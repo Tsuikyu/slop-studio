@@ -1,0 +1,442 @@
+# Minimal CyberSquare
+## Universal Design Language Specification
+**Version 3.2 — Functional Void Edition**
+
+### 1. Core Philosophy
+
+**Minimal CyberSquare** is a universal design language combining functional minimalism, precise geometric engineering, OLED-conscious darkness, and restrained cinematic cyberpunk aesthetics.
+
+**Core principle: Functional beauty above visual decoration.**
+
+The design should resemble a sophisticated technological system from a cinematic cyberpunk world, while remaining practical, readable, efficient, and professionally engineered.
+
+Its atmosphere should emerge naturally from precise geometry, pure black surfaces, disciplined spacing, and carefully controlled accents.
+
+**Visual priority: 90% functional minimalism, 10% cinematic cyberpunk atmosphere.**
+
+Never sacrifice usability, readability, accessibility, or information hierarchy for stylistic effects.
+
+---
+
+### 2. Color System
+
+#### Background and Surface Colors
+
+| Role | HEX |
+|---|---|
+| Primary background | `#000000` |
+| Secondary surface | `#08080D` |
+| Elevated surface | `#101018` |
+| Interactive surface | `#191923` |
+| Structural borders | `#302C40` |
+
+Use pure black as the dominant background wherever practical.
+
+Create visual hierarchy through subtle luminance differences, spacing, and thin borders rather than decorative effects.
+
+#### Typography Colors
+
+| Role | HEX |
+|---|---|
+| Primary text | `#FFFFFF` |
+| Secondary text | `#C8C8D0` |
+| Tertiary text | `#A9A9B5` |
+| Muted text | `#888895` |
+
+**Critical typography rule: White is the default text color, not violet.**
+
+All ordinary text, headings, menu items, numerical data, button labels, and primary information must use white or neutral grayscale.
+
+Do not apply the primary violet accent color to ordinary typography.
+
+Colored text is permitted only when communicating meaningful semantic information, such as status, warnings, errors, connections, classifications, or other functionally important distinctions.
+
+Never use color merely to make text appear futuristic.
+
+#### Primary Accent
+
+| Role | HEX |
+|---|---|
+| Cyber Violet | `#7466FF` |
+| Light Violet | `#A69BFF` |
+| Dark Violet | `#6251D9` |
+
+Cyber Violet is the principal brand accent, not the principal text color.
+
+Use violet selectively for:
+
+- Active selection indicators
+- Keyboard focus outlines
+- Selected navigation elements
+- Active tool indicators
+- Interactive borders
+- Precision markers
+- Important graphical highlights
+
+Do not use violet indiscriminately across text, backgrounds, buttons, or entire panels.
+
+Violet must communicate interaction or emphasis, not decoration.
+
+For buttons with a solid violet background, use a foreground color that meets contrast requirements. For example, dark text on `#7466FF`, or white text on the darker `#6251D9`.
+
+#### Functional Colors
+
+Use bright, readable colors when the interface requires meaningful distinctions.
+
+| Function | HEX |
+|---|---|
+| Success / Valid | `#7AF0BA` |
+| Error / Recording | `#FF8F96` |
+| Warning | `#FFC96B` |
+| Information / Connection | `#9BE8FF` |
+
+Functional colors must be clearly distinguishable against black backgrounds.
+
+Use them sparingly, and only when their semantic meaning improves usability.
+
+For charts, category identification, timelines, tracks, and other data-rich interfaces, additional colors are allowed when necessary for effective differentiation.
+
+Do not force functionally different elements into the same violet color.
+
+**Semantic clarity always takes priority over palette uniformity.**
+
+---
+
+### 3. Typography
+
+#### Font Independence
+
+Minimal CyberSquare is a **font-agnostic design system**.
+
+Use a modern, highly legible, minimalist sans-serif typeface appropriate for the target platform, language, and application.
+
+**Noto Sans and its language-specific variants are recommended options, but they are neither mandatory nor exclusive.**
+
+Any existing or future sans-serif typeface may be used if it meets the design system's requirements for readability, visual neutrality, technical consistency, and accessibility.
+
+Font selection must be based on functional quality rather than brand association or visual fashion.
+
+#### Typeface Selection Criteria
+
+A suitable typeface should provide:
+
+1. Excellent readability at small and medium interface sizes.
+2. Clean, modern, minimalist letterforms.
+3. Consistent visual proportions and spacing.
+4. Clear distinction between similar characters.
+5. Appropriate character coverage for supported languages.
+6. Reliable rendering on target platforms.
+7. Sufficient font weights for a clear information hierarchy.
+8. Consistent numerical alignment where required.
+9. Good accessibility under high-contrast dark themes.
+10. Compatibility with applicable licensing and distribution requirements.
+
+Avoid highly decorative, exaggerated futuristic, excessively condensed, or difficult-to-read typefaces for ordinary interface content.
+
+#### Font Flexibility
+
+The design system must not depend on a specific font vendor, font family, operating system, or rendering engine.
+
+Applications may use system-native sans-serif fonts, bundled open-source fonts, licensed commercial fonts, or suitable future typefaces.
+
+Use appropriate fallback fonts for unsupported characters and writing systems.
+
+When multiple fonts are necessary for multilingual coverage, maintain consistent apparent size, weight, baseline alignment, and visual hierarchy.
+
+Allow font substitution and user-configurable font settings where practical.
+
+Prefer variable fonts when they offer meaningful rendering, performance, or accessibility benefits, but do not require them.
+
+#### Recommended Font Weights
+
+- Regular 400: Body text
+- Medium 500: Menus and interface labels
+- SemiBold 600: Headings and important controls
+- Monospaced or tabular numerals: Technical data
+
+Equivalent weights may be selected when a typeface uses a different weight system.
+
+#### Typography Requirements
+
+1. Use white (`#FFFFFF`) for primary information.
+2. Use neutral grays for secondary information.
+3. Avoid violet or other colored text without functional meaning.
+4. Maintain comfortable and scalable text sizes.
+5. Avoid excessive uppercase labels.
+6. Maintain clear hierarchy through spacing, weight, and size.
+7. Prefer readability over decorative typography.
+8. Do not rely exclusively on font weight or color to distinguish critical information.
+9. Use appropriate fallback fonts for multilingual content.
+10. Preserve layout stability when fonts are substituted.
+11. Support user-defined text scaling and accessibility settings where appropriate.
+12. Never compromise readability to maintain a particular aesthetic.
+
+**Typography must remain visually consistent, functionally adaptable, and independent of any single typeface.**
+
+Technical typography should feel precise, understated, and readable.
+
+---
+
+### 4. Geometry
+
+Use rigorous rectangular geometry.
+
+- Default corner radius: `0px`
+- Default spacing system: 4px or 8px increments
+- Borders: Thin and consistent
+- Shadows: Generally disabled
+- Gradients: Disabled by default
+- Decorative textures: Disabled
+- Layout: Modular and systematically aligned
+
+Prefer square and rectangular shapes.
+
+Use circular elements only when their function requires them.
+
+Keep controls compact without sacrificing usability or appropriate interaction target sizes.
+
+Do not add unnecessary borders or containers around every element.
+
+**Geometry must support function, not merely create visual style.**
+
+---
+
+### 5. Surface Design
+
+Use predominantly matte, black surfaces.
+
+Avoid:
+
+- Metallic materials
+- Glossy textures
+- Glassmorphism
+- Decorative gradients
+- Heavy shadows
+- Oversized borders
+- Excessive neon illumination
+- Artificial interface depth
+- Unnecessary visual complexity
+
+Use whitespace, subtle surface variations, and precise alignment to separate functional areas.
+
+Keep boundaries visible when necessary, but do not outline every element by default.
+
+The visual design should feel engineered rather than decorated.
+
+---
+
+### 6. Functional Visual Identity
+
+Minimal CyberSquare uses three signature design concepts.
+
+#### Void Rail
+
+A thin violet line indicating an active or selected region.
+
+Use it only when the selection state is meaningful.
+
+Avoid large violet background fills when a small indicator communicates the same information more efficiently.
+
+#### Modular Precision
+
+Organize technical information into clearly defined rectangular modules.
+
+Each module must have a practical purpose.
+
+Use consistent alignment and appropriate spacing.
+
+Avoid presenting ordinary information as decorative technical instrumentation.
+
+#### Spectral Geometry
+
+Use crisp geometric forms for graphs, meters, progress indicators, timelines, and data visualization.
+
+Preserve data accuracy and clarity.
+
+Use violet as a primary visual accent where appropriate, but introduce additional colors when necessary to distinguish information.
+
+Do not create fake data, arbitrary indicators, or meaningless graphical effects.
+
+---
+
+### 7. Cinematic Cyberpunk Identity
+
+The overall design should feel:
+
+**Silent. Precise. Dark. Advanced. Powerful.**
+
+Express cinematic atmosphere through:
+
+- Pure black backgrounds
+- High-contrast white typography
+- Restrained blue-violet accents
+- Geometric structure
+- Carefully balanced negative space
+- Precise visual rhythm
+- Subtle technological detailing
+
+Avoid stereotypical cyberpunk effects such as random code, decorative circuitry, unnecessary holograms, constant glitches, glowing text, and artificial technical labels.
+
+The design may feel mysterious and technologically formidable, but must never become theatrical at the expense of utility.
+
+**Cyberpunk is the atmosphere, not the interface's purpose.**
+
+---
+
+### 8. Interaction Design
+
+Interactive elements must communicate their states clearly.
+
+Required states include:
+
+- Default
+- Hover
+- Focus
+- Selected
+- Active
+- Disabled
+- Error
+
+Use subtle background changes, borders, geometry, and restrained accent colors.
+
+Avoid excessive animation.
+
+Recommended motion duration: 80–160ms where appropriate.
+
+Support reduced-motion preferences.
+
+Preserve keyboard accessibility, predictable navigation, and consistent control behavior.
+
+Do not allow visual minimalism to make controls difficult to discover or operate.
+
+---
+
+### 9. Accessibility and Contrast
+
+Readability is a fundamental design requirement.
+
+- Default primary text: `#FFFFFF`
+- Use neutral gray for supporting text.
+- Use bright semantic colors against dark backgrounds.
+- Avoid low-contrast violet text.
+- Avoid unnecessarily small typography.
+- Do not use color alone to communicate status or meaning.
+- Ensure important interface controls remain distinguishable.
+- Target a minimum contrast ratio of 4.5:1 for normal text.
+- Target at least 3:1 for relevant non-text interface indicators.
+- Support readable font substitutions and text scaling.
+- Ensure multilingual font fallback does not compromise accessibility.
+
+Important actions and information must remain understandable without decorative effects.
+
+Functionality always overrides visual atmosphere.
+
+---
+
+### 10. OLED-Conscious Design
+
+Optimize the interface for OLED displays while maintaining usability.
+
+- Use pure black for dominant background regions.
+- Minimize large bright areas.
+- Prefer localized highlights.
+- Avoid persistent luminous decoration.
+- Keep inactive elements visually subdued.
+- Maintain high readability at lower display brightness.
+- Avoid unnecessary continuous animations.
+- Do not reduce text contrast merely to save display power.
+
+Pure black backgrounds and restrained illumination should contribute to both energy-conscious design and visual identity.
+
+---
+
+### 11. Universal Application
+
+Apply Minimal CyberSquare consistently across:
+
+- Desktop applications
+- Mobile applications
+- Websites
+- Creative software
+- Developer tools
+- Dashboards
+- Interactive interfaces
+- Technical instruments
+- Design automation
+- Image generation
+- Concept art
+- Visual presentations
+- Digital products
+
+Adapt layout, component density, typography, and interaction patterns to each medium.
+
+Do not impose a predetermined interface layout on unrelated products.
+
+Use reusable design tokens and components for software implementations.
+
+Typography should use configurable font-family tokens rather than hardcoded typeface dependencies wherever possible.
+
+For static visual media, express the language through functional composition, precise geometry, black surfaces, white typography, and restrained accent colors.
+
+Maintain an independent visual identity without copying recognizable commercial products or proprietary visual assets.
+
+---
+
+### 12. Strict Design Prohibitions
+
+Do not:
+
+- Use violet as the default text color.
+- Reduce readability for aesthetic reasons.
+- Require a specific font family unnecessarily.
+- Use decorative typefaces for essential information.
+- Apply accent colors indiscriminately.
+- Introduce decorative interface elements without purpose.
+- Use rounded containers by default.
+- Add unnecessary gradients, glow, shadows, or textures.
+- Create visually dense dashboards without functional justification.
+- Use fake technical information.
+- Introduce excessive animation.
+- Make every element appear highlighted.
+- Replace accessible interaction patterns with decorative alternatives.
+- Sacrifice information hierarchy for cinematic appearance.
+
+---
+
+### 13. Final Design Directive
+
+When applying Minimal CyberSquare, prioritize the following:
+
+1. **Functional correctness**
+2. **Readability and accessibility**
+3. **Information hierarchy**
+4. **Ease of use**
+5. **Visual consistency**
+6. **OLED-conscious black surfaces**
+7. **Precise rectangular geometry**
+8. **Restrained blue-violet accents**
+9. **Cinematic cyberpunk atmosphere**
+
+Use white (`#FFFFFF`) as the default text color.
+
+Use pure black (`#000000`) as the principal background color.
+
+Use blue-violet (`#7466FF`) as the primary identity accent, not as a general typography color.
+
+Use a clean, readable, minimalist sans-serif font appropriate for the target environment.
+
+Noto Sans is an optional recommendation, never a mandatory dependency.
+
+Use other bright colors only when they serve meaningful functional or informational purposes.
+
+Every visual element must justify its existence through usability, clarity, structure, or necessary communication.
+
+**Do not decorate what can be communicated through functional design.**
+
+### Design Motto
+
+**Minimal CyberSquare**
+
+*Absolute Black. Pure Clarity. Precise Control.*
+
+**Function is the aesthetic.**

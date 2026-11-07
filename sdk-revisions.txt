@@ -1,0 +1,14 @@
+VST3 SDK https://github.com/steinbergmedia/vst3sdk 3cdf9ca5d1f5b1b21e0a86832aa4abe55607bd96
+VST3 pluginterfaces https://github.com/steinbergmedia/vst3_pluginterfaces 4f547e8e102b47de4a8b8aaf343c73b700786372
+CLAP https://github.com/free-audio/clap a47f6badb49d948fd009998f28309cdab78979c9
+Only official SDK headers are needed by this host; no JUCE is used.
+
+ASIO official SDK https://www.steinberg.net/asiosdk (ASIO-SDK_2.3.4_2025-10-15.zip) SHA256 D5EBF0C20DD2C5F43771FD0C1418F4B361BF52434EE670097CFA6B3A335E2ECA
+Ableton Link https://github.com/ableton/link 5ba907ae027a8c2ec8824463e37296dcefc5e9be
+asio-standalone https://github.com/chriskohlhoff/asio 026dce530a6c39a8aa6d98e5177482310c4a01e5
+ASIO/Link headers are used only by companions/SlopBridge.cpp, not by MIT application/DLLs.
+
+Lua official sources https://github.com/lua/lua tag v5.4.8; per-file SHA-256: third_party/lua/SHA256SUMS.txt
+ARA official SDK 2.3.0 https://github.com/Celemony/ARA_SDK
+ARA API https://github.com/Celemony/ARA_API 65ec5c43b943a48cb5446f448a0492db6af8534b (Apache-2.0)
+SlopControl.dll contains original controller/Lua host code and Lua MIT; no GPL ASIO/Link code.

@@ -1,0 +1,14 @@
+build/
+dist/
+.vs/
+.idea/
+__pycache__/
+*.user
+*.pdb
+*.log
+*.tmp
+*.bak
+.env
+.env.*
+/projects/
+/user-data/

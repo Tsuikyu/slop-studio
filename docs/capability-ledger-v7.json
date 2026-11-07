@@ -1,0 +1,313 @@
+{
+  "version": "0.7.0",
+  "date": "2026-10-28",
+  "target": "Windows 11 AMD64 Release",
+  "features": [
+    {
+      "feature": "Windows 11 x64 standalone",
+      "status": "PASS",
+      "evidence": "Release PE32+ executable and three native DLLs; actual four-language SlopProX.exe smoke, 16 checks each",
+      "limits": "Clean source and archive verification recorded separately"
+    },
+    {
+      "feature": "起動・プロジェクト作成／保存／再読込",
+      "status": "PASS",
+      "evidence": "Actual main window, real MIDI/audio/plugin state round-trip",
+      "limits": "External media is referenced; no automatic media collection"
+    },
+    {
+      "feature": "ContextMenuStrip例外",
+      "status": "PASS",
+      "evidence": "Native mouse events select/dispose menus; Preferences driver switches and float Bounce selection",
+      "limits": "Other unexercised controls may still contain defects"
+    },
+    {
+      "feature": "録音ボタンと停止",
+      "status": "PASS",
+      "evidence": "Native Record/Stop button captures software MIDI; actual executable smoke records MiniFuse virtual loopback WAV",
+      "limits": "Physical microphone performance and cycle recording not verified/implemented"
+    },
+    {
+      "feature": "WASAPI共有",
+      "status": "PASS",
+      "evidence": "48 kHz virtual loopback, 39,326 captured frames, peak 0.04000066; 44.1/96 kHz callbacks",
+      "limits": "Specific tested endpoints; speaker audition NOT RUN"
+    },
+    {
+      "feature": "WASAPI排他",
+      "status": "PARTIAL",
+      "evidence": "PCM/float negotiation, alignment retry, full-buffer packet code and PCM unit tests",
+      "limits": "Actual MiniFuse virtual endpoint rejected formats: 0x88890008; exclusive runtime test FAIL"
+    },
+    {
+      "feature": "ASIO",
+      "status": "PASS",
+      "evidence": "Official SDK independent companion, actual FL Studio ASIO 48/44.1/48 kHz, two input channels",
+      "limits": "Other drivers and physical hardware paths NOT VERIFIED"
+    },
+    {
+      "feature": "複数入力・入力監視",
+      "status": "PARTIAL",
+      "evidence": "Two synthetic channels recorded separately; real 2-channel capture callbacks; monitoring PCM test",
+      "limits": "32-channel infrastructure exists; physical 32-input test NOT RUN"
+    },
+    {
+      "feature": "MIDI入力・イベント録音",
+      "status": "PARTIAL",
+      "evidence": "Actual input port opens, injected timestamped messages and Musical Typing Record/Stop preserve notes",
+      "limits": "Physical MIDI keyboard performance NOT RUN"
+    },
+    {
+      "feature": "標準MIDIインポート",
+      "status": "PASS",
+      "evidence": "Format 0/1, PPQ/SMPTE, running status, tempo/meter, velocities and sustain tested",
+      "limits": "Format 2 explicitly rejected; MusicXML/PDF import not implemented"
+    },
+    {
+      "feature": "Ctrl／Shiftホイール",
+      "status": "PASS",
+      "evidence": "Native wheel message routes Ctrl zoom to hovered editor, Shift horizontal pan, Ctrl+Alt scale",
+      "limits": "Physical pointer gestures outside the test desktop NOT RUN"
+    },
+    {
+      "feature": "再生ピンのドラッグ",
+      "status": "PASS",
+      "evidence": "Captured continuous seeking, edge autoscroll, pointer release verified",
+      "limits": "No audio scrubbing audition while dragging"
+    },
+    {
+      "feature": "分割線・キーボード幅",
+      "status": "PASS",
+      "evidence": "Eight logical pixel hit zones, successful grab six pixels from border",
+      "limits": "Physical mixed-DPI monitor transitions NOT RUN"
+    },
+    {
+      "feature": "音声／MIDIファイルD&D",
+      "status": "PASS",
+      "evidence": "DragEnter/DragDrop control events import actual WAV and editable SMF at pointer beat",
+      "limits": "Explorer physical drag NOT RUN; ffmpeg needed for compressed formats"
+    },
+    {
+      "feature": "FLPインポート",
+      "status": "PARTIAL",
+      "evidence": "15 untouched FL Studio factory demos parse; 32/60/80-byte playlist records and UTF-16 names",
+      "limits": "FL instruments, FX, routing, automation, stretch and full fidelity not converted"
+    },
+    {
+      "feature": "ALSインポート",
+      "status": "PARTIAL",
+      "evidence": "Real gzip/XML fixture with notes and timeline timing",
+      "limits": "Vendor devices, warps, automation and all project variants unsupported"
+    },
+    {
+      "feature": "DAWproject入出力",
+      "status": "PARTIAL",
+      "evidence": "XSD validation, embedded audio and notes; native and external fixture round-trips",
+      "limits": "Actual cross-DAW application round-trip NOT RUN"
+    },
+    {
+      "feature": "トラック／リージョン編集",
+      "status": "PARTIAL",
+      "evidence": "Creation, selection, naming, arm, mute, solo, move, trim, split and undo exercised",
+      "limits": "Full editor multi-selection, every clipboard context and advanced tools incomplete"
+    },
+    {
+      "feature": "Piano Roll／Step Sequencer／譜面",
+      "status": "PARTIAL",
+      "evidence": "Editors change common persisted MIDI data with undo",
+      "limits": "Simple staff editor; commercial engraving/notation parity not implemented"
+    },
+    {
+      "feature": "Slop Launcher",
+      "status": "PASS",
+      "evidence": "Quantized audio loops and eight fractional MIDI loops retain first note at 137 BPM / 44.1 kHz",
+      "limits": "Direct cell recording and performance capture not implemented"
+    },
+    {
+      "feature": "サンプルブラウザー",
+      "status": "PARTIAL",
+      "evidence": "Folder navigation, search, WAV preview, audio/MIDI import and drag source",
+      "limits": "Compressed preview uses optional FFmpeg; metadata/tag ecosystem incomplete"
+    },
+    {
+      "feature": "VST3ホスト",
+      "status": "PASS",
+      "evidence": "Official SDK; actual Vital detection, MIDI-to-PCM, state round-trip; real parameter automation fixture",
+      "limits": "64-bit mono/stereo main bus only; universal compatibility not claimed"
+    },
+    {
+      "feature": "CLAPホスト",
+      "status": "PASS",
+      "evidence": "Official API; actual Vital detection, MIDI-to-PCM, state round-trip; real parameter automation fixture",
+      "limits": "64-bit mono/stereo main bus only; external sidechain/multibus incomplete"
+    },
+    {
+      "feature": "Melodyne ARA",
+      "status": "PASS",
+      "evidence": "Actual installed plugin: factory/document/source/role binding, peak .12, native editor, approximately 20.8 KB archive and new-instance restore",
+      "limits": "Synthetic 1-second source; full-song workflow not exhaustively tested"
+    },
+    {
+      "feature": "Synthesizer V Studio 2 ARA",
+      "status": "PARTIAL",
+      "evidence": "Actual plugin discovery, ARA document binding and native editor attachment",
+      "limits": "Output remained zero with no vocal content; empty archive test FAIL. Singing/edited-state persistence NOT VERIFIED"
+    },
+    {
+      "feature": "全ベンダープラグイン互換",
+      "status": "NOT VERIFIED",
+      "evidence": "Only named real plugins and clearly named ABI/fault fixtures tested",
+      "limits": "Cannot establish all-vendor compatibility from finite fixtures"
+    },
+    {
+      "feature": "DSPクラッシュ・停止隔離",
+      "status": "PARTIAL",
+      "evidence": "Actual worker exit/hang/native access violation; nonblocking pipeline and unaffected dry PCM; full callback max .675 ms in test",
+      "limits": "Failed track can mute. No guarantee against OS/audio-engine failure or arbitrary overload"
+    },
+    {
+      "feature": "動的PDC",
+      "status": "PASS",
+      "evidence": "CLAP restart changes latency 256→512 samples; dry/wet impulse test; dynamic history delay",
+      "limits": "Advanced bus graph and all vendor notification variants not verified"
+    },
+    {
+      "feature": "付属6エフェクト",
+      "status": "PASS",
+      "evidence": "Measured EQ response, compressor, nonlinear saturation, limiter ceiling, 3 ducker triggers, stereo fold-down, state/undo",
+      "limits": "Internal DSP only; no VST3/CLAP effect exports, True Peak/LUFS or cross-track auxiliary buses"
+    },
+    {
+      "feature": "Slop Pitch Pitch",
+      "status": "PARTIAL",
+      "evidence": "Synthetic A4 detected, transposed toward C5, duration preserved",
+      "limits": "Monophonic processing; polyphonic/formant/commercial quality incomplete"
+    },
+    {
+      "feature": "Slop Pitch Timing",
+      "status": "PARTIAL",
+      "evidence": "Transient grid mapping, GUI marker drag/render/undo; 120 BPM fixture estimated119.67; 440 Hz stays440 after2→3s stretch",
+      "limits": "Conventional DSP, no learned AI. Complex material quality NOT VERIFIED"
+    },
+    {
+      "feature": "オートメーション",
+      "status": "PARTIAL",
+      "evidence": "Sample-wise gain/pan/mute and sample-offset plugin parameter events tested",
+      "limits": "Touch/Latch/Write, broad target set and high-density workflows incomplete"
+    },
+    {
+      "feature": "コンピング",
+      "status": "PARTIAL",
+      "evidence": "Actual selected audio slice playback and persistence tested",
+      "limits": "Automatic take folders, cycle recording and crossfades incomplete"
+    },
+    {
+      "feature": "バウンス／32-bit float",
+      "status": "PASS",
+      "evidence": "Actual dropdown selection and finite IEEE-float WAV; PCM16/24/float duration tests",
+      "limits": "GUI individual stems path not separately exercised"
+    },
+    {
+      "feature": "永続設定",
+      "status": "PASS",
+      "evidence": "Validated settings save/load, driver choices and failed configuration rollback",
+      "limits": "No arbitrary user shortcut editor yet"
+    },
+    {
+      "feature": "EN／DE／JP／KRとHTMLマニュアル",
+      "status": "PARTIAL",
+      "evidence": "Four packs, localized launch/about views, four self-contained HTML manuals",
+      "limits": "Authored translations approved by user; vendor diagnostics and some dynamic UI text remain untranslated"
+    },
+    {
+      "feature": "起動・Quick Start・Aboutの指定文",
+      "status": "PASS",
+      "evidence": "Four-language real windows and disclaimer/AI attribution captured",
+      "limits": "Requested wording is included; no claim about legal enforceability"
+    },
+    {
+      "feature": "DJロボット猫耳アイコン",
+      "status": "PASS",
+      "evidence": "Original faceless silhouette SVG/PNG/ICO16–256; actual Windows executable shows icon",
+      "limits": "No Apple assets used"
+    },
+    {
+      "feature": "プラグインマネージャー再構成",
+      "status": "PASS",
+      "evidence": "Real catalog/category/search/detail and six working internal DSP choices; GUI tests",
+      "limits": "Long vendor names intentionally ellipsize; no universal compatibility certification"
+    },
+    {
+      "feature": "XInput／DirectInput",
+      "status": "PARTIAL",
+      "evidence": "Real native polling code; injected normalized buttons/dead-zone/held-edge tests",
+      "limits": "Physical gamepad NOT RUN; controller layouts may differ"
+    },
+    {
+      "feature": "Musical Typing ON／OFF",
+      "status": "PASS",
+      "evidence": "Real note-on/off, repeat suppression, focus release and recorded MIDI verified",
+      "limits": "No MPE/multizone controller implementation"
+    },
+    {
+      "feature": "Lua Mod",
+      "status": "PASS",
+      "evidence": "Official Lua5.4.8 worker, memory/instruction/time limits, real16-note macro and one-step undo",
+      "limits": "One-shot six-command project API; event mods/custom UI/native extensions incomplete"
+    },
+    {
+      "feature": "自動復旧",
+      "status": "PARTIAL",
+      "evidence": "Rotating snapshots and unclean-session detection; crash test recorded separately",
+      "limits": "Power loss/recording-in-progress recovery not verified"
+    },
+    {
+      "feature": "MCP AI連携",
+      "status": "PASS",
+      "evidence": "Actual stdio client and11 tools create/edit/play/save/open/render",
+      "limits": "Starts a separate visible DAW session; no attach to arbitrary existing process"
+    },
+    {
+      "feature": "VRChat OSC送受信",
+      "status": "BLOCKED",
+      "evidence": "36-byte OSC status sent; receive9001 timed out; localhost UDP self-send also dropped",
+      "limits": "No VRChat UI/settings/profile/friends/personal data accessed or changed"
+    },
+    {
+      "feature": "Ableton Link",
+      "status": "BLOCKED",
+      "evidence": "Independent official GPL companions start; current peer discovery test failed",
+      "limits": "UDP delivery unavailable in environment; sample-accurate DAW phase follow incomplete"
+    },
+    {
+      "feature": "画面比率／DPI",
+      "status": "PARTIAL",
+      "evidence": "1280×800 and maximized; Windows120DPI and100/150% workspace render tests",
+      "limits": "Physical monitor-to-monitor DPI transition NOT RUN"
+    },
+    {
+      "feature": "GUIの厳密な一致",
+      "status": "PARTIAL",
+      "evidence": "Reference panel hierarchy, transport, timeline, original icons, channel strips and actual screenshot comparison",
+      "limits": "Pixel-level match, all Logic screens and version13 parity not established"
+    },
+    {
+      "feature": "全Logicキー",
+      "status": "PARTIAL",
+      "evidence": "Actual export:68 registry entries,65 active assignments, uniqueness checks and selected execution tests",
+      "limits": "Not comprehensive; most individual key mappings not separately exercised"
+    },
+    {
+      "feature": "めちゃくちゃにする",
+      "status": "PASS",
+      "evidence": "Optional hidden setting, generated explosion, falling regions, requested word, Space restores identical project",
+      "limits": "Sound playback request tested; physical loudspeaker audition NOT RUN"
+    },
+    {
+      "feature": "Debian13／DAW自体のプラグイン配布",
+      "status": "FAIL",
+      "evidence": "Current WinForms/WASAPI architecture and CMake explicitly Windows-only",
+      "limits": "No Debian runtime, no Slop DAW VST3 product artifact"
+    }
+  ]
+}
