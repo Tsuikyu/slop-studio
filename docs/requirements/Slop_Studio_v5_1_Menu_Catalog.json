@@ -205,7 +205,7 @@
             "children": [
               {
                 "type": "command",
-                "label_ja": "Slop Studio標準（Logic操作参考）",
+                "label_ja": "Slop Studio標準",
                 "implemented": false
               },
               {
