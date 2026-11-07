@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
 
-namespace SlopProX
+namespace SlopStudio
 {
     // Launchpad X / Mini MK3 Programmer Mode: top-left is note 81, bottom-left 11.
     // https://userguides.novationmusic.com/hc/en-gb/articles/24001475492498-Controlling-the-Launchpad-X-surface

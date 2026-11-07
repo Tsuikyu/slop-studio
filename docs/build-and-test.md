@@ -13,7 +13,7 @@ $cmake = 'C:/Tools/cmake/bin/cmake.exe'
   -DCMAKE_MAKE_PROGRAM=C:/Tools/ninja/ninja.exe `
   -DCMAKE_TOOLCHAIN_FILE=cmake/llvm-mingw.cmake `
   -DLLVM_MINGW_ROOT=C:/Tools/llvm-mingw `
-  -DSLOPX_PACKAGE_DIR=dist/windows-x64 `
+  -DSLOPSTUDIO_PACKAGE_DIR=dist/windows-x64 `
   -DBUILD_TESTING=OFF
 & $cmake --build build/release --config Release --parallel 3
 ```

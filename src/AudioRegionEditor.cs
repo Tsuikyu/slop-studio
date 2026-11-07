@@ -1,5 +1,5 @@
 using System;using System.Drawing;using System.Windows.Forms;
-namespace SlopProX
+namespace SlopStudio
 {
  public sealed class AudioRegionEditor:UserControl
  {

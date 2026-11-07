@@ -4,7 +4,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Web.Script.Serialization;
-namespace SlopProX
+namespace SlopStudio
 {
  public sealed class AutomationPoint{public double Beat{get;set;}public double Value{get;set;}}
  public sealed class AutomationLane

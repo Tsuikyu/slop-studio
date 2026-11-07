@@ -1,5 +1,5 @@
 using System;
-namespace SlopProX {
+namespace SlopStudio {
  internal sealed class SampleDelay {
   private float[] _history=new float[4096];private long _written;private int _delay,_previous,_fade;
   public void SetDelay(int samples){samples=Math.Max(0,samples);if(samples==_delay)return;int capacity=_history.Length/2;if(samples+2>capacity){int size=capacity;while(size<samples+2)size*=2;var larger=new float[size*2];for(long i=Math.Max(0,_written-capacity);i<_written;i++){larger[(i%size)*2]=_history[(i%capacity)*2];larger[(i%size)*2+1]=_history[(i%capacity)*2+1];}_history=larger;}_previous=_delay;_delay=samples;_fade=_written==0?0:128;}

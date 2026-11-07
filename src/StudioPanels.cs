@@ -4,7 +4,7 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Windows.Forms;
-namespace SlopProX
+namespace SlopStudio
 {
  public sealed class StudioSelectionEventArgs:EventArgs{public Guid TrackId;public Guid? RegionId;public StudioSelectionEventArgs(Guid t,Guid? r){TrackId=t;RegionId=r;}}
  public sealed class InspectorTrackEventArgs:EventArgs{public Guid TrackId;public string Name;public double GainDb,Pan;public bool Muted,Solo;}

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Web.Script.Serialization;
 using System.Windows.Forms;
 
-namespace SlopProX
+namespace SlopStudio
 {
     public sealed class StockEffectEditor : Form
     {

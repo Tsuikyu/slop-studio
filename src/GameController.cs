@@ -1,7 +1,7 @@
 using System;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
-namespace SlopProX {
+namespace SlopStudio {
  [StructLayout(LayoutKind.Sequential)]public struct GameControllerState {public int Kind,Index;public uint Buttons;public float X,Y,RightX,RightY,LeftTrigger,RightTrigger;}
  public sealed class GameController:IDisposable {
   [DllImport("SlopControl.dll",CallingConvention=CallingConvention.Cdecl)]private static extern int slc_controller(IntPtr window,out GameControllerState state);

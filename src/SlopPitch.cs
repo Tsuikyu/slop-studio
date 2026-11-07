@@ -5,7 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-namespace SlopProX
+namespace SlopStudio
 {
  public sealed class PitchSegment{public double StartSeconds,EndSeconds,Midi;public int Target;public double Confidence;}
  public sealed class PitchAnalysis

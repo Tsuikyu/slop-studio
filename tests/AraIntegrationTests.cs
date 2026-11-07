@@ -4,10 +4,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Windows.Forms;
-using SlopProX;
+using SlopStudio;
 class AraIntegrationTests {
  [STAThread]static int Main(string[] a){Application.EnableVisualStyles();Console.OutputEncoding=System.Text.Encoding.UTF8;var lines=new List<string>();string pluginPath=a[0],report=a[1];int failed=0;try{
-  string folder=Path.GetDirectoryName(Path.GetFullPath(report));Directory.CreateDirectory(folder);Environment.SetEnvironmentVariable("SLOPX_PROFILE",Path.Combine(folder,"profile"));string file=Path.Combine(folder,"ara-source.wav");if(File.Exists(file))File.Delete(file);float[] audio=new float[48000*2];for(int i=0;i<48000;i++)audio[i*2]=audio[i*2+1]=(float)(.12*Math.Sin(2*Math.PI*440*i/48000));using(var writer=new ExportWaveWriter(file,48000,2,24,false))writer.Write(audio,0,audio.Length);
+  string folder=Path.GetDirectoryName(Path.GetFullPath(report));Directory.CreateDirectory(folder);Environment.SetEnvironmentVariable("SLOPSTUDIO_PROFILE",Path.Combine(folder,"profile"));string file=Path.Combine(folder,"ara-source.wav");if(File.Exists(file))File.Delete(file);float[] audio=new float[48000*2];for(int i=0;i<48000;i++)audio[i*2]=audio[i*2+1]=(float)(.12*Math.Sin(2*Math.PI*440*i/48000));using(var writer=new ExportWaveWriter(file,48000,2,24,false))writer.Write(audio,0,audio.Length);
   var descriptor=NativePlugin.Scan(pluginPath).First(d=>d.AraSupported);lines.Add("PASS real installed ARA VST3 discovery: "+descriptor.Name);var project=new ProjectDocument{Name="ARA verification"};var track=ProjectFactory.CreateTrack("ARA input",TrackType.Audio);var region=ProjectFactory.CreateRegion("Synthetic A4",0,2);region.MediaPath=file;track.Regions.Add(region);project.Tracks.Add(track);
   var slot=descriptor.CreateSlot();slot.AraDocument=AraDocumentInfo.FromTrack(project,track);track.Plugins.Add(slot);string archive;
   using(var plugin=new NativePlugin(slot,48000,512)){

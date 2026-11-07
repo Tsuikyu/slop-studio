@@ -5,7 +5,7 @@ app = pathlib.Path(sys.argv[1]).resolve()
 out = pathlib.Path(sys.argv[2]).resolve()
 out.mkdir(parents=True, exist_ok=True)
 env = os.environ.copy()
-env["SLOPX_PROFILE"] = str(out / "profile")
+env["SLOPSTUDIO_PROFILE"] = str(out / "profile")
 startup = subprocess.STARTUPINFO()
 startup.dwFlags |= subprocess.STARTF_USESHOWWINDOW
 startup.wShowWindow = 0

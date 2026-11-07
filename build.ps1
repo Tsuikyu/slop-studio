@@ -11,7 +11,7 @@ if(-not (Test-Path -LiteralPath (Join-Path $env:WINDIR 'Microsoft.NET/Framework6
 New-Item -ItemType Directory -Path $BuildDirectory,$OutputDirectory -Force | Out-Null
 $probe=Join-Path $OutputDirectory ('.write-probe-'+[Guid]::NewGuid().ToString('N'))
 [IO.File]::WriteAllText($probe,'probe');Remove-Item -LiteralPath $probe
-$configure=@('-S',$PSScriptRoot,'-B',$BuildDirectory,'-G',$Generator,'-DCMAKE_BUILD_TYPE=Release',('-DSLOPX_PACKAGE_DIR='+$OutputDirectory.Replace([char]92,[char]47)))
+$configure=@('-S',$PSScriptRoot,'-B',$BuildDirectory,'-G',$Generator,'-DCMAKE_BUILD_TYPE=Release',('-DSLOPSTUDIO_PACKAGE_DIR='+$OutputDirectory.Replace([char]92,[char]47)))
 if($LlvmMingwRoot){$configure+=@('-DCMAKE_TOOLCHAIN_FILE=cmake/llvm-mingw.cmake',('-DLLVM_MINGW_ROOT='+[IO.Path]::GetFullPath($LlvmMingwRoot).Replace([char]92,[char]47)))}
 elseif($Generator -like 'Visual Studio*'){$configure+=@('-A','x64')}
 if($Generator -eq 'Ninja'){$ninjaCommand=Get-Command $NinjaPath -ErrorAction Stop;$configure+=('-DCMAKE_MAKE_PROGRAM='+$ninjaCommand.Source.Replace([char]92,[char]47))}

@@ -1,6 +1,6 @@
 using System;
 
-namespace SlopProX
+namespace SlopStudio
 {
     // Maps submitted output frames to the musical position that produced them.
     // A fixed-size ring avoids allocating on the audio callback.

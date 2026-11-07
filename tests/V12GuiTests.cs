@@ -8,7 +8,7 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Threading;
 using System.Windows.Forms;
-using SlopProX;
+using SlopStudio;
 
 internal static class V12GuiTests
 {
@@ -28,7 +28,7 @@ internal static class V12GuiTests
     [STAThread]private static int Main(string[] args)
     {
         _root=Path.Combine(Path.GetFullPath(args[0]),"run-"+Guid.NewGuid().ToString("N"));Directory.CreateDirectory(_root);
-        Environment.SetEnvironmentVariable("SLOPX_PROFILE",Path.Combine(_root,"profile"));Application.EnableVisualStyles();Application.SetCompatibleTextRenderingDefault(false);
+        Environment.SetEnvironmentVariable("SLOPSTUDIO_PROFILE",Path.Combine(_root,"profile"));Application.EnableVisualStyles();Application.SetCompatibleTextRenderingDefault(false);
         var settings=new AppSettings{Language="ja-JP",AudioBackend="WASAPI"};settings.Integration.QuickStart=false;
         var locale=LocaleCatalog.Load(Path.Combine(AppDomain.CurrentDomain.BaseDirectory,"locales","ja-JP.json"),"ja-JP");
         using(var form=new MainForm(settings,locale,false,null))

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 
-namespace SlopProX
+namespace SlopStudio
 {
     public sealed class TrackStack
     {

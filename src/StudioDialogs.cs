@@ -7,7 +7,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Web.Script.Serialization;
 using System.Windows.Forms;
-namespace SlopProX
+namespace SlopStudio
 {
  public sealed class RecoveryItem{public string ProjectPath,Snapshot,Name;public DateTime Time;public override string ToString(){return Name+"  ·  "+Time.ToLocalTime().ToString("g");}}
  public sealed class RecoveryStore

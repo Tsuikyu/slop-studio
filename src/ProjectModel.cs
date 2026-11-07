@@ -6,7 +6,7 @@ using System.IO;
 using System.Text;
 using System.Web.Script.Serialization;
 
-namespace SlopProX
+namespace SlopStudio
 {
     public enum TrackType
     {

@@ -1,4 +1,4 @@
-using System;using System.Collections.Generic;using System.Diagnostics;using System.IO;using System.Linq;using System.Reflection;using System.Threading;using SlopProX;
+using System;using System.Collections.Generic;using System.Diagnostics;using System.IO;using System.Linq;using System.Reflection;using System.Threading;using SlopStudio;
 class V8BackendTests {
  static string filter="";static List<string> report=new List<string>();static int failed;static string output;
  static void Check(bool b,string reason){if(!b)throw new Exception(reason);}static void Test(string name,Action test){if(filter.Length>0&&!name.Contains(filter))return;try{test();report.Add("PASS "+name);}catch(Exception e){failed++;report.Add("FAIL "+name+" :: "+e);}File.WriteAllLines(output,report);}

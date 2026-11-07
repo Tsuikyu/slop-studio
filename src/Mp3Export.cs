@@ -4,7 +4,7 @@ using System.IO;
 using System.Text;
 using System.Threading;
 
-namespace SlopProX
+namespace SlopStudio
 {
     public static class Mp3Export
     {
@@ -21,7 +21,7 @@ namespace SlopProX
                 for(int i=0;i<keys.Length;i++)if(!String.IsNullOrWhiteSpace(values[i]))args.Append(" -metadata ").Append(Quote(keys[i]+"="+values[i]));
                 args.Append(" -f mp3 ").Append(Quote(encoded));var start=new ProcessStartInfo(VideoDecoder.FfmpegPath(),args.ToString()){UseShellExecute=false,CreateNoWindow=true,WindowStyle=ProcessWindowStyle.Hidden,RedirectStandardError=true};
                 try{using(var process=Process.Start(start)){var errors=process.StandardError.ReadToEndAsync();while(!process.WaitForExit(100)){if(cancel.IsCancellationRequested){process.Kill();process.WaitForExit();cancel.ThrowIfCancellationRequested();}}if(process.ExitCode!=0)throw new IOException("FFmpeg MP3 export failed: "+errors.Result.Trim());}}
-                catch(System.ComponentModel.Win32Exception){throw new InvalidOperationException("MP3 export requires FFmpeg with libmp3lame. Install FFmpeg or set SLOPX_FFMPEG.");}
+                catch(System.ComponentModel.Win32Exception){throw new InvalidOperationException("MP3 export requires FFmpeg with libmp3lame. Install FFmpeg or set SLOPSTUDIO_FFMPEG.");}
                 cancel.ThrowIfCancellationRequested();if(!File.Exists(encoded)||new FileInfo(encoded).Length==0)throw new IOException("FFmpeg produced no MP3 file.");
                 if(File.Exists(full))File.Replace(encoded,full,null);else File.Move(encoded,full);if(progress!=null)progress(1);
             }finally{if(File.Exists(wave))File.Delete(wave);if(File.Exists(encoded))File.Delete(encoded);}

@@ -5,7 +5,7 @@ using System.IO;
 using System.Text;
 using System.Web.Script.Serialization;
 
-namespace SlopProX
+namespace SlopStudio
 {
     public sealed class AppSettings
     {
@@ -33,8 +33,8 @@ namespace SlopProX
         {
             get
             {
-                string root = Environment.GetEnvironmentVariable("SLOPX_PROFILE");
-                if(String.IsNullOrWhiteSpace(root))root=Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),"SlopProX");
+                string root = Environment.GetEnvironmentVariable("SLOPSTUDIO_PROFILE");
+                if(String.IsNullOrWhiteSpace(root))root=Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),"SlopStudio");
                 return Path.Combine(root,"settings.json");
                 /*
                 */
@@ -71,7 +71,7 @@ namespace SlopProX
             JavaScriptSerializer serializer = new JavaScriptSerializer();
             serializer.MaxJsonLength = 64 * 1024;
             IDictionary<string, object> root = AsObject(serializer.DeserializeObject(json), "Settings");
-            if (ReadString(root, "schema") != "slopx-settings" || (ReadInteger(root, "version") != 1 && ReadInteger(root, "version") != 2))
+            if (ReadString(root, "schema") != "slopstudio-settings" || (ReadInteger(root, "version") != 1 && ReadInteger(root, "version") != 2))
                 throw new InvalidDataException("Settings schema or version is unsupported.");
             AppSettings settings = new AppSettings();
             settings.Language = ReadString(root, "language");settings.InputMode=root.ContainsKey("inputMode")?ReadString(root,"inputMode"):"Mouse";settings.SmoothAnimation=!root.ContainsKey("smoothAnimation")||Convert.ToBoolean(root["smoothAnimation"]);settings.AudioBackend=root.ContainsKey("audioBackend")?ReadString(root,"audioBackend"):"MME";settings.OutputEndpoint=root.ContainsKey("outputEndpoint")?ReadString(root,"outputEndpoint"):"";settings.InputEndpoint=root.ContainsKey("inputEndpoint")?ReadString(root,"inputEndpoint"):"";settings.AsioDriver=root.ContainsKey("asioDriver")?ReadString(root,"asioDriver"):"";settings.PdcEnabled=!root.ContainsKey("pdc")||Convert.ToBoolean(root["pdc"]);if(root.ContainsKey("integration"))settings.Integration=serializer.ConvertToType<IntegrationSettings>(root["integration"]);
@@ -103,7 +103,7 @@ namespace SlopProX
                 Directory.CreateDirectory(directory);
             Dictionary<string, object> values = new Dictionary<string, object>();
             values["audioBackend"]=settings.AudioBackend;values["outputEndpoint"]=settings.OutputEndpoint;values["inputEndpoint"]=settings.InputEndpoint;values["asioDriver"]=settings.AsioDriver;values["pdc"]=settings.PdcEnabled;values["integration"]=settings.Integration;
-            values["inputMode"]=settings.InputMode;values["smoothAnimation"]=settings.SmoothAnimation;values["schema"] = "slopx-settings";
+            values["inputMode"]=settings.InputMode;values["smoothAnimation"]=settings.SmoothAnimation;values["schema"] = "slopstudio-settings";
             values["version"] = 2;
             values["language"] = settings.Language;
             values["timelineZoom"] = settings.TimelineZoom;

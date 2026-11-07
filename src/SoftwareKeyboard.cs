@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
-namespace SlopProX {
+namespace SlopStudio {
  public sealed class SoftwareKeyboard:Form,IMessageFilter {
   private Action<int,int,bool> _note;private HashSet<int> _held=new HashSet<int>();private Dictionary<Keys,int> _keys=new Dictionary<Keys,int>();private KeyboardCanvas _canvas;private Form _owner;private int _octave=4,_velocity=96;
   private readonly Keys[] _map={Keys.A,Keys.W,Keys.S,Keys.E,Keys.D,Keys.F,Keys.T,Keys.G,Keys.Y,Keys.H,Keys.U,Keys.J,Keys.K,Keys.O,Keys.L,Keys.P,Keys.OemSemicolon};

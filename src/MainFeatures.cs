@@ -8,7 +8,7 @@ using System.Threading;
 using System.Web.Script.Serialization;
 using System.Windows.Forms;
 using Timer=System.Windows.Forms.Timer;
-namespace SlopProX
+namespace SlopStudio
 {
  public sealed partial class MainForm
  {

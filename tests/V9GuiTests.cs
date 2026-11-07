@@ -1,4 +1,4 @@
-using System;using System.Collections.Generic;using System.Diagnostics;using System.Drawing;using System.IO;using System.Linq;using System.Reflection;using System.Runtime.InteropServices;using System.Threading;using System.Threading.Tasks;using System.Windows.Forms;using SlopProX;
+using System;using System.Collections.Generic;using System.Diagnostics;using System.Drawing;using System.IO;using System.Linq;using System.Reflection;using System.Runtime.InteropServices;using System.Threading;using System.Threading.Tasks;using System.Windows.Forms;using SlopStudio;
 class V9GuiTests {
  static BindingFlags F=BindingFlags.Public|BindingFlags.NonPublic|BindingFlags.Instance;static List<string> lines=new List<string>();static List<Exception> errors=new List<Exception>();static int failures;static string root;
  static object Field(object o,string n){for(Type t=o.GetType();t!=null;t=t.BaseType){var f=t.GetField(n,F|BindingFlags.DeclaredOnly);if(f!=null)return f.GetValue(o);}throw new Exception(n);}static void Set(object o,string n,object v){o.GetType().GetField(n,F).SetValue(o,v);}static object Call(object o,string n,params object[] a){for(Type t=o.GetType();t!=null;t=t.BaseType){var method=t.GetMethods(F|BindingFlags.DeclaredOnly).FirstOrDefault(m=>m.Name==n&&m.GetParameters().Length==a.Length);if(method!=null)return method.Invoke(o,a);}throw new Exception(n);}
@@ -14,7 +14,7 @@ class V9GuiTests {
  static ProjectDocument Project(MainForm f){return (ProjectDocument)Field(f,"_project");}static void PointTo(Control c){c.Focus();Point point=c.PointToScreen(new Point(c.ClientSize.Width/2,c.ClientSize.Height/2));var form=c.FindForm() as MainForm;if(form!=null)Set(form,"_editorPointer",(Func<Point>)(()=>point));}
 
  [STAThread]static int Main(string[] args){
- root=Path.Combine(Path.GetFullPath(args[0]),"run-"+Guid.NewGuid().ToString("N"));Directory.CreateDirectory(root);Environment.SetEnvironmentVariable("SLOPX_PROFILE",Path.Combine(root,"profile"));
+ root=Path.Combine(Path.GetFullPath(args[0]),"run-"+Guid.NewGuid().ToString("N"));Directory.CreateDirectory(root);Environment.SetEnvironmentVariable("SLOPSTUDIO_PROFILE",Path.Combine(root,"profile"));
  SetProcessDpiAwarenessContext((IntPtr)(-4));Application.SetUnhandledExceptionMode(UnhandledExceptionMode.CatchException);Application.ThreadException+=delegate(object s,ThreadExceptionEventArgs e){errors.Add(e.Exception);};
  Application.EnableVisualStyles();Application.SetCompatibleTextRenderingDefault(false);UiText.Load("en-US");
  var settings=new AppSettings{AudioBackend="WASAPI"};settings.Integration.QuickStart=false;var locale=LocaleCatalog.Load(Path.Combine(AppDomain.CurrentDomain.BaseDirectory,"locales","en-US.json"),"en-US");

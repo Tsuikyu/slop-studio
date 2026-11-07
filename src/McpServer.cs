@@ -4,7 +4,7 @@ using System.IO;
 using System.Text;
 using System.Threading;
 using System.Web.Script.Serialization;
-namespace SlopProX
+namespace SlopStudio
 {
  public sealed class McpServer
  {

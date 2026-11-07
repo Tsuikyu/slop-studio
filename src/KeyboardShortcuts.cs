@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace SlopProX
+namespace SlopStudio
 {
     public enum AppCommand
     {
@@ -22,7 +22,7 @@ namespace SlopProX
     {
         ReferenceFactoryPreset,
         LegacyPlatformConvention,
-        SlopProXConvenience
+        SlopStudioConvenience
     }
 
     public sealed class ShortcutBinding
@@ -169,8 +169,8 @@ namespace SlopProX
         {
             List<ShortcutBinding> result = new List<ShortcutBinding>();
             Add(result,AppCommand.ToggleSoftwareKeyboard,"Show/Hide Musical Typing","Command-K",Keys.Control|Keys.K,ReferenceGlobal,ShortcutOrigin.ReferenceFactoryPreset,true,false,"Command maps to Ctrl.");
-            Add(result,AppCommand.UserManual,"User Manual","",Keys.F1,"",ShortcutOrigin.SlopProXConvenience,true,false,"Windows Help convention.");
-            Add(result,AppCommand.ToggleFullScreen,"Full Screen","",Keys.F11,"",ShortcutOrigin.SlopProXConvenience,true,false,"Windows full-screen shortcut.");
+            Add(result,AppCommand.UserManual,"User Manual","",Keys.F1,"",ShortcutOrigin.SlopStudioConvenience,true,false,"Windows Help convention.");
+            Add(result,AppCommand.ToggleFullScreen,"Full Screen","",Keys.F11,"",ShortcutOrigin.SlopStudioConvenience,true,false,"Windows full-screen shortcut.");
             Add(result, AppCommand.PlayOrStop, "Play or Stop", "Space", Keys.Space, ReferenceTransport,
                 ShortcutOrigin.ReferenceFactoryPreset, true, false, "the vendor documents Space as Play or Stop.");
             Add(result, AppCommand.Stop, "Stop", "numeric keypad 0", Keys.NumPad0, ReferenceGlobal,
@@ -236,9 +236,9 @@ namespace SlopProX
             Add(result, AppCommand.UnmuteAll, "Mute Off for All", "Control-Shift-M", Keys.Control | Keys.Alt | Keys.Shift | Keys.M, ReferenceGlobal,
                 ShortcutOrigin.ReferenceFactoryPreset, true, false, "the vendor Control maps to Ctrl+Alt.");
             Add(result, AppCommand.AddRegion, "Add Region (Slop Studio)", "Ctrl-Shift-R", Keys.Control | Keys.Shift | Keys.R, "",
-                ShortcutOrigin.SlopProXConvenience, true, false, "Slop Studio convenience mapping; not claimed as a reference application default.");
+                ShortcutOrigin.SlopStudioConvenience, true, false, "Slop Studio convenience mapping; not claimed as a reference application default.");
             Add(result, AppCommand.DeleteRegion, "Delete Region (Slop Studio)", "Delete", Keys.Delete, "",
-                ShortcutOrigin.SlopProXConvenience, true, true, "Slop Studio convenience mapping.");
+                ShortcutOrigin.SlopStudioConvenience, true, true, "Slop Studio convenience mapping.");
             Add(result, AppCommand.Record, "Record", "R", Keys.R, ReferenceGlobal,
                 ShortcutOrigin.ReferenceFactoryPreset, true, false, "Starts a real input recording workflow; dependencies are validated.");
             Add(result, AppCommand.Pause, "Pause", "numeric keypad period", Keys.Decimal, ReferenceGlobal,

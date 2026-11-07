@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SlopProX;
+using SlopStudio;
 
 internal static class V11CoreTests
 {
@@ -29,7 +29,7 @@ internal static class V11CoreTests
     [STAThread] private static int Main(string[] args)
     {
         _root = Path.Combine(Path.GetFullPath(args[0]), "run-" + Guid.NewGuid().ToString("N"));
-        Directory.CreateDirectory(_root); Environment.SetEnvironmentVariable("SLOPX_PROFILE", Path.Combine(_root, "profile"));
+        Directory.CreateDirectory(_root); Environment.SetEnvironmentVariable("SLOPSTUDIO_PROFILE", Path.Combine(_root, "profile"));
         Test("VST3 no-op processing notification still processes and restores actual audio", delegate {
             var descriptor = NativePlugin.Scan(Fixture("FixtureNoStart.vst3"))[0];
             using (var plugin = new NativePlugin(descriptor.CreateSlot(), 48000, 256))

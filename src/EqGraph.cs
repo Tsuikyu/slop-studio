@@ -4,7 +4,7 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 
-namespace SlopProX
+namespace SlopStudio
 {
     // Original five-band graph: the curve is calculated from the actual filter coefficients.
     public sealed class EqGraph : ScaledCanvas

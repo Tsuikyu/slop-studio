@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Threading;
-namespace SlopProX
+namespace SlopStudio
 {
  public sealed class IntegrationSettings
  {

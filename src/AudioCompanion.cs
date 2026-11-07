@@ -6,7 +6,7 @@ using System.IO.MemoryMappedFiles;
 using System.Threading;
 using System.Text;
 using Microsoft.Win32;
-namespace SlopProX
+namespace SlopStudio
 {
  public sealed class AsioDriverChoice{public string Name,Clsid;public override string ToString(){return Name;}}
  public static class AsioDrivers

@@ -4,7 +4,7 @@ using System.Drawing;
 using System.IO;
 using System.Web.Script.Serialization;
 using System.Windows.Forms;
-namespace SlopProX {
+namespace SlopStudio {
  public static class UiText {
   public static string Language="en-US";
   private static Dictionary<string,string> _words=new Dictionary<string,string>(StringComparer.OrdinalIgnoreCase);

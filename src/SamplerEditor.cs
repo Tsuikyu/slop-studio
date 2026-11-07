@@ -1,5 +1,5 @@
 using System;using System.Collections.Generic;using System.Drawing;using System.Linq;using System.IO;using System.Web.Script.Serialization;using System.Windows.Forms;
-namespace SlopProX {
+namespace SlopStudio {
  public sealed class SamplerEditor:Form {
   private SamplerView _view;private StudioChoice _preset;private SamplerSettings _sampler;private bool _recording;private Func<bool,string> _record;private Action<SamplerSettings> _update;
   public SamplerEditor(string preset,SamplerSettings settings,Action<string> change,Action<SamplerSettings> update,Func<string,string> import,Func<bool,string> record,Action<int,bool> preview){

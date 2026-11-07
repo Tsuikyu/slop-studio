@@ -2,7 +2,7 @@ using System;
 using System.IO;
 using System.Text;
 
-namespace SlopProX
+namespace SlopStudio
 {
     public static class WavMetadata
     {

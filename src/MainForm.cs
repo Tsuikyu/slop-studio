@@ -9,7 +9,7 @@ using System.Reflection;
 using System.Text;
 using System.Windows.Forms;
 
-namespace SlopProX
+namespace SlopStudio
 {
     public sealed partial class MainForm : Form
     {

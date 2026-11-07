@@ -7,7 +7,7 @@ Modifier policy: Command → Ctrl; Option → Alt; Control → Ctrl+Alt; Shift �
 | reference application command | legacy platform source | Windows | Handler | Origin | Active | Verification / note | Primary source |
 |---|---|---|---|---|---|---|---|
 | Show/Hide Musical Typing | Command-K | Ctrl+K | ToggleSoftwareKeyboard | the vendorUSFactoryPreset | Yes | Registry validated; Command maps to Ctrl. |  |
-| User Manual |  | F1 | UserManual | SlopProXConvenience | Yes | Registry validated; Windows Help convention. |  |
+| User Manual |  | F1 | UserManual | SlopStudioConvenience | Yes | Registry validated; Windows Help convention. |  |
 | Play or Stop | Space | Space | PlayOrStop | the vendorUSFactoryPreset | Yes | Registry validated; the vendor documents Space as Play or Stop. |  |
 | Stop | numeric keypad 0 | Num 0 | Stop | the vendorUSFactoryPreset | Yes | Registry validated; Requires the numeric keypad 0 key. |  |
 | Go to Beginning | Return | Enter | GoToBeginning | the vendorUSFactoryPreset | Yes | Registry validated; Stops playback and returns the arrangement cursor to beat 0. |  |
@@ -40,8 +40,8 @@ Modifier policy: Command → Ctrl; Option → Alt; Control → Ctrl+Alt; Shift �
 | Engage Solo Tracks of Selected Regions | Control-S | Ctrl+Alt+S | ToggleSolo | the vendorUSFactoryPreset | No | Registry validated; Windows translation conflicts with New Software Instrument Track (Ctrl+Alt+S); use the active S shortcut for solo. |  |
 | Clear/Recall Solo | Option-S | Alt+S | ClearSolo | the vendorUSFactoryPreset | Yes | Registry validated; Clears solo state for all tracks. |  |
 | Mute Off for All | Control-Shift-M | Ctrl+Alt+Shift+M | UnmuteAll | the vendorUSFactoryPreset | Yes | Registry validated; the vendor Control maps to Ctrl+Alt. |  |
-| Add Region (Slop Studio) | Ctrl-Shift-R | Ctrl+Shift+R | AddRegion | SlopProXConvenience | Yes | Registry validated; Slop Studio convenience mapping; not claimed as a reference application default. |  |
-| Delete Region (Slop Studio) | Delete | Delete | DeleteRegion | SlopProXConvenience | Yes | Registry validated; Slop Studio convenience mapping. |  |
+| Add Region (Slop Studio) | Ctrl-Shift-R | Ctrl+Shift+R | AddRegion | SlopStudioConvenience | Yes | Registry validated; Slop Studio convenience mapping; not claimed as a reference application default. |  |
+| Delete Region (Slop Studio) | Delete | Delete | DeleteRegion | SlopStudioConvenience | Yes | Registry validated; Slop Studio convenience mapping. |  |
 | Record | R | R | Record | the vendorUSFactoryPreset | Yes | Registry validated; Starts a real input recording workflow; dependencies are validated. |  |
 | Pause | numeric keypad period | Num . | Pause | the vendorUSFactoryPreset | Yes | Registry validated; Pauses transport at the current timeline position. |  |
 | Show/Hide Piano Roll | P | P | ShowPianoRoll | the vendorUSFactoryPreset | Yes | Registry validated; Shows or hides the piano-roll editor. |  |

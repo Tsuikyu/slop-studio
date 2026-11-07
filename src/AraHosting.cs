@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
-namespace SlopProX {
+namespace SlopStudio {
  public sealed class AraClipInfo {public string Id{get;set;}public string Name{get;set;}public string Path{get;set;}public double StartSeconds{get;set;}public double OffsetSeconds{get;set;}public double DurationSeconds{get;set;}}
  public sealed class AraDocumentInfo {
   public List<AraClipInfo> Clips{get;set;}public double Tempo{get;set;}public int Numerator{get;set;}public int Denominator{get;set;}

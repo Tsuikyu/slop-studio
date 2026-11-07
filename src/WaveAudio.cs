@@ -4,7 +4,7 @@ using System.IO;
 using System.Runtime.InteropServices;
 using System.Text;
 
-namespace SlopProX
+namespace SlopStudio
 {
     public sealed class PcmWaveInfo
     {
@@ -162,7 +162,7 @@ namespace SlopProX
             long outputBytes=frames*4L;if(outputBytes>MaximumWaveBytes)throw new InvalidDataException("The selected playback range exceeds the supported temporary audio size.");
             double gain=Math.Pow(10.0,Math.Max(-60.0,Math.Min(12.0,gainDb))/20.0);
             double left=pan>0?1.0-Math.Min(1.0,pan):1.0;double right=pan<0?1.0+Math.Max(-1.0,pan):1.0;
-            string output=System.IO.Path.Combine(System.IO.Path.GetTempPath(),"SlopProX-preview-"+Guid.NewGuid().ToString("N")+".wav");
+            string output=System.IO.Path.Combine(System.IO.Path.GetTempPath(),"SlopStudio-preview-"+Guid.NewGuid().ToString("N")+".wav");
             try
             {
                 using(BinaryWriter writer=new BinaryWriter(File.Create(output)))

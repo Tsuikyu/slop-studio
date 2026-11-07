@@ -3,7 +3,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Collections.Generic;
 
-namespace SlopProX
+namespace SlopStudio
 {
     // Minimal CyberSquare tokens shared by the main workspace and standard dialogs.
     public static class CyberTheme

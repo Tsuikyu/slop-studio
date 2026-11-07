@@ -626,14 +626,14 @@ Do not point tests at user project directories.
 
 Set the existing environment variable:
 
-`SLOPX_PROFILE`
+`SLOPSTUDIO_PROFILE`
 
 Use a dedicated directory inside the authorized workspace.
 
 Example in PowerShell:
 
 ```powershell
-$env:SLOPX_PROFILE = "D:\SlopStudioTestProfile"
+$env:SLOPSTUDIO_PROFILE = "D:\SlopStudioTestProfile"
 ```
 
 The example path is illustrative. Select an appropriate existing or explicitly created test directory for the current workspace.

@@ -30,7 +30,7 @@ $build = "$root/work/slop-studio/release-build"
 $dist = "$root/outputs/dist/slop-studio-windows-x64-release"
 $ninja = "$root/work/tools/ninja/ninja.exe"
 $llvm = "$root/work/tools/llvm-mingw/llvm-mingw-20261020-ucrt-x86_64"
-& $cmake -S $source -B $build -G Ninja -DCMAKE_BUILD_TYPE=Release "-DCMAKE_MAKE_PROGRAM=$ninja" "-DCMAKE_TOOLCHAIN_FILE=$source/cmake/llvm-mingw.cmake" "-DLLVM_MINGW_ROOT=$llvm" "-DSLOPX_PACKAGE_DIR=$dist" -DBUILD_TESTING=OFF
+& $cmake -S $source -B $build -G Ninja -DCMAKE_BUILD_TYPE=Release "-DCMAKE_MAKE_PROGRAM=$ninja" "-DCMAKE_TOOLCHAIN_FILE=$source/cmake/llvm-mingw.cmake" "-DLLVM_MINGW_ROOT=$llvm" "-DSLOPSTUDIO_PACKAGE_DIR=$dist" -DBUILD_TESTING=OFF
 & $cmake --build $build --config Release --parallel 3
 ```
 

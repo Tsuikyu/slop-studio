@@ -5,7 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-namespace SlopProX {
+namespace SlopStudio {
  public sealed partial class MainForm {
   private bool _importing;
   private void InitializeFileDrop(){RegisterDrop(this);}

@@ -5,7 +5,7 @@ using System.IO;
 using System.Text;
 using System.Web.Script.Serialization;
 
-namespace SlopProX
+namespace SlopStudio
 {
     public sealed class LocaleCatalog
     {
@@ -60,7 +60,7 @@ namespace SlopProX
             JavaScriptSerializer serializer = new JavaScriptSerializer();
             serializer.MaxJsonLength = 128 * 1024;
             IDictionary<string, object> root = AsObject(serializer.DeserializeObject(json), "Language pack");
-            if (ReadString(root, "schema") != "slopx-locale")
+            if (ReadString(root, "schema") != "SLOPSTUDIO-locale")
                 throw new InvalidDataException("Language pack schema is unsupported.");
             if (ReadInteger(root, "version") != 1)
                 throw new InvalidDataException("Language pack version is unsupported.");

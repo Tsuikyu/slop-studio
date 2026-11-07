@@ -2,7 +2,7 @@ using System;
 using System.IO;
 using System.Windows.Forms;
 
-namespace SlopProX
+namespace SlopStudio
 {
     public static class ProjectProtection
     {

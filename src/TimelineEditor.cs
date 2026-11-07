@@ -6,7 +6,7 @@ using System.Globalization;
 using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-namespace SlopProX
+namespace SlopStudio
 {
  public sealed class TimelineSelectionEventArgs:EventArgs{public Guid? TrackId,RegionId;public TimelineSelectionEventArgs(Guid? t,Guid? r){TrackId=t;RegionId=r;}}
  public sealed class RegionMoveEventArgs:EventArgs{public Guid TrackId,RegionId;public double NewStartBeat;public RegionMoveEventArgs(Guid t,Guid r,double b){TrackId=t;RegionId=r;NewStartBeat=b;}}

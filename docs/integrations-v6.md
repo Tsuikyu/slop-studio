@@ -11,7 +11,7 @@ The server invokes the main UI command/history path. Saving captures actual plug
 Generic client configuration (replace the command with your extracted absolute path):
 
 ~~~json
-{"mcpServers":{"slop-pro-x":{"command":"C:/Apps/SlopProX/SlopProX.exe","args":["--mcp"]}}}
+{"mcpServers":{"Slop-Studio":{"command":"C:/Apps/SlopStudio/SlopStudio.exe","args":["--mcp"]}}}
 ~~~
 
 McpProcessTests.py is a real subprocess client: it initializes, lists 11 tools, creates MIDI/automation, plays/stops, saves, exports audio and reopens the project. RecoveryCrashTests.py also terminates the actual DAW and restores its automatic snapshot in a new process.

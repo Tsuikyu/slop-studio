@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
-using SlopProX;
+using SlopStudio;
 
 internal static class V11InstalledPluginTests
 {
@@ -28,7 +28,7 @@ internal static class V11InstalledPluginTests
     [STAThread] private static int Main(string[] args)
     {
         string root = Path.GetFullPath(args[1]); Directory.CreateDirectory(root);
-        Environment.SetEnvironmentVariable("SLOPX_PROFILE", Path.Combine(root, "profile"));
+        Environment.SetEnvironmentVariable("SLOPSTUDIO_PROFILE", Path.Combine(root, "profile"));
         string report = Path.Combine(root, "result.txt");
         try
         {

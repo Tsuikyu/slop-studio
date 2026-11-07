@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Xml;
 using System.Xml.Linq;
-namespace SlopProX
+namespace SlopStudio
 {
  public sealed class ImportResult{public ProjectDocument Project;public List<string> Warnings=new List<string>();}
  public static class ProjectExchange

@@ -7,7 +7,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Web.Script.Serialization;
-using SlopProX;
+using SlopStudio;
 
 internal static class V12CoreTests
 {
@@ -19,7 +19,7 @@ internal static class V12CoreTests
     [STAThread] private static int Main(string[] args)
     {
         _root = Path.Combine(Path.GetFullPath(args[0]), "run-" + Guid.NewGuid().ToString("N")); Directory.CreateDirectory(_root);
-        Environment.SetEnvironmentVariable("SLOPX_PROFILE", Path.Combine(_root, "profile"));
+        Environment.SetEnvironmentVariable("SLOPSTUDIO_PROFILE", Path.Combine(_root, "profile"));
         Test("88-byte FL playlist items import and survive project save/reopen", delegate {
             string path=Path.Combine(_root,"fixture.flp"); using(var events=new MemoryStream()) using(var w=new BinaryWriter(events)) {
                 Event(w,65,BitConverter.GetBytes((ushort)1)); byte[] note=new byte[24]; Array.Copy(BitConverter.GetBytes(96),0,note,8,4); Array.Copy(BitConverter.GetBytes((ushort)60),0,note,12,2); note[21]=80; Event(w,224,note);

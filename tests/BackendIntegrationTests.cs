@@ -1,4 +1,4 @@
-using System;using System.Collections.Generic;using System.IO;using System.Linq;using System.Threading;using SlopProX;
+using System;using System.Collections.Generic;using System.IO;using System.Linq;using System.Threading;using SlopStudio;
 internal static class BackendIntegrationTests
 {
  static int Main(string[] args){string report=args[0];var lines=new List<string>();int failures=0;Action<string,Action> test=delegate(string name,Action body){try{body();lines.Add("PASS "+name);}catch(Exception ex){failures++;lines.Add("FAIL "+name+" :: "+ex);}};

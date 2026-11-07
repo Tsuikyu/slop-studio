@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Web.Script.Serialization;
 
-namespace SlopProX
+namespace SlopStudio
 {
     public sealed class SampleLibraryData
     {

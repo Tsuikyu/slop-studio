@@ -4,7 +4,7 @@ using System.Drawing;
 using System.IO;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-namespace SlopProX
+namespace SlopStudio
 {
  public sealed class PreferencesForm:Form
  {

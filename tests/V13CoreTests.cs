@@ -4,7 +4,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading;
-using SlopProX;
+using SlopStudio;
 
 internal static class V13CoreTests
 {
@@ -15,7 +15,7 @@ internal static class V13CoreTests
     private static string Wave(string name,float value){string file=Path.Combine(root,name+".wav");using(var w=new ExportWaveWriter(file,48000,1,32,true))w.Write(Enumerable.Repeat(value,48000).ToArray(),0,48000);return file;}
     private static void ClockFor(ArrangementEngine e,Clock clock){typeof(ArrangementEngine).GetField("_output",BindingFlags.NonPublic|BindingFlags.Instance).SetValue(e,clock);}
     private static ProjectDocument AudioProject(string file){var p=new ProjectDocument{Tempo=120};var track=ProjectFactory.CreateTrack("Signal",TrackType.Audio);var region=ProjectFactory.CreateRegion("Signal",0,4);region.MediaPath=file;track.Regions.Add(region);p.Tracks.Add(track);return p;}
-    [STAThread]private static int Main(string[] args){root=Path.Combine(Path.GetFullPath(args[0]),"run-"+Guid.NewGuid().ToString("N"));Directory.CreateDirectory(root);Environment.SetEnvironmentVariable("SLOPX_PROFILE",Path.Combine(root,"profile"));
+    [STAThread]private static int Main(string[] args){root=Path.Combine(Path.GetFullPath(args[0]),"run-"+Guid.NewGuid().ToString("N"));Directory.CreateDirectory(root);Environment.SetEnvironmentVariable("SLOPSTUDIO_PROFILE",Path.Combine(root,"profile"));
         Test("Output presentation follows the rendered spans, latency, loop and seek",delegate{
             var h=new TransportHistory();h.Reset(8);h.Record(1000,200,8,0.001);h.Record(1200,100,0,0.001);
             Check(Math.Abs(h.Position(900,0)-8)<1e-8,"Position moved before queued audio.");Check(Math.Abs(h.Position(1150,50)-8.1)<1e-8,"Output latency was not applied.");Check(Math.Abs(h.Position(1220,0)-.02)<1e-8,"Loop boundary was not followed.");h.Reset(3);Check(h.Position(1500,0)==3,"Seek did not reset history.");
@@ -100,7 +100,7 @@ internal static class V13CoreTests
             string file=Path.Combine(root,"metadata.wav");AudioExport.Render(p,file,new AudioExportOptions{EndBeat=1},CancellationToken.None,null);byte[] bytes=File.ReadAllBytes(file);
             Check(BitConverter.ToUInt32(bytes,4)==bytes.Length-8&&WaveAudio.Load(file).Samples.Length>0,"WAV header or audio is invalid.");string info=Encoding.UTF8.GetString(bytes);foreach(string text in new[]{"INAM","夜の街","IART","Tsuikyu","IGNR","Electronic","ICMT","Original","IURL","https://example.invalid"})Check(info.Contains(text),"WAV metadata missing: "+text);
         });
-        if(Environment.GetEnvironmentVariable("SLOPX_TEST_MP3")=="1")Test("FFmpeg MP3 export encodes audio and project metadata",delegate{
+        if(Environment.GetEnvironmentVariable("SLOPSTUDIO_TEST_MP3")=="1")Test("FFmpeg MP3 export encodes audio and project metadata",delegate{
             var p=AudioProject(Wave("mp3-source",.1f));p.Studio.Metadata=new ProjectMetadata{Title="夜の街",Artist="Tsuikyu",Genre="Electronic",Comment="Original",Website="https://example.invalid"};string file=Path.Combine(root,"metadata.mp3");
             Mp3Export.Render(p,file,new AudioExportOptions{EndBeat=1},CancellationToken.None,null);Check(File.Exists(file)&&new FileInfo(file).Length>1000,"MP3 output is missing.");Console.WriteLine("MP3_FIXTURE "+file);
         });

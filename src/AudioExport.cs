@@ -2,7 +2,7 @@ using System;
 using System.IO;
 using System.Text;
 using System.Threading;
-namespace SlopProX
+namespace SlopStudio
 {
  public sealed class AudioExportOptions{public int SampleRate=48000;public int Bits=24;public bool Float;public double StartBeat,EndBeat=16,TailSeconds;}
  public sealed class ExportWaveWriter:IDisposable

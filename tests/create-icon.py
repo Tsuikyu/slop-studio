@@ -36,6 +36,6 @@ sizes=[16,24,32,48,64,128,256];images=[png(n) for n in sizes];offset=6+16*len(si
 header=struct.pack("<HHH",0,1,len(sizes));entries=bytearray()
 for n,image in zip(sizes,images):
     entries+=struct.pack("<BBBBHHII",n%256,n%256,0,0,1,32,len(image),offset);offset+=len(image)
-(root/"SlopProX.ico").write_bytes(header+entries+b"".join(images))
+(root/"SlopStudio.ico").write_bytes(header+entries+b"".join(images))
 (root/"slop-robot.png").write_bytes(images[-1])
 print("Original 64-bit application icon: 7 PNG resolutions, 16..256 px.")

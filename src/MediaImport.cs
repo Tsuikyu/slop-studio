@@ -1,7 +1,7 @@
 using System;
 using System.Diagnostics;
 using System.IO;
-namespace SlopProX {
+namespace SlopStudio {
  public static class MediaImport {
   public static bool IsAudio(string path){return Array.IndexOf(new[]{".wav",".wave",".aif",".aiff",".flac",".mp3",".ogg",".m4a",".wma"},Path.GetExtension(path).ToLowerInvariant())>=0;}
   public static string Decode(string input,string folder) {

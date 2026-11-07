@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
-namespace SlopProX {
+namespace SlopStudio {
  public sealed class EffectKnob:ScaledCanvas {
   public EffectParameter Parameter;public double Value;public bool Exponential;public event Action<double> Changed;private double _initial;private int _start;private bool _drag;
   public EffectKnob(){DoubleBuffered=true;Cursor=Cursors.Hand;BackColor=Color.FromArgb(42,46,51);}

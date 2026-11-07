@@ -6,7 +6,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-namespace SlopProX {
+namespace SlopStudio {
  public sealed partial class MainForm {
   private SoftwareKeyboard _softwareKeyboard;private GameController _controller;private Timer _v7Timer;private List<string> _loadedMods=new List<string>();private bool _localizing;private readonly HashSet<Form> _localizedForms=new HashSet<Form>();
   public bool TextEntryFocused{get{return IsTextEntryFocused();}}

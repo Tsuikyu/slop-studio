@@ -1,4 +1,4 @@
-using System;using System.Collections.Generic;using System.IO;using System.IO.Compression;using System.Linq;using System.Net;using System.Net.Sockets;using System.Text;using System.Threading;using System.Web.Script.Serialization;using System.Xml;using System.Xml.Linq;using System.Xml.Schema;using SlopProX;
+using System;using System.Collections.Generic;using System.IO;using System.IO.Compression;using System.Linq;using System.Net;using System.Net.Sockets;using System.Text;using System.Threading;using System.Web.Script.Serialization;using System.Xml;using System.Xml.Linq;using System.Xml.Schema;using SlopStudio;
 internal static class StudioIntegrationTests
 {
  static List<string> lines=new List<string>();static int failed;static string folder,app;static void Assert(bool value,string error){if(!value)throw new Exception(error);}static void Test(string name,Action action){try{action();lines.Add("PASS "+name);}catch(Exception ex){failed++;lines.Add("FAIL "+name+" :: "+ex);}}

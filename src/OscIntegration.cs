@@ -5,7 +5,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading;
-namespace SlopProX
+namespace SlopStudio
 {
  public sealed class OscMessage{public string Address;public object[] Arguments;}
  public static class OscCodec

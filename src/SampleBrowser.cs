@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SlopProX
+namespace SlopStudio
 {
     public sealed class SampleBrowser : UserControl
     {

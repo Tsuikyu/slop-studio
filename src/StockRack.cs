@@ -4,7 +4,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms;
-namespace SlopProX {
+namespace SlopStudio {
  public sealed partial class MainForm {
   private Dictionary<Guid,StockEffectEditor> _stockWindows=new Dictionary<Guid,StockEffectEditor>();
   private void AddStockEffect(Track track,string kind){Guid targetId=track==null?Guid.Empty:track.Id;var order=InsertChain.Entries(_project,targetId).Select(e=>e.Id).ToList();var state=_project.Studio.Copy();var slot=StockEffects.Create(targetId,kind);state.Effects.Add(slot);order.Add(slot.Id);InsertChain.Set(state,targetId,order);CommitStudio("Add Slop "+kind,state);OpenStockEffect(slot.Id);}

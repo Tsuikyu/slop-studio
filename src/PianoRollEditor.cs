@@ -4,7 +4,7 @@ using System.Drawing;
 using System.Globalization;
 using System.Windows.Forms;
 
-namespace SlopProX
+namespace SlopStudio
 {
     public sealed class MidiNotesChangedEventArgs : EventArgs
     {

@@ -5,7 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
-namespace SlopProX {
+namespace SlopStudio {
  public sealed partial class MainForm {
   private ContextMenuStrip _instrumentMenu;private GlobalTracksPanel _globalTracks;private readonly List<Tuple<Guid,TrackType,Region>> _regionClipboard=new List<Tuple<Guid,TrackType,Region>>();private bool _scaling;private Timer _scaleTimer;private VideoPreviewForm _videoWindow;
   private Func<Point> _editorPointer=()=>MousePosition;

@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-namespace SlopProX {
+namespace SlopStudio {
  // Original PCM multisamples, generated once outside the real-time callback. No third-party samples.
  public sealed class SamplerSample {public int Root,Rate,LoopStart,LoopEnd;public float[] Pcm;public bool Loop;}
  public static class SamplerBank {

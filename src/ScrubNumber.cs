@@ -2,7 +2,7 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace SlopProX
+namespace SlopStudio
 {
     // Numeric entry remains keyboard-editable; drag vertically or turn the wheel to adjust.
     public sealed class ScrubNumber : NumericUpDown

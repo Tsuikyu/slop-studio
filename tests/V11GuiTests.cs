@@ -8,7 +8,7 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Threading;
 using System.Windows.Forms;
-using SlopProX;
+using SlopStudio;
 
 internal static class V11GuiTests
 {
@@ -62,7 +62,7 @@ internal static class V11GuiTests
     [STAThread] private static int Main(string[] args)
     {
         _root = Path.Combine(Path.GetFullPath(args[0]), "run-" + Guid.NewGuid().ToString("N")); Directory.CreateDirectory(_root);
-        Environment.SetEnvironmentVariable("SLOPX_PROFILE", Path.Combine(_root, "profile"));
+        Environment.SetEnvironmentVariable("SLOPSTUDIO_PROFILE", Path.Combine(_root, "profile"));
         Application.SetUnhandledExceptionMode(UnhandledExceptionMode.CatchException);
         Application.ThreadException += delegate(object sender, ThreadExceptionEventArgs e) { Errors.Add(e.Exception); };
         Application.EnableVisualStyles(); Application.SetCompatibleTextRenderingDefault(false); UiText.Load("en-US");

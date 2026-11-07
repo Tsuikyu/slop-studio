@@ -2,7 +2,7 @@ using System;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-namespace SlopProX {
+namespace SlopStudio {
  public sealed class GlobalTracksPanel:ScaledCanvas {
   public Func<ProjectDocument> Project;public Func<int> Header,Zoom;public Func<double> First;public event EventHandler EditRequested;private bool _resize;private int _screenY,_initial;
   public GlobalTracksPanel(){BackColor=Color.FromArgb(48,48,48);DoubleBuffered=true;Cursor=Cursors.HSplit;Font=new Font("Segoe UI",8);}

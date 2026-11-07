@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace SlopProX
+namespace SlopStudio
 {
     public interface IProjectCommand
     {

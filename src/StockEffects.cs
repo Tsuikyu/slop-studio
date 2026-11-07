@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
-namespace SlopProX {
+namespace SlopStudio {
  public sealed class StockEffectSlot {
   public Guid Id{get;set;}public Guid TrackId{get;set;}public Guid? SidechainTrackId{get;set;}public string Kind{get;set;}public bool Enabled{get;set;}public Dictionary<string,double> Values{get;set;}
   public StockEffectSlot(){Id=Guid.NewGuid();Enabled=true;Kind="Compressor";Values=new Dictionary<string,double>();}

@@ -1,8 +1,8 @@
 import json, os, pathlib, subprocess, sys, time, wave
 app=pathlib.Path(sys.argv[1]).resolve();root=pathlib.Path(sys.argv[2]).resolve();root.mkdir(parents=True,exist_ok=True)
 profile=root/"profile";profile.mkdir(exist_ok=True)
-(profile/"settings.json").write_text(json.dumps({"schema":"slopx-settings","version":2,"language":"en-US","timelineZoom":8,"audioBackend":"WASAPI","integration":{"RecoverySeconds":10,"QuickStart":False}}))
-env=os.environ.copy();env["SLOPX_PROFILE"]=str(profile)
+(profile/"settings.json").write_text(json.dumps({"schema":"SLOPSTUDIO-settings","version":2,"language":"en-US","timelineZoom":8,"audioBackend":"WASAPI","integration":{"RecoverySeconds":10,"QuickStart":False}}))
+env=os.environ.copy();env["SLOPSTUDIO_PROFILE"]=str(profile)
 def launch():return subprocess.Popen([str(app),"--mcp"],stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True,encoding="utf-8",env=env)
 def request(p,i,method,params=None):
  p.stdin.write(json.dumps({"jsonrpc":"2.0","id":i,"method":method,"params":params or {}})+"\n");p.stdin.flush()

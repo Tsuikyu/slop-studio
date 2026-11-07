@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace SlopProX
+namespace SlopStudio
 {
     // One persisted ordering is shared by the mixer and the audio graph.
     public sealed class TrackInsertOrder

@@ -6,7 +6,7 @@
     {
       "feature": "Windows 11 x64 standalone",
       "status": "PASS",
-      "evidence": "Release PE32+ executable and three native DLLs; actual four-language SlopProX.exe smoke, 16 checks each",
+      "evidence": "Release PE32+ executable and three native DLLs; actual four-language SlopStudio.exe smoke, 16 checks each",
       "limits": "Clean source and archive verification recorded separately"
     },
     {

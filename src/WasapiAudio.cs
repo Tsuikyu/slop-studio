@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.Text;
-namespace SlopProX
+namespace SlopStudio
 {
  // FramesPlayed estimates frames that reached the endpoint, rather than frames queued for it.
  public interface IAudioOutput:IDisposable {long FramesPlayed{get;} event Action<Exception> Failed;}

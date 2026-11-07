@@ -10,7 +10,7 @@ using System.Web.Script.Serialization;
 using System.Windows.Forms;
 using System.Linq;
 
-namespace SlopProX
+namespace SlopStudio
 {
     public sealed class PluginDescriptor
     {

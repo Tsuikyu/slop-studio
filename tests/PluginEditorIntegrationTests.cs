@@ -4,7 +4,7 @@ using System.IO;
 using System.Runtime.InteropServices;
 using System.Threading;
 using System.Windows.Forms;
-using SlopProX;
+using SlopStudio;
 internal static class PluginEditorIntegrationTests
 {
  [DllImport("user32.dll")]private static extern IntPtr GetWindow(IntPtr h,int command);

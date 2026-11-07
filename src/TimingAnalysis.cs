@@ -1,5 +1,5 @@
 using System;using System.Collections.Generic;using System.IO;using System.Linq;
-namespace SlopProX {
+namespace SlopStudio {
  public sealed class TimingMarker {public double SourceSeconds,TargetSeconds,Strength;}
  public sealed class TimingAnalysis {
   public float[] Samples;public int Rate,Channels;public double DetectedTempo,Confidence;public List<TimingMarker> Markers=new List<TimingMarker>();public double Duration{get{return Samples.Length/(double)(Rate*Channels);}}

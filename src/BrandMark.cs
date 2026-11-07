@@ -1,6 +1,6 @@
 using System.Drawing;
 using System.Drawing.Drawing2D;
-namespace SlopProX {
+namespace SlopStudio {
  public static class BrandMark {
   public static void Draw(Graphics g,Rectangle bounds){var state=g.Save();g.TranslateTransform(bounds.X,bounds.Y);g.ScaleTransform(bounds.Width/256f,bounds.Height/256f);g.SmoothingMode=SmoothingMode.AntiAlias;
    using(var background=StudioDraw.Rounded(new Rectangle(4,4,248,248),52))using(var brush=new SolidBrush(Color.FromArgb(23,28,38)))g.FillPath(brush,background);

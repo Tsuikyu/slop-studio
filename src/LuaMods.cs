@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.Script.Serialization;
-namespace SlopProX {
+namespace SlopStudio {
  public sealed class LuaOperation {public string Command;public Dictionary<string,object> Arguments;}
  public static class LuaMods {
   [UnmanagedFunctionPointer(CallingConvention.Cdecl)]private delegate int Host(IntPtr json,IntPtr result,int capacity);

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
-namespace SlopProX {
+namespace SlopStudio {
  public static class MidiFileImport {
   private sealed class Note {public long Start,End;public int Pitch,Velocity,Channel;}
   private sealed class Tempo {public long Tick;public int Micro=500000;}

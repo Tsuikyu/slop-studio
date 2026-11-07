@@ -3,7 +3,7 @@ using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace SlopProX
+namespace SlopStudio
 {
     public static class ProjectMediaRelink
     {

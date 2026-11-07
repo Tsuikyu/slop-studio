@@ -9,7 +9,7 @@ PASS below only marks keys actually exercised by V8GuiTests. NOT VERIFIED rows h
 | reference application command | legacy platform | Windows | Slop handler | Origin / source | Status | Scope / limitations |
 |---|---|---|---|---|---|---|
 | Show/Hide Musical Typing | Command-K | Ctrl+K | ToggleSoftwareKeyboard | the vendorUSFactoryPreset · [source]() | NOT VERIFIED | Command maps to Ctrl. |
-| User Manual | — | F1 | UserManual | SlopProXConvenience · Slop convenience | NOT VERIFIED | Windows Help convention. |
+| User Manual | — | F1 | UserManual | SlopStudioConvenience · Slop convenience | NOT VERIFIED | Windows Help convention. |
 | Play or Stop | Space | Space | PlayOrStop | the vendorUSFactoryPreset · [source]() | NOT VERIFIED | the vendor documents Space as Play or Stop. |
 | Stop | numeric keypad 0 | Num 0 | Stop | the vendorUSFactoryPreset · [source]() | NOT VERIFIED | Requires the numeric keypad 0 key. |
 | Go to Beginning | Return | Enter | GoToBeginning | the vendorUSFactoryPreset · [source]() | NOT VERIFIED | Stops playback and returns the arrangement cursor to beat 0. |
@@ -42,8 +42,8 @@ PASS below only marks keys actually exercised by V8GuiTests. NOT VERIFIED rows h
 | Engage Solo Tracks of Selected Regions | Control-S | Ctrl+Alt+S | ToggleSolo | the vendorUSFactoryPreset · [source]() | PARTIAL | Windows translation conflicts with New Software Instrument Track (Ctrl+Alt+S); use the active S shortcut for solo. |
 | Clear/Recall Solo | Option-S | Alt+S | ClearSolo | the vendorUSFactoryPreset · [source]() | NOT VERIFIED | Clears solo state for all tracks. |
 | Mute Off for All | Control-Shift-M | Ctrl+Alt+Shift+M | UnmuteAll | the vendorUSFactoryPreset · [source]() | NOT VERIFIED | the vendor Control maps to Ctrl+Alt. |
-| Add Region (Slop Studio) | Ctrl-Shift-R | Ctrl+Shift+R | AddRegion | SlopProXConvenience · Slop convenience | NOT VERIFIED | Slop Studio convenience mapping; not claimed as a reference application default. |
-| Delete Region (Slop Studio) | Delete | Delete | DeleteRegion | SlopProXConvenience · Slop convenience | NOT VERIFIED | Slop Studio convenience mapping. |
+| Add Region (Slop Studio) | Ctrl-Shift-R | Ctrl+Shift+R | AddRegion | SlopStudioConvenience · Slop convenience | NOT VERIFIED | Slop Studio convenience mapping; not claimed as a reference application default. |
+| Delete Region (Slop Studio) | Delete | Delete | DeleteRegion | SlopStudioConvenience · Slop convenience | NOT VERIFIED | Slop Studio convenience mapping. |
 | Record | R | R | Record | the vendorUSFactoryPreset · [source]() | NOT VERIFIED | Starts a real input recording workflow; dependencies are validated. |
 | Pause | numeric keypad period | Num . | Pause | the vendorUSFactoryPreset · [source]() | NOT VERIFIED | Pauses transport at the current timeline position. |
 | Show/Hide Piano Roll | P | P | ShowPianoRoll | the vendorUSFactoryPreset · [source]() | NOT VERIFIED | Shows or hides the piano-roll editor. |

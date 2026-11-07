@@ -26,7 +26,7 @@ Target: Windows 11 x86-64, Release, CMake / Ninja / LLVM-MinGW UCRT, .NET Framew
 
 ## Tests Run
 
-- `V13CoreTests.exe`: 13 items covering synthetic audio/MIDI, stems, saving, profiles, Launchpad mapping, and related behavior. With `SLOPX_TEST_MP3=1`, one additional item using external FFmpeg also passed.
+- `V13CoreTests.exe`: 13 items covering synthetic audio/MIDI, stems, saving, profiles, Launchpad mapping, and related behavior. With `SLOPSTUDIO_TEST_MP3=1`, one additional item using external FFmpeg also passed.
 - `V13GuiTests.exe`: Nine Windows-window tests covering master control, piano roll, sample browser, fullscreen, templates, custom keys, Launchpad settings, themes, and instrument icons.
 - `V12GuiTests.exe`: 11 items; `V9GuiTests.exe`: 12 items passed. These used controlled Windows messages; they do not cover all physical mouse and tablet gestures.
 - CTest: 9 of 10 suites passed; one OSC item in `StudioIntegrationTests` failed (the other 19 items in that suite passed).

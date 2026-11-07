@@ -1,7 +1,7 @@
 using System;
 using System.IO;
 
-namespace SlopProX
+namespace SlopStudio
 {
     public sealed class SamplerSettings
     {

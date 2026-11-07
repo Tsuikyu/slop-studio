@@ -5,7 +5,7 @@ using System.Linq;
 using System.Reflection;
 using System.Collections;
 using System.Threading;
-using SlopProX;
+using SlopStudio;
 
 internal static class V12UserProjectTests
 {
@@ -13,7 +13,7 @@ internal static class V12UserProjectTests
     {
         if (args.Length != 3) { Console.Error.WriteLine("Usage: V12UserProjectTests flp|verify-conversion|nexus input output-directory"); return 2; }
         string root = Path.GetFullPath(args[2]); Directory.CreateDirectory(root);
-        Environment.SetEnvironmentVariable("SLOPX_PROFILE", Path.Combine(root, "profile"));
+        Environment.SetEnvironmentVariable("SLOPSTUDIO_PROFILE", Path.Combine(root, "profile"));
         try
         {
             if (args[0] == "flp")

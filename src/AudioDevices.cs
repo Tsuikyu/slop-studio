@@ -5,7 +5,7 @@ using System.IO;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
-namespace SlopProX
+namespace SlopStudio
 {
     public sealed class DeviceChoice { public int Id; public string Name; public override string ToString(){return Name;} }
     public static class WinMmDevices

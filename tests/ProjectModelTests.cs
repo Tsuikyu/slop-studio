@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using System.Web.Script.Serialization;
-using SlopProX;
+using SlopStudio;
 
 internal static class ProjectModelTests
 {
@@ -17,7 +17,7 @@ internal static class ProjectModelTests
         string localeDirectory = args.Length > 0 ? args[0] : Path.Combine(Environment.CurrentDirectory, "locales");
         string scratchDirectory = args.Length > 1 ? args[1] : Path.Combine(Environment.CurrentDirectory, "test-work");
         Directory.CreateDirectory(scratchDirectory);
-        string testDirectory = Path.Combine(scratchDirectory, "SlopProXTests-" + Guid.NewGuid().ToString("N"));
+        string testDirectory = Path.Combine(scratchDirectory, "SlopStudioTests-" + Guid.NewGuid().ToString("N"));
         Directory.CreateDirectory(testDirectory);
 
         Run("default model and serialization round-trip", delegate { TestRoundTrip(); });

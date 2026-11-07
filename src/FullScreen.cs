@@ -1,7 +1,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace SlopProX
+namespace SlopStudio
 {
     public sealed partial class MainForm
     {

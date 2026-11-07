@@ -2,7 +2,7 @@ using System;
 using System.IO;
 using System.Windows.Forms;
 
-namespace SlopProX
+namespace SlopStudio
 {
     internal static class Program
     {
@@ -26,7 +26,7 @@ namespace SlopProX
                 return;
             }
 
-            if(smoke)Environment.SetEnvironmentVariable("SLOPX_PROFILE",Path.Combine(Path.GetDirectoryName(Path.GetFullPath(reportPath)),"smoke-profile"));
+            if(smoke)Environment.SetEnvironmentVariable("SLOPSTUDIO_PROFILE",Path.Combine(Path.GetDirectoryName(Path.GetFullPath(reportPath)),"smoke-profile"));
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             string localeDirectory = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "locales");

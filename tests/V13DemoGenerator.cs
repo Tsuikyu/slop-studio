@@ -1,7 +1,7 @@
 using System;
 using System.IO;
 using System.Linq;
-using SlopProX;
+using SlopStudio;
 
 internal static class V13DemoGenerator
 {

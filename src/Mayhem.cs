@@ -1,5 +1,5 @@
 using System;using System.Collections.Generic;using System.Diagnostics;using System.Drawing;using System.Drawing.Drawing2D;using System.IO;using System.Media;using System.Text;using System.Windows.Forms;
-namespace SlopProX {
+namespace SlopStudio {
  internal sealed class FallingRegion {public RectangleF Bounds;public string Name;public Color Color;public float Velocity,Horizontal,Angle,Spin;}
  internal sealed class MayhemOverlay:Control {
   private Bitmap _background;private List<FallingRegion> _regions;private Timer _timer;private Stopwatch _watch=new Stopwatch();private double _last;private SoundPlayer _sound;private MemoryStream _wave;

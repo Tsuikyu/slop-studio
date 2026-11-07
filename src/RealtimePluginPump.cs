@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Concurrent;
 using System.Threading;
-namespace SlopProX {
+namespace SlopStudio {
  internal sealed class PluginAudioJob {
   public float[] Audio;public MidiEventPacket[] Events;public NativePlugin.QueuedParameter[] Parameters;public int Frames,Count,Numerator,Denominator;public long Position;public double Tempo,Beat;public bool Playing;
   public PluginAudioJob(int block){Audio=new float[block*2];Events=new MidiEventPacket[4096];}

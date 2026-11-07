@@ -8,7 +8,7 @@ using System.Threading;
 using System.Web.Script.Serialization;
 using System.Windows.Forms;
 
-namespace SlopProX
+namespace SlopStudio
 {
     // No vendor module is loaded in this process. One x64 worker owns one instance.
     public sealed partial class NativePlugin : IDisposable

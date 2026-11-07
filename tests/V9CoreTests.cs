@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using SlopProX;
+using SlopStudio;
 
 internal static class V9CoreTests
 {
@@ -34,7 +34,7 @@ internal static class V9CoreTests
     private static int Main(string[] args)
     {
         root = Path.Combine(Path.GetFullPath(args[0]), "run-" + Guid.NewGuid().ToString("N")); Directory.CreateDirectory(root);
-        Environment.SetEnvironmentVariable("SLOPX_PROFILE", Path.Combine(root, "profile"));
+        Environment.SetEnvironmentVariable("SLOPSTUDIO_PROFILE", Path.Combine(root, "profile"));
         string a = Audio("a", .2f, 96000), b = Audio("b", .1f, 96000);
         Test("Sampler imported PCM, root note, ADSR and project persistence", delegate {
             var p = new ProjectDocument(); var t = ProjectFactory.CreateTrack("Sampler", TrackType.Midi); p.Tracks.Add(t);

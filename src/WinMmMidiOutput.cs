@@ -1,7 +1,7 @@
 using System;
 using System.Runtime.InteropServices;
 
-namespace SlopProX
+namespace SlopStudio
 {
     public sealed class WinMmMidiOutput : IDisposable
     {
