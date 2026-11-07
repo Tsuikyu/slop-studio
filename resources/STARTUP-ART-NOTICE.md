@@ -1,3 +1,3 @@
 # Startup artwork
 
-`Startup.png` was supplied by the requester for use as the Slop Studio startup image on 2026-10-29. The application draws the changing progress bar and startup status in code. The contributor has not independently verified authorship or redistribution licensing for this image. Confirm the rights and applicable license before public redistribution or assigning an MIT license to this asset.
+`Startup.png` was supplied by the project requester for use in Slop Studio. The requester states that the image was generated using ChatGPT and has explicitly requested its public distribution as part of this repository. The application draws the changing progress bar and startup status in code. This statement records the provided provenance and authorization; it does not purport to determine copyright status in every jurisdiction.
