@@ -1,25 +1,25 @@
 Current 0.8 audit: [defects](defect-report-v8.md), [reference comparison](reference-comparison-v8.md), [shortcut registry](shortcut-spec-v8.json). Earlier results below are historical.
 
-# Visual reference comparison — 0.7
+# Visual Reference Comparison — 0.7
 
-比較元はユーザー提供の2024-12-19、2024-09-13、2024-03-20の画面と、追加のアレンジ／Launcher／プラグイン／起動画面です。画像は分析だけに使い、アプリや配布物に埋め込んでいません。独自GDI描画・SVG・ICOと既存WinForms部品を使用しています。現在のthe vendor公式リリースノートでは12.4が掲示されています。参照画像から未提供の13の画面仕様を推定して一致認定していません。
+The references were user-provided screenshots dated 2024-12-19, 2024-09-13, and 2024-03-20, plus additional arrangement, Launcher, plugin, and startup screens. The images were used only for analysis and were not embedded in the application or distributions. The implementation uses original GDI drawing, SVG, ICO, and existing WinForms controls. The current official vendor release notes list version 12.4. No unprovided version 13 screen behavior was inferred from the references or certified as matching.
 
-| 領域 | 参照と旧版の差／影響 | 0.7での実装・担当ファイル | 確認結果／残差 |
+| Area | Difference from reference and impact in earlier version | Implementation in 0.7 and responsible files | Verification and remaining gaps |
 |---|---|---|---|
-| 全体構成 | 初期版は小さなトラック一覧と白い空白が大部分 | MainForm / StudioPanels。左Library、Inspector、固定track headers、可動Arrangement、下部Mixer/Editors、右Browserを分割配置 | 最大化／1280×800で実画面確認。構造は近づいたが厳密一致はPARTIAL |
-| 上部操作 | 文字だけの小さなtoolbar、transport欠落 | StudioChrome。左view group、中央8 transport controlsとLCD、右masterとutility controls | 実再生／停止／録音と状態同期。参照にある全utility buttonは未実装 |
-| 配色・文字 | 明るすぎる地面と小さすぎる作業領域 | charcoalの編集面、灰色chrome、緑MIDI／青audio／紫の選択、Segoe UI、一定border | 4言語、選択／hover、文字重なりと目盛りを修正。the vendorフォントや固有assetは使用しない |
-| Library / Inspector | トラック選択と編集対象の関係が不明瞭 | StudioPanels。sound library、region/track fields、選択channel+master strips | 選択・名前・M/S/R・音量・plugin controlsに接続。参照の全patch/library体系はない |
-| track headers | 一覧の密度・サイズ・armが不適切 | TimelineCanvas。番号、色帯、独自楽器／wave icon、名前、M/S/R、選択と幅変更 | 26/46等のlane高さとスクロール、8pixel hit area。アイコンの精細さは参照と異なる |
-| Arrangement | 空白／ruler／region geometry／playhead不備 | TimelineEditor。beat ruler、cycle bar、sample由来waveform、MIDI bars、捕捉playhead、edge pan | 12 tracks /46 regionsを実際に発音。任意データの密度で違いが出るため画素一致認定なし |
-| Mixer | 短いfader、被る数字、少ない状態表示 | ChannelStripControl。instrument/FX、pan、dB、real peak meters、fader、M/S/R、色strip。高さに応じfaderへ配分 | 操作と実エンジンに接続。aux/send/VCA/full bus graphは未実装で飾りにしない |
-| Piano roll / score | 相互関係と拡縮が弱い | PianoRollEditor / CreationEditors。同じMIDIノートの編集、独立カメラ、幅変更、下部tabs | 一音編集・undo・譜面/step entry。高度な複数選択／商用浄書はPARTIAL |
-| Pitch / Timing | 参照のFlex系編集と差が大きい | SlopPitch / TimingAnalysis。音声に由来するpitch segments／waveform、editable destination markers | 数値試験とGUI実編集PASS。AI／polyphonic／formant品質の一致は未達 |
-| Launcher | 参照のセルとtimeline併置 | LauncherCanvas / MainFeatures。clip cells、scene launch、quantize、tracksとのsplit | ループ先頭音を修正。直接セル録音／performance recordingは未実装 |
-| plugin UI | 一般的なリストしかなく使いにくい | PluginBrowserDialog。category、search、native dark headers、details、scan errors。vendor editorは実instanceを埋込み | real fixture/catalogとactual vendor editor確認。the vendor付属pluginのGUIやアルゴリズムを模倣するfake画面は作らない |
-| ウィンドウ | 最新指示では右上Windows方式が必要 | native Sizable/FixedDialog frames、DWM caption colors、独自icon | 右上ボタンを使用。Macの交通信号は撤去済み |
-| 起動とAbout | 参照の製品感と案内が不足 | BrandMark / SplashForm / QuickStartForm / ShowAbout | 独自の猫耳シルエットと4言語指定文。the vendor logo、スクショ切り抜き、他社iconは使わない |
+| Overall layout | The initial version showed a small track list with mostly empty white space. | MainForm / StudioPanels: split layout with Library and Inspector on the left, fixed track headers, resizable Arrangement, Mixer/Editors below, and Browser on the right. | Checked on a real display when maximized and at 1280×800. The structure is closer, but exact matching is PARTIAL. |
+| Top controls | Small text-only toolbar and missing transport. | StudioChrome: left-side view group, eight central transport controls with LCD, and master/utility controls on the right. | Playback, stop, recording, and state synchronization work. Not all utility buttons from the reference are implemented. |
+| Colors and type | Background was too bright and the work area too small. | Charcoal editing surfaces, gray chrome, green MIDI / blue audio / purple selection, Segoe UI, and consistent borders. | Four languages, selection/hover states, text overlap, and ruler issues were checked. No vendor fonts or proprietary assets are used. |
+| Library / Inspector | The relationship between track selection and editing targets was unclear. | StudioPanels: sound library, region/track fields, and selected-channel plus master strips. | Selection, name, M/S/R, volume, and plugin controls are connected. The reference's complete patch/library system is absent. |
+| Track headers | Density, size, and arming were inadequate. | TimelineCanvas: number, color band, original instrument/wave icon, name, M/S/R, selection, and width resizing. | Lane heights such as 26/46, scrolling, and an 8-pixel hit area were checked. Icon detail differs from the reference. |
+| Arrangement | Blank space, ruler, region geometry, and playhead behavior were deficient. | TimelineEditor: beat ruler, cycle bar, waveform sourced from samples, MIDI bars, snapped playhead, and edge panning. | 12 tracks / 46 regions were played. No pixel-match claim was made because density depends on the user's data. |
+| Mixer | Short faders, overlapping values, and insufficient state indicators. | ChannelStripControl: instrument/FX, pan, dB, real peak meters, fader, M/S/R, and color strip. Fader space adapts to available height. | Connected to interactive controls and the audio engine. Aux/send/VCA/full bus graph remains unimplemented and is not shown as decorative functionality. |
+| Piano roll / score | Weak relationship between editors and poor scaling. | PianoRollEditor / CreationEditors: edit the same MIDI notes, independent viewport, width resizing, and bottom tabs. | Single-note editing, Undo, score and step entry were checked. Advanced multi-selection and professional engraving remain PARTIAL. |
+| Pitch / Timing | Major gap from the reference's flexible pitch editing. | SlopPitch / TimingAnalysis: audio-derived pitch segments/waveform and editable destination markers. | Numeric tests and GUI editing passed. Matching AI, polyphonic, and formant quality is not achieved. |
+| Launcher | Reference places cells and timeline together. | LauncherCanvas / MainFeatures: clip cells, scene launch, quantization, and split view alongside tracks. | Fixed the first sound on loop start. Direct cell recording and performance recording are not implemented. |
+| Plugin UI | A generic list was difficult to use. | PluginBrowserDialog: categories, search, native dark headers, details, scan errors, and embedded real-instance vendor editors. | Checked with real fixtures/catalog and an installed plugin editor. No fake screen copies an included vendor plugin's UI or algorithm. |
+| Window | Latest requirements call for standard Windows controls at upper right. | Native Sizable/FixedDialog frames, DWM caption colors, and original icon. | Upper-right Windows controls are used. Mac-style traffic-light controls were removed. |
+| Startup and About | Product identity and onboarding were insufficient. | BrandMark / SplashForm / QuickStartForm / ShowAbout. | Original cat-ear silhouette and specified copy in four languages. No vendor logo, screenshot crops, or third-party icons are used. |
 
-実際のアプリ撮影: verification/v7/app-ja-JP-example-mixer.png、同example-piano、gui-finalのTiming、6effect、About、QuickStart等。撮影は対象アプリのPrintWindowだけで行い、デスクトップや他アプリを撮影していません。画像差分による厳密な一致率は算出していません。独自データ、解像度、OS frameが異なる画像に架空の一致率は付けません。
+Application captures: `verification/v7/app-ja-JP-example-mixer.png`, the corresponding `example-piano`, and GUI captures of Timing, six effects, About, QuickStart, and others. Captures used only the target application's PrintWindow; no desktop or other application was captured. No exact visual similarity percentage was calculated. No fictional matching percentage is assigned to screenshots with different original data, resolutions, or OS frames.
 
-Source: 
+Source:

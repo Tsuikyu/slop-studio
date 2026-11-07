@@ -1,22 +1,22 @@
-# Slop Studio 0.13 — 実装前の優先順位と難易度
+# Slop Studio 0.13 — Priorities and Difficulty Before Implementation
 
-既存 0.12 のコードと検証台帳を確認した時点の暫定評価。各機能は動作と保存を検証し、未完了を完成扱いしない。
+This is a provisional assessment based on the existing 0.12 code and verification ledger. Verify each feature's behavior and persistence; do not present incomplete work as finished.
 
-| 優先 | 内容 | 難易度 | 先に確認する依存関係・受入条件 |
+| Priority | Item | Difficulty | Dependencies and acceptance criteria to verify first |
 |---|---|---|---|
-| P0 | 再生位置と音のずれ（トラック／Launcher） | 高 | 音声処理フレーム、デバイス再生位置、バッファー、ループ／シークを分けて追跡し、合成信号と実機で可能な範囲を検証する。 |
-| P0 | 右上マスター音量 | 中 | 操作の当たり判定、マスター値の往復、DSP 出力、ミキサーとの同期を実測し、独自の角形 UI で表示する。 |
-| P1 | サンプル／テンプレートの原本保護 | 高 | 名前を付けて保存、原子的保存、Undo、素材参照を考慮し、原本を上書きできないことを検証する。 |
-| P1 | MIDI 書き出し、ステム書き出し | 中〜高 | ノートの位置・長さ・ベロシティ・テンポを標準 MIDI として再読込する。既存ステム機能はルーティングと失敗時の上書きを監査する。 |
-| P1 | ブラウザーのブックマーク／お気に入り／検索 | 中 | 実ファイルは移動せずパス参照のみ保存。存在しない素材の扱いと再起動時の復元を検証する。 |
-| P1 | Undo 回数、全画面 | 中 | 履歴の保存状態と上限変更、タスクバーの表示・復帰を検証する。 |
-| P2 | ピアノロールのベロシティ等の編集 | 高 | 選択ノートへの編集、Undo、保存と音源へ渡る値を検証する。未対応の編集は明示する。 |
-| P2 | プロジェクト情報と WAV／MP3 メタデータ | 高 | 文字コードと互換性を確認する。MP3 エンコードがない場合は機能を装わない。 |
-| P2 | ショートカットの保存・読み込み | 高 | 既存の集約レジストリ、競合、文字入力、設定復元を調べる。他 DAW 風プリセットの内容を捏造しない。 |
-| P2 | サンプル曲の整備と新規 J-Pop 曲 | 高 | 独自の MIDI・音源で制作し、128/150 BPM、再生・保存を確認。音圧の実測と試聴条件を分ける。 |
-| P3 | ファイル名から BPM を推定してテンポ追従 | 非常に高 | 推定確認・素材単位の保存・後から変更・ピッチ維持の実音声処理が必要。数字のみでテンポを確定しない。 |
-| P3 | Launchpad 操作 | 非常に高 | 機種ごとの MIDI 配列、入出力競合、LED 更新を確認。実機未接続なら合成 MIDI の範囲に限定して報告する。 |
-| P3 | フリーズ／解除 | 非常に高 | プラグイン状態、ルーティング、音源ファイル、Undo、復元と再生中の変更を安全に扱う。 |
-| P3 | カスタムテーマとプリセット | 高 | 独自 UI、共通色、保存、コントラスト、再起動を横断して検証する。 |
+| P0 | Playback position and audio drift (Tracks / Launcher) | High | Track processed frames, device playback position, buffers, loops, and seeks separately. Verify with synthetic signals and physical hardware where available. |
+| P0 | Master volume in the upper-right | Medium | Measure hit testing, round-trip master values, DSP output, and mixer synchronization; display it in the original angular UI. |
+| P1 | Protect sample/template originals | High | Verify that Save As behavior, atomic saves, Undo, and media references prevent overwriting originals. |
+| P1 | MIDI export and stem export | Medium–High | Re-import standard MIDI and verify note positions, lengths, velocities, and tempo. Audit existing stem routing and overwrite behavior on failure. |
+| P1 | Browser bookmarks, favorites, and search | Medium | Save path references only; do not move source files. Verify missing-media handling and restoration after restart. |
+| P1 | Undo history limit and fullscreen | Medium | Verify history persistence, configurable limits, and taskbar visibility/restoration. |
+| P2 | Piano-roll editing such as velocity | High | Verify edits to selected notes, Undo, saving, and values delivered to instruments. Clearly identify unsupported edits. |
+| P2 | Project information and WAV/MP3 metadata | High | Check text encoding and compatibility. Do not present MP3 export as available if MP3 encoding is absent. |
+| P2 | Save and load shortcut profiles | High | Inspect the existing central registry, conflicts, text entry, and settings restoration. Do not fabricate other DAWs' shortcut profiles. |
+| P2 | Improve sample projects and create a J-pop project | High | Create original MIDI and instruments; verify 128/150 BPM, playback, and saving. Separate measured loudness from listening conditions. |
+| P3 | Infer sample BPM from filenames and follow tempo | Very High | Requires confirmation of inferred values, per-sample persistence, later editing, and real pitch-preserving audio processing. Do not infer tempo from digits alone. |
+| P3 | Launchpad control | Very High | Check each device's MIDI mapping, port contention, and LED updates. Without hardware, report only synthetic MIDI coverage. |
+| P3 | Freeze and unfreeze tracks | Very High | Safely preserve plugin state, routing, source media, Undo, recovery, and changes during playback. |
+| P3 | Custom themes and presets | High | Verify the shared UI, common colors, saving, contrast, and behavior after restart across the application. |
 
-すべてを一度に完成したと見なさず、音の整合性とデータ保護を優先して実装し、実際に検証できた範囲を記録する。
+Do not consider everything complete at once. Prioritize audio consistency and data protection, and report only what was actually verified.

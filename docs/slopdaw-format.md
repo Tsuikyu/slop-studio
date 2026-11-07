@@ -1,7 +1,7 @@
-# .slopdaw プロジェクト形式
+# `.slopdaw` Project Format
 
-標準形式は UTF-8 の JSON です。ルートには `schema: "slopdaw-project"`、整数 `version: 1`、プロジェクト ID、名前、テンポ、拍子、トラック、`studio` 状態を持ちます。トラックにはリージョンと MIDI ノート、音源・プラグインの状態などが含まれます。検証に失敗したデータ、別のスキーマ、未対応の将来バージョンは拒否します。ファイル上限は 64 MiB です。
+The standard format is UTF-8 JSON. The root object contains `schema: "slopdaw-project"`, integer `version: 1`, project ID, name, tempo, meter, tracks, and `studio` state. Tracks may contain regions, MIDI notes, instrument/plugin states, and related data. Invalid data, other schemas, and unsupported future versions are rejected. The file-size limit is 64 MiB.
 
-保存は同じディレクトリーの一時ファイルへ書いて検証・フラッシュし、既存ファイルは置換時に一意な `.bak` バックアップとして保持します。バックアップは蓄積するため、必要に応じてユーザーが管理してください。自動復旧スナップショットは別の場所に保持します。
+Saving writes to a temporary file in the same directory, validates and flushes it, then replaces the existing file while retaining a uniquely named `.bak` backup. Backups accumulate, so users should manage them as needed. Automatic recovery snapshots are stored elsewhere.
 
-音声メディアは外部ファイル参照です。読み込み時には相対パスをプロジェクトのディレクトリーから解決しますが、すべての参照を相対化したり素材をまとめたりする機能はまだありません。参照先を移動・削除すると音声を復元できない場合があります。DAWproject の独自拡張もこの形式を使用します。
+Audio media are referenced as external files. Relative paths are resolved from the project directory on load, but not all references are made relative, and media collection is not yet available. Moving or deleting a referenced file may make the audio unrecoverable. Native DAWproject extensions also use this format.

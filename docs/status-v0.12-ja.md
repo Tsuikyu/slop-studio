@@ -1,29 +1,29 @@
-# Slop Studio 0.12 — 変更と検証
+# Slop Studio 0.12 — Changes and Verification
 
-対象: Windows 11 x86-64、Release。CMake / Ninja / LLVM-MinGW UCRT と .NET Framework 4.8 の C# コンパイラーでビルド。アプリと別プロセスの GPL-3.0-only ASIO / Ableton Link companion を同梱します。作者表示は Tsuikyu。冗談表示と Codex 使用表示は維持しています。
+Target: Windows 11 x86-64, Release. Built with CMake / Ninja / LLVM-MinGW UCRT and the .NET Framework 4.8 C# compiler. Includes the application and separate-process GPL-3.0-only ASIO / Ableton Link companion. Author credit is Tsuikyu. The disclaimer and Codex attribution remain.
 
-## 今回の変更
+## Changes in This Version
 
-- **PASS（合成信号・GUI）** 「ファイル → マスター」から Ctrl+B で実際の WAV 書き出しを開く。16/24-bit PCM、32-bit float、マスターエフェクト有効／無効をテスト。参照用ファイルの波形と Windows 既定出力での試聴を追加。
-- **PARTIAL** リージョン／トラックを元位置にオーディオ化、および全トラックをオーディオ化して置き換える3項目は実装していないため無効。参照音源との同期 A/B 比較や DAW の選択した ASIO 出力を使う試聴は未実装。
-- **PASS（実 VST3・処理データ）** 再生位置変更・ループ時、未発音の全ノートに Note Off を大量送信していた問題を修正。ユーザー提供のプロジェクトとローカルの Nexus VST3 で、48 kHz/512 フレームの約40秒処理中 3,668/3,750 ブロックが発音、ループ後も継続、処理ワーカーの missed block は 0。実際の ASIO ドライバーを通したスピーカー聴取は未検証。
-- **PARTIAL（実 FLP）** 88-byte プレイリストを認識。提供された FLP の変換・保存・再読込は 46 トラック、952 リージョン、20,412 ノート。370 音声リージョン（11種類の素材）は元ファイルが見つからず、位置と参照を持つ無音 `[Missing]` リージョンにした。右クリックから WAV の再リンクと Undo が可能。元音源やエフェクト、オートメーション、ルーティング、トリム、伸縮、スライドノートは再現しない。インポートレポートと不足素材を確認すること。
-- **PASS（GUI と保存）** フォルダー・スタック／ミックス・スタック、波形エディター、動画を読み込むの表示を更新。スクリプト登録・選択実行・削除、コントローラーのボタン割り当て、トラックとリージョンの背景／文字色、インスペクターのホイールと上下ドラッグを追加。色と割り当ては保存される。
-- **PASS（GUI）/ NOT VERIFIED（実機）** ASIO 選択時のドライバー設定ボタンと、既存または別プロセスの ASIO ドライバーパネルへの呼び出しを追加。無効 CLSID の拒否と設定画面からの呼び出しを検証。実際のドライバーの設定画面と、物理 MIDI キーボード、マイク、コントローラー操作は未検証。
-- **PASS（GUI）** Slop Launcher を黒・紫の独自コンポーネントに更新。サンプルブラウザーにデコード済み波形と試聴を追加。日本語のサンプルブラウザーと About の文字切れを修正し、インスペクターの初期幅を拡大。全言語・全解像度で文字切れが無いとは未確認。
+- **PASS (synthetic signal and GUI):** Opened actual WAV export from File → Master with Ctrl+B. Tested 16/24-bit PCM, 32-bit float, and master effects enabled/disabled. Added reference-file waveforms and audition through the Windows default output.
+- **PARTIAL:** The three operations to render a region/track at its original position and render/replace all tracks are not implemented and remain disabled. Synchronized A/B comparison with reference audio and audition through the DAW-selected ASIO output are also not implemented.
+- **PASS (real VST3 and processing data):** Fixed an issue that sent large numbers of Note Off events to all notes that were not playing during seek and loop operations. With the user-provided project and local Nexus VST3, 3,668 of 3,750 blocks produced audio during approximately 40 seconds of processing at 48 kHz/512 frames; playback continued after looping and the processing worker reported zero missed blocks. Listening through an actual ASIO driver and speakers was not verified.
+- **PARTIAL (real FLP):** Recognizes the 88-byte playlist layout. Converted, saved, and reloaded the supplied FLP: 46 tracks, 952 regions, and 20,412 notes. The original files for 370 audio regions (11 media types) were not found, so those regions retain their positions and references as silent `[Missing]` regions. WAV relinking and Undo are available from the right-click menu. Original instruments/effects, automation, routing, trim, stretch, and slide notes are not reconstructed. Review the import report and missing media.
+- **PASS (GUI and saving):** Updated Folder Stack / Mix Stack, Waveform Editor, and the Import Video label. Added script registration/selected execution/deletion, controller button assignments, track and region background/text colors, and mouse-wheel/vertical-drag inspector values. Colors and assignments are saved.
+- **PASS (GUI) / NOT VERIFIED (hardware):** Added a driver settings button when ASIO is selected and calls to an existing driver panel or a driver panel in a separate process. Verified rejection of an invalid CLSID and invocation from Settings. Actual driver configuration UI, physical MIDI keyboards, microphones, and controller operation were not verified.
+- **PASS (GUI):** Updated Slop Launcher with original black and purple components. Added decoded waveforms and auditioning to the sample browser. Fixed Japanese text clipping in the sample browser and About dialog and increased the inspector's initial width. Text clipping has not been ruled out for every language and resolution.
 
-## 検証結果
+## Verification Results
 
-- `V12CoreTests.exe`: 9/9。FLP の88-byte配置、欠落音声の保持・再リンク・Undo、MIDI ノート停止処理、マスター信号、色、コントローラー、Lua、ASIO の異常入力。
-- `V12GuiTests.exe`: 11/11。マスターメニュー、名称、Launcher、色、数値ドラッグ、波形、ASIO ボタン、コントローラー画面、Lua／参照音源画面、About、音声再リンクメニュー。
-- `V11GuiTests.exe`: 6/6。ダークメニュー、Compressor、EQ、Sampler、VST3/CLAP のプリセット画面、日本語。
-- `V9GuiTests.exe`: 13/13。起動、マスターFX、MCP設定、ピアノロール、ループ、リージョン結合、インサート順序、スタックなど。
-- アプリの `--smoke`: en-US / ja-JP / de-DE / ko-KR 各17項目成功。表示、MIDI 編集、合成信号、保存と再読込を含む。物理機器と実際の聴取を示すものではない。
-- CTest: 9 スイート中 8 成功、`StudioIntegrationTests` の OSC ローカル UDP 受信が失敗（同スイートの他19項目は成功）。独立した生 UDP ループバックでも送信後の受信がタイムアウトした。この環境では OSC/VRChat 通信を確認できない。
-- GUI テストは制御された Windows メッセージによる操作で、実際のマウス・ゲームパッド、異なる物理モニターの DPI は未検証。
+- `V12CoreTests.exe`: 9/9. Includes 88-byte FLP layout, preserving/relinking/Undo for missing audio, MIDI note stop handling, master signal, colors, controllers, Lua, and invalid ASIO inputs.
+- `V12GuiTests.exe`: 11/11. Master menu, labels, Launcher, colors, numeric dragging, waveform, ASIO button, controller screen, Lua/reference audio screen, About, and audio relink menu.
+- `V11GuiTests.exe`: 6/6. Dark menus, Compressor, EQ, Sampler, VST3/CLAP preset screen, and Japanese.
+- `V9GuiTests.exe`: 13/13. Startup, master FX, MCP settings, piano roll, loop, region merge, insert order, stacks, and others.
+- App `--smoke`: 17 items passed for each of `en-US`, `ja-JP`, `de-DE`, and `ko-KR`. Includes display, MIDI editing, synthetic signals, save and reload. Does not prove physical device operation or listening results.
+- CTest: 8 of 9 suites passed. The local OSC UDP receive item in `StudioIntegrationTests` failed (the other 19 items passed). A separate raw UDP loopback also timed out after sending. OSC/VRChat communication could not be verified in this environment.
+- GUI tests used controlled Windows messages. Real mouse/gamepad operation and DPI on different physical monitors were not verified.
 
-## 仕様と配布上の残課題
+## Specification and Distribution Limitations
 
-メニュー仕様 v5.1 の全項目は未実装。FLP と全ベンダープラグインの互換性、ASIO/WASAPI の全機器、障害時の完全な音切れ防止、Debian 版は保証できない。プロジェクトは `.slopdaw` を使用する。
+The full v5.1 menu specification is not implemented. Compatibility with every FLP and third-party plugin, all ASIO/WASAPI devices, uninterrupted output during every fault, and a Debian build are not guaranteed. Projects use `.slopdaw`.
 
-MIT ライセンスの従来の著作権表示は削除せず、新しい作者表示を追加した。従来表示に含まれる旧名称は権利通知として残る。起動画面は依頼者提供の画像であり、公衆への再配布・MIT 公開に必要な権利は未確認。第三者コンポーネントと GPL companion の通知を維持する。GitHub への公開は行っていない。
+The existing copyright notices in the MIT license were retained and new author attribution was added. The old name present in the prior notice remains as a rights notice. The startup image was supplied by the requester; rights required for public redistribution and MIT publication have not been verified. Notices for third-party components and the GPL companion are retained. No GitHub publication was performed.

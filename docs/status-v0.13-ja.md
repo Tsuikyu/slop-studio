@@ -1,44 +1,44 @@
-# Slop Studio 0.13 — 実装・検証台帳
+# Slop Studio 0.13 — Implementation and Verification Ledger
 
-対象は Windows 11 x86-64、Release、CMake / Ninja / LLVM-MinGW UCRT、.NET Framework 4.8。デバイス別・物理音響の検証を区別し、実装していないものを完成と表示しない。作業前の順序と難易度は `plan-v0.13-ja.md` に記録した。
+Target: Windows 11 x86-64, Release, CMake / Ninja / LLVM-MinGW UCRT, .NET Framework 4.8. The ledger distinguishes device-specific and physical-audio verification and does not mark unimplemented features complete. The priorities and difficulty assessment from before work are in `plan-v0.13-ja.md`.
 
-| 要件 | 状態 | 実装・検証と限界 |
+| Requirement | Status | Implementation, verification, and limits |
 |---|---|---|
-| 楽器アイコン | PASS | ライブラリーとトラックの楽器アイコン、音源スロットを共通の青紫アクセントに変更。描画色と既存操作をWindows GUIテストで確認。 |
-| 右上マスター | PASS | 角形の紫スライダーとマスターDSPのスナップショットを接続。Windowsのマウスメッセージ、ミキサー表示、-12 dB時のPCM振幅比で検証。 |
-| 再生位置と音の同期 | PARTIAL | 送出フレームと出力済みフレームを分離し、ループ・シーク・テンポ変更・PDCをフレーム履歴で扱う。Launcherはアレンジのループから独立した時計を使う。合成PCMとシミュレートした遅延で検証。実際の音響出力と表示位置を測るループバック／聴取試験は未実施。ASIOとWASAPIの遅延報告にはドライバー差があり、全機器での完全解決は未確認。 |
-| MIDI書き出し | PASS | SMF format 1、複数トラック、テンポ、拍子、配置、ノート長、ピッチ、ベロシティを再読込して確認。MIDI CCやテンポマップ等の完全な交換は対象外。 |
-| ピアノロール | PARTIAL | 選択ノートのベロシティレーンを追加。拍頭の棒もドラッグでき、実GUI操作とUndoを検証。さまざまなMIDIコントローラー、完全なLogic相当の編集は未実装。 |
-| サンプル検索・ブックマーク・お気に入り | PASS | 元ファイルは移動せずパス参照を保存。追加・削除・再起動相当・検索を試験。検索は現在のフォルダーまたはお気に入り内のみで再帰検索しない。 |
-| Launchpad | PARTIAL / NOT VERIFIED | Launchpad X / Mini MK3 Programmerモードの先頭8トラック×8シーン、発射とLED色、別MIDIポート選択を実装。公式Novation資料に基づくMIDIマッピングを合成テスト。実機なし。ページ移動・他モデルは未対応／未確認。機器側でProgrammerモードへ切替が必要。 |
-| サンプルBPM自動判定・追従 | NOT IMPLEMENTED | ファイル名の数値確認、素材ごとの設定、後からの修正、テンポ変更への追従は未実装。従来の波形エディターの手動タイミング処理はあるが代替と見なさない。 |
-| プロジェクト情報・音声メタデータ | PASS | タイトル・アーティスト・ジャンル・コメント・ウェブサイトを保存。WAV RIFF INFOと、外部FFmpeg/libmp3lameによるMP3タグを `ffprobe` で確認。FFmpegは同梱しない。 |
-| テンプレートと同梱例の保護 | PASS | `.sloptemplate` と同梱 `Examples` から開くと新規コピー扱い。通常保存は別名が必要で、アプリの保存先検証は原本を拒否する。音声はパス参照、OS上の外部アプリによる変更までは防がない。 |
-| Undo回数 | PASS | 環境設定で1〜10000、保存／復元、古い履歴の切り詰め、保存済み状態を試験。 |
-| テーマ | PARTIAL | 共通色12項目、色選択、`.sloptheme` 保存／読込、再起動後反映を実装。GUIと設定再読込を検証。一部の既存の独自描画やプラグイン画面には固定色が残る。配色のコントラストは利用者の設定次第。 |
-| サンプル曲 | PARTIAL | オリジナルMIDIと付属音源による128 BPMのMelodic House、150 BPMのJ-Popを保存・再読込しPCMの有限値と発音を検証。EDMのドロップ4秒は旧 -32.3 LUFS、改訂 -12.4 LUFS、真のピーク -1.2 dBFS。全曲の聴取、プロ現場やクラブ再生での品質は未評価。 |
-| ショートカットプロファイル | PARTIAL | 既存コマンドへのキー割当、重複検出、`.slopkeys` 保存／読込、設定保存、GUIの表示と実行を検証。他DAWの信頼できる公式プリセットは付属しない。未実装コマンドや一部エディター固有のキーは網羅しない。 |
-| トラックフリーズ | NOT IMPLEMENTED | 元のMIDI／プラグイン状態を安全に復元できるフリーズ／解除は未実装。 |
-| ステム | PARTIAL | 個別出力を新規フォルダーへ保存。サミング先をミュートして無音になる問題を修正し、合成音でバス経由と兄弟トラック分離を検証。各ステムはマスター処理を個別に通るため、非線形FX時の合算一致を保証しない。バスと子トラックの同時合算は重複する。 |
-| 全画面 | PASS | F11で画面全体の矩形・最前面を使用、再度F11で元のサイズとウィンドウ状態へ復帰。Windows GUIテスト。複数物理モニターと異なるDPIは未検証。 |
-| OSC | FAIL / NOT VERIFIED | CTestのローカルUDP受信がタイムアウト。独立した素のUDP自己送受信も失敗し、この環境での通信確認はできない。原因を環境に限定したと断定せず、VRChat通信も未検証。 |
-| VST3 / CLAP | PARTIAL | 既存のテスト用プラグインでDSP、サンプル単位オートメーション、異常なワーカーの隔離を検証。全ベンダー互換や実機の音途切れなしは未保証。 |
+| Instrument icons | PASS | Changed instrument icons in the library and track headers and the instrument slot to a shared blue-purple accent. Verified rendered colors and existing operations with Windows GUI tests. |
+| Master control in upper-right | PASS | Connected an angular purple slider to a master DSP snapshot. Verified with Windows mouse messages, mixer display, and PCM amplitude ratio at -12 dB. |
+| Playback/audio synchronization | PARTIAL | Separated submitted and completed audio frames; loop, seek, tempo change, and PDC use frame history. Launcher uses its own clock independent of the arrangement loop. Verified with synthetic PCM and simulated latency. No loopback/listening test measured actual acoustic output against the displayed position. ASIO and WASAPI report latency differently across drivers; a complete fix across all devices is unverified. |
+| MIDI export | PASS | Re-imported and verified SMF format 1, multiple tracks, tempo, meter, positions, note lengths, pitches, and velocities. Complete exchange of MIDI CC and tempo maps is out of scope. |
+| Piano roll | PARTIAL | Added a velocity lane for selected notes. Bars at beat starts can also be dragged; verified real GUI interaction and Undo. Editing across many MIDI controllers and a fully equivalent editing workflow are not implemented. |
+| Sample search, bookmarks, and favorites | PASS | Saves path references without moving source files. Tested adding, removing, restart-like restoration, and search. Search is limited to the current folder or favorites and is not recursive. |
+| Launchpad | PARTIAL / NOT VERIFIED | Implemented the first 8 tracks × 8 scenes, launch, LED colors, and separate MIDI port selection for Launchpad X / Mini MK3 Programmer mode. Synthetic tests use MIDI mappings based on official Novation documentation. No hardware was available. Page navigation and other models are unsupported/unverified. The device must be switched to Programmer mode. |
+| Automatic sample BPM detection and sync | NOT IMPLEMENTED | Filename-based detection, per-sample settings, later editing, and following project tempo are not implemented. The existing waveform editor has manual timing tools, but they are not a substitute. |
+| Project metadata and audio tags | PASS | Saves title, artist, genre, comments, and website. Verified WAV RIFF INFO and MP3 tags via external FFmpeg/libmp3lame using `ffprobe`. FFmpeg is not bundled. |
+| Protect templates and included examples | PASS | Opening `.sloptemplate` or an included item from `Examples` creates a new-copy workflow. Normal saving requires a different name, and application save-path validation rejects overwriting the original. Audio uses path references; this does not prevent external applications from changing source files. |
+| Undo history limit | PASS | Tested Settings range 1–10,000, persistence/restoration, pruning older history, and saved-state tracking. |
+| Themes | PARTIAL | Implemented 12 shared color settings, color selection, `.sloptheme` save/load, and applying after restart. Verified GUI and settings reload. Some existing custom drawing and plugin windows still use fixed colors. Contrast depends on user choices. |
+| Sample projects | PARTIAL | Saved/reloaded original MIDI and bundled instruments for 128 BPM Melodic House and 150 BPM J-pop projects; verified finite PCM values and audio generation. The EDM drop's four-second measurement changed from -32.3 LUFS to -12.4 LUFS, with -1.2 dBFS true peak. Full-project listening and quality on professional/club systems were not evaluated. |
+| Shortcut profiles | PARTIAL | Verified key assignments for existing commands, duplicate detection, `.slopkeys` save/load, settings persistence, GUI display, and execution. No authoritative preset from another DAW is bundled. Unimplemented commands and some editor-specific keys are not covered. |
+| Track freeze | NOT IMPLEMENTED | Safe freeze/unfreeze that restores original MIDI and plugin state is not implemented. |
+| Stems | PARTIAL | Individual outputs are saved to a new folder. Fixed silence caused by muting the summing destination; verified bus routing and sibling-track separation with synthetic audio. Each stem passes through master processing individually, so their sum is not guaranteed to match with nonlinear FX. Summing buses and their child tracks together duplicates content. |
+| Fullscreen | PASS | F11 uses the full screen rectangle and topmost state; pressing F11 again restores the previous size and window state. Verified with Windows GUI tests. Multiple physical monitors and mixed DPI are unverified. |
+| OSC | FAIL / NOT VERIFIED | Local UDP receive timed out in CTest. A separate plain UDP loopback also failed; communication could not be confirmed in this environment. The cause is not conclusively attributed to the environment, and VRChat communication is unverified. |
+| VST3 / CLAP | PARTIAL | Verified DSP, sample-accurate automation, and isolation of a faulty worker using existing test plugins. Compatibility with every vendor and uninterrupted audio during actual faults are not guaranteed. |
 
-## 実行したテスト
+## Tests Run
 
-- `V13CoreTests.exe`: 合成オーディオ・MIDI・ステム・保存・プロファイル・Launchpadマッピングなど13項目。`SLOPX_TEST_MP3=1` では外部FFmpegを使う追加1項目も成功。
-- `V13GuiTests.exe`: マスター、ピアノロール、素材ブラウザー、全画面、テンプレート、独自キー、Launchpad設定、テーマ、楽器アイコンをWindowsのウィンドウで9項目実施。
-- `V12GuiTests.exe`: 11項目、`V9GuiTests.exe`: 12項目成功。制御したWindowsメッセージを用いたGUI操作であり、物理マウスやタブレットの全操作ではない。
-- CTest: 10スイート中9成功、`StudioIntegrationTests` のOSC 1項目失敗（同スイートの他19項目成功）。
-- 最終配布用EXEの通常起動: ウィンドウが表示され応答。自己診断は日本語・英語・ドイツ語・韓国語の各15項目成功、配布版には診断用VST3/CLAPを含めないため各2項目は NOT RUN。これらのプラグイン自体は別のテストビルドで検証した。
-- 配布ZIPを別フォルダーに展開し、通常起動と応答を確認。ソースZIPを別フォルダーに展開して CMake / Ninja の Release を再ビルドし、日本語自己診断15項目成功・診断プラグイン2項目 NOT RUN。
-- FL Studio ASIO: 48 kHz、無音出力で約8秒のコールバック継続、underrun 0。WASAPI: 選択した仮想出力で無音フレーム進行を確認。別機種、実際の楽曲の聴取、録音品質、再生位置と物理音のズレは未検証。
-- サンプル曲の音圧は FFmpeg EBU R128 の4秒測定であり、全曲・音質・クラブ再生の評価ではない。
+- `V13CoreTests.exe`: 13 items covering synthetic audio/MIDI, stems, saving, profiles, Launchpad mapping, and related behavior. With `SLOPX_TEST_MP3=1`, one additional item using external FFmpeg also passed.
+- `V13GuiTests.exe`: Nine Windows-window tests covering master control, piano roll, sample browser, fullscreen, templates, custom keys, Launchpad settings, themes, and instrument icons.
+- `V12GuiTests.exe`: 11 items; `V9GuiTests.exe`: 12 items passed. These used controlled Windows messages; they do not cover all physical mouse and tablet gestures.
+- CTest: 9 of 10 suites passed; one OSC item in `StudioIntegrationTests` failed (the other 19 items in that suite passed).
+- Normal launch of final distribution EXE: window appeared and responded. Self-diagnostics passed 15 items each in Japanese, English, German, and Korean. Two items each were NOT RUN because the distribution excludes diagnostic VST3/CLAP plugins; those plugins were tested in a separate test build.
+- Extracted distribution ZIP to another folder and confirmed normal startup and responsiveness. Extracted the source ZIP to another folder, rebuilt Release with CMake / Ninja, and passed 15 Japanese self-diagnostic items; two diagnostic plugin items were NOT RUN.
+- FL Studio ASIO: about eight seconds of callbacks at 48 kHz with silent output; zero underruns. WASAPI: confirmed silent frame progression on the selected virtual output. Other devices, listening to real music, recording quality, and the gap between displayed position and acoustic output are unverified.
+- Sample loudness was measured over four seconds using FFmpeg EBU R128; this is not a full-song, sound-quality, or club playback assessment.
 
-## 確認資料
+## Reference Material
 
-Launchpadのインターフェイスは [NovationのMIDI資料](https://userguides.novationmusic.com/hc/en-gb/articles/24001489325330-MIDI-on-Launchpad-X)、パッドとLEDのMIDI番号は [Novationの表面制御資料](https://userguides.novationmusic.com/hc/en-gb/articles/24001475492498-Controlling-the-Launchpad-X-surface) に基づく。
+The Launchpad interface is based on [Novation MIDI documentation](https://userguides.novationmusic.com/hc/en-gb/articles/24001489325330-MIDI-on-Launchpad-X), and pad/LED MIDI numbers are based on [Novation surface-control documentation](https://userguides.novationmusic.com/hc/en-gb/articles/24001475492498-Controlling-the-Launchpad-X-surface).
 
-## 利用上の注意
+## Usage Notice
 
-この開発版は商用DAW同等の完成版ではない。全プラグイン、全ASIO機器、複数モニターDPI、Debian、再生中の障害でも無音にならないことは保証していない。サードパーティー音源、外部FFmpeg、および利用者が作成した素材は同梱していない。起動画面画像の公衆再配布・MIT公開に必要な権利は未確認。MIT本体以外のSDKと別プロセスのGPL companionの通知・ソースは配布物に含める。
+This development build is not complete at the level of commercial DAWs. Compatibility with every plugin or ASIO device, mixed-DPI multi-monitor behavior, Debian, and uninterrupted audio during all failures is not guaranteed. Third-party instruments, external FFmpeg, and user-created media are not included. Rights required for public redistribution and MIT publication of the startup image have not been verified. Notices and source for SDKs outside the MIT-licensed application and the separate-process GPL companion are included in the distribution.

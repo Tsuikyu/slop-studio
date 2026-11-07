@@ -1,26 +1,26 @@
-# Slop Studio 0.10 — 機能・検証台帳
+# Slop Studio 0.10 — Feature and Verification Ledger
 
-2026-10-29、Windows 11 x64。PASS は記載した試験範囲での結果です。仕様書の全項目が完成したという意味ではありません。
+Windows 11 x64, 2026-10-29. PASS applies only to the stated test scope. It does not mean every specification item is complete.
 
-| 項目 | 状態 | 検証・残課題 |
+| Item | Status | Verification and remaining work |
 |---|---|---|
-| Windows x64 Release | PASS | CMake / Ninja / Clang 23.1.4 で独立した配布フォルダーをビルドし、実行ファイルから First Light を開いて正常終了。 |
-| 起動画面 | PASS | 提供画像を実行時に読み込み、起動段階に応じてバーと文言を更新。画面を実描画して変化を確認。画像の公開ライセンスは未確認。 |
-| .slopdaw | PASS | 新規・編集・保存・再読込、スキーマと未知バージョンの拒否、原子的置換とバックアップをテスト。素材の完全収集・相対化は未実装。 |
-| Minimal CyberSquare | PARTIAL | 暗い画面、紫の強調色、四角いコントロール、トラック・ミキサーを実画面で確認。全ダイアログと全 DPI・画面サイズの仕上げは未完了。 |
-| マスター FX | PASS | 実 CLAP テストプラグインと内蔵 FX の並べ替え、処理順による PCM 差、バイパス、保存・再読込を検証。全製品互換は未検証。 |
-| 再生・録音・MIDI | PARTIAL | WASAPI 仮想ループバックの PCM 録音と合成 MIDI イベント、再生・停止、保存を GUI スモークで確認。物理マイク・鍵盤の演奏や音の聴取は未実施。 |
-| ASIO | PARTIAL | FL Studio ASIO で16秒の連続再生、パン変更・シーク、44.1 / 48 kHz 切替と自プロセス障害後の再接続が成功。全ドライバー、MiniFuse 物理接続、聴取は未検証。 |
-| VST3 / CLAP | PARTIAL | 公式仕様のフィクスチャープラグインで発見・生成・パラメーター・処理・保存状態を検証。全ベンダー互換、全機能、実音源製品は今回未検証。 |
-| OSC | FAIL | ローカル UDP 往復テストの受信が失敗。同じ環境で単純な UDP 自己送受信も失敗し、原因は未確定。実 VRChat 往復は未実施。 |
-| MCP | PARTIAL | 標準入出力の起動と11ツール、初期読み取り専用による編集・保存・再生拒否、許可後の編集と Undo を検証。永続監査、細分化権限、正式な相互運用性・安全性は未完了。 |
-| メニューカタログ | PARTIAL | 指定された424項目を識別子付きで記録し、54項目を最も近い既存コマンド / ハンドラーへ対応付けた。完全な意味・表示・翻訳の一致を主張しない。 |
-| 4言語 | PARTIAL | ja-JP / en-US / de-DE / ko-KR の各17項目の GUI スモークが成功。全文翻訳・全画面の言語品質は未確認。 |
-| テスト | PARTIAL | CTest 7スイート中6成功。StudioIntegrationTests は19項目成功、OSC 1項目失敗。GUI 12項目、MCP 実プロセステストは成功。 |
-| 公開・ライセンス | PARTIAL | 本体 MIT と第三者通知、独立した GPL 補助プログラムのソースを収録。提供された起動画面の著作権者と公開許諾は未確認。GitHub への公開や法的保証は行っていない。 |
-| Debian | NOT RUN | 現在のスタンドアロン構成は Windows 専用。 |
+| Windows x64 Release | PASS | Built an independent distribution folder with CMake / Ninja / Clang 23.1.4, opened First Light from the executable, and confirmed normal shutdown. |
+| Startup screen | PASS | Loads the supplied image at runtime and updates the bar and text for each startup stage. Verified by capturing the actual screen and observing the updates. Public redistribution rights for the image have not been confirmed. |
+| `.slopdaw` | PASS | Tested create, edit, save, reload, schema validation, rejection of unknown versions, atomic replacement, and backups. Complete media collection and path relativization are not implemented. |
+| Minimal CyberSquare | PARTIAL | Verified the dark UI, purple accent, square controls, tracks, and mixer on screen. Work remains on all dialogs, DPI levels, and screen sizes. |
+| Master FX | PASS | Verified ordering of a real CLAP test plugin and built-in FX, PCM changes from processing order, bypass, save, and reload. Compatibility with every product is unverified. |
+| Playback, recording, MIDI | PARTIAL | Confirmed PCM recording through WASAPI virtual loopback, synthetic MIDI events, playback, stop, and save in GUI smoke tests. No performance/recording with physical microphones or keyboards and no listening test were done. |
+| ASIO | PARTIAL | FL Studio ASIO passed 16 seconds of continuous playback, pan changes, seeks, 44.1/48 kHz switching, and reconnection after an application-owned process fault. Other drivers, physical MiniFuse connectivity, and listening tests are unverified. |
+| VST3 / CLAP | PARTIAL | Verified discovery, creation, parameters, processing, and state saving with fixtures based on the official specifications. All vendors, all features, and commercial instrument products were not tested. |
+| OSC | FAIL | The local UDP round-trip receive test failed. A simple UDP loopback also failed in the same environment; the cause is unknown. A real VRChat round trip was not performed. |
+| MCP | PARTIAL | Verified standard I/O startup and 11 tools; editing, saving, and playback are denied by default in read-only mode and work after permission is granted, with Undo. Persistent audit, fine-grained permissions, and formal interoperability/safety are incomplete. |
+| Menu catalog | PARTIAL | Recorded all 424 specified items with identifiers and mapped 54 to the closest existing commands/handlers. Complete semantic, display, or translation parity is not claimed. |
+| Four languages | PARTIAL | GUI smoke tests passed 17 items each for `ja-JP`, `en-US`, `de-DE`, and `ko-KR`. Full translations and language quality across all screens are unverified. |
+| Tests | PARTIAL | Six of seven CTest suites passed. `StudioIntegrationTests` passed 19 items and failed one OSC item. Twelve GUI items and MCP real-process tests passed. |
+| Publication and licensing | PARTIAL | Includes the application's MIT license, third-party notices, and separate GPL companion source. The rights and public redistribution permission for the supplied startup image are unverified. No GitHub publication or legal assurance was performed. |
+| Debian | NOT RUN | The current standalone build is Windows-only. |
 
-## 今回のビルド
+## Build Used
 
 ```powershell
 $root = (Get-Location).Path.Replace('\','/')
@@ -34,8 +34,8 @@ $llvm = "$root/work/tools/llvm-mingw/llvm-mingw-20261020-ucrt-x86_64"
 & $cmake --build $build --config Release --parallel 3
 ```
 
-テスト用ビルドは `work/slop-studio/build`、出力は `outputs/dist/slop-studio-windows-x64`。`ctest --test-dir work/slop-studio/build -C Release --output-on-failure` を実行した。GUI と ASIO は専用のテストプロファイル・テストプロジェクトを使用した。
+The test build used `work/slop-studio/build` and wrote to `outputs/dist/slop-studio-windows-x64`. `ctest --test-dir work/slop-studio/build -C Release --output-on-failure` was run. GUI and ASIO checks used dedicated test profiles and test projects.
 
-## 次の優先事項
+## Next Priorities
 
-OSC 受信環境の切り分け、実機 MIDI / オーディオ / ASIO の検証、メニュー・翻訳の欠落修正、素材収集と形式仕様の深化、プラグイン・MCP の権限と安全性、画面全域の調整を継続する。商用 DAW との完全互換やプロ用途の信頼性はまだ達成していない。
+Continue isolating the OSC receive failure, verify with physical MIDI/audio/ASIO hardware, fix missing menu commands and translations, improve media collection and format documentation, review plugin/MCP permissions and safety, and refine the whole interface. Full commercial DAW compatibility and production-grade reliability have not been achieved.

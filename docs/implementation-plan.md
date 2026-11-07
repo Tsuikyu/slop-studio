@@ -1,35 +1,35 @@
-# Slop Studio 実装計画
+# Slop Studio Implementation Plan
 
-## 基準と既存資産
+## Baseline and Existing Assets
 
-この作業コピーは Slop Studio 0.9 / master-FX 修正版を基準とする。Windows x64、CMake、C# WinForms、C++ 音声・VST3/CLAP ホスト、別プロセス GPL ASIO/Link 補助プログラムを引き継ぐ。ソースと既存配布物は別に保管している。以前の MIDI、Sampler、Launcher、Slop Pitch、ARA、Lua、OSC、ゲームパッド、マスターFXとその他の機能は維持し、未検証部分は完成扱いしない。
+This working copy is based on Slop Studio 0.9 with the master-FX revision. It retains Windows x64, CMake, C# WinForms, the C++ audio/VST3/CLAP host, and the separate GPL ASIO/Link companion process. The source and existing distributions are stored separately. Preserve the existing MIDI, Sampler, Launcher, Slop Pitch, ARA, Lua, OSC, gamepad, master FX, and other features; do not treat unverified behavior as complete.
 
-## P0: 製品名・画面・保存
+## P0: Product Name, Interface, and Saving
 
-- 依存なし: Slop Studio の名称と独自 Minimal CyberSquare 色・四角形コンポーネントを導入し、既存の配置・操作・アクセシビリティを維持する。
-- 依存なし: 新規標準形式を .slopdaw とし、Slop Studioは .slopdaw のみをサポートする。新形式のスキーマと将来バージョン拒否、アトミック保存とバックアップを検証する。
-- 保存形式に依存: サンプル、D&D、起動引数、復旧、DAWproject のネイティブ拡張を移行する。
-- 依存なし: 4言語リソースと既存キーコマンドを保ち、画面名称を Sloppy に変更する。
-- P0の検証: Windows起動、4言語、編集→.slopdaw保存→再読込、ユーザーデータの不変性、マスターFX回帰。
+- No dependencies: use the Slop Studio name and the original Minimal CyberSquare colors and square components while retaining the existing layout, interaction, and accessibility.
+- No dependencies: make `.slopdaw` the new standard format and support only `.slopdaw` in Slop Studio. Verify the new schema, rejection of future unsupported versions, atomic saving, and backups.
+- Depends on the save format: migrate examples, drag-and-drop, launch arguments, recovery, and native DAWproject extensions.
+- No dependencies: retain the four language resources and existing key commands; change the editor name to Sloppy.
+- P0 verification: Windows startup, all four languages, edit → save as `.slopdaw` → reload, user-data integrity, and master-FX regression checks.
 
-## P1: 既存の制作機能
+## P1: Existing Production Features
 
-- P0に依存: オーディオ／MIDIの再生、録音、編集、バウンス、Sampler、マスターFXを既存実装で回帰検査する。実機がないものは未検証とする。
-- オーディオスレッドのロック・割当と例外経路の監査は継続課題。現時点でリアルタイム安全を保証しない。
+- Depends on P0: run regression checks for audio/MIDI playback, recording, editing, bounce, Sampler, and master FX using the existing implementation. Mark hardware-dependent behavior unverified when the required device is unavailable.
+- Auditing locks, allocations, and exception paths in the audio thread remains ongoing. Real-time safety is not currently guaranteed.
 
-## P2: ミキサー・編集
+## P2: Mixer and Editing
 
-- P1に依存: スタック、バス、センド、プラグイン、オートメーション、Sloppy、譜面・テイクの既存操作を残す。
-- P0に依存: 提供されたメニューカタログと既存の AppCommand／ハンドラーの対応を記録し、未実装は有効な操作として表示しない。全仕様の実装を意味しない。
+- Depends on P1: preserve existing operations for stacks, buses, sends, plugins, automation, Sloppy, score editing, and takes.
+- Depends on P0: document the mapping between the supplied menu catalog and existing AppCommand handlers. Do not present an unimplemented command as an available operation. This does not mean the entire specification has been implemented.
 
-## P3: 外部連携
+## P3: External Integrations
 
-- P0/P1に依存: 既存Lua、OSC、ゲームパッド、stdio MCPを維持する。MCPは初期停止・読み取りを基準とし、編集／ファイル操作は明示的な権限を要する。監査、きめ細かい承認、マネージャー画面と正式なMCP適合は検証状況に応じて未完了として扱う。
+- Depends on P0/P1: retain existing Lua, OSC, gamepad, and stdio MCP integrations. MCP should start disabled and read-only; editing and file operations require explicit permission. Treat auditing, fine-grained approvals, manager UI, and formal MCP conformance as incomplete unless verified.
 
-## P4: 拡張・公開準備
+## P4: Extensions and Publication Readiness
 
-- P1–P3に依存: Sloppyの非破壊高度編集、MPE、譜面、テイク、その他の仕様は個別に実装・検証する。
-- 独自本体はMIT方針。別プロセスのASIO/LinkはGPL、ARA API等の第三者コードはそれぞれの条件を保つ。収録物や著作権者を確認し、法的安全性を保証しない。
-- Windows向けCMakeビルドを最優先とする。Debian版と公開・プッシュは今回の検証対象から分ける。
+- Depends on P1–P3: implement and verify Sloppy's non-destructive advanced editing, MPE, score editing, takes, and other requirements individually.
+- The original application follows an MIT policy. Preserve the respective terms for the separate-process ASIO/Link components and third-party code such as the ARA API. Verify included materials and copyright holders; do not claim legal clearance.
+- Prioritize the Windows CMake build. Keep Debian support and public release/publishing outside this verification scope.
 
-提供仕様の .slopstudio は仮称であり、直接のユーザー指示 .slopdaw を優先する。
+The supplied specification's `.slopstudio` extension is provisional; follow the direct user requirement for `.slopdaw`.

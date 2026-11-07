@@ -1,10 +1,10 @@
-# Slop Studio — Windows x64 ビルドと検証
+# Slop Studio — Windows x64 Build and Verification
 
-Windows 11 x64、.NET Framework 4.8 の `Framework64` C# コンパイラー、CMake 3.24 以上、Ninja と LLVM-MinGW UCRT x64（または Visual Studio の x64 C++ ツールチェーン）が必要です。JUCE は使用しません。固定した SDK のリビジョンは `sdk-revisions.txt` を参照してください。
+Requirements: Windows 11 x64, the .NET Framework 4.8 `Framework64` C# compiler, CMake 3.24 or later, Ninja, and LLVM-MinGW UCRT x64 (or the Visual Studio x64 C++ toolchain). JUCE is not used. See `sdk-revisions.txt` for the pinned SDK revisions.
 
-## 配布用 Release ビルド
+## Release Build
 
-PowerShell でソースのルートを開き、環境に合わせてツールのパスを変更します。
+Open PowerShell in the source root and adjust the tool paths for your environment.
 
 ```powershell
 $cmake = 'C:/Tools/cmake/bin/cmake.exe'
@@ -18,11 +18,11 @@ $cmake = 'C:/Tools/cmake/bin/cmake.exe'
 & $cmake --build build/release --config Release --parallel 3
 ```
 
-出力の `SlopStudio.exe`、DLL、`Resources/Startup.png`、`locales`、`docs`、`Examples`、`licenses`、`Companions` と通知を一緒に配布します。OS に付属する .NET と UCRT は同梱しません。FFmpeg は任意の別途依存です。
+Distribute `SlopStudio.exe`, the DLLs, `Resources/Startup.png`, `locales`, `docs`, `Examples`, `licenses`, `Companions`, and the accompanying notices together. The .NET and UCRT runtimes supplied by the operating system are not bundled. FFmpeg is an optional external dependency.
 
-## テスト用ビルド
+## Test Build
 
-別のビルド・出力フォルダーを指定し `-DBUILD_TESTING=ON` にしてから、対応する `ctest.exe --test-dir build/test -C Release --output-on-failure` を実行します。GUI とフィクスチャーテストを実行する際は隔離したテスト用プロファイルを使用し、ユーザーの制作中プロジェクトは使わないでください。
+Use separate build and output directories, set `-DBUILD_TESTING=ON`, and run the matching `ctest.exe --test-dir build/test -C Release --output-on-failure`. Use an isolated test profile for GUI and fixture tests; do not use a user's in-progress production projects.
 
 ```powershell
 dist/test/V9GuiTests.exe verification/gui
@@ -36,6 +36,6 @@ dist/test/SlopStudio.exe --smoke verification/app-ja.txt ja-JP
 python tests/McpProcessTests.py dist/test/SlopStudio.exe verification/mcp
 ```
 
-GUI スモークの言語は `ja-JP`, `en-US`, `de-DE`, `ko-KR` を指定できます。仮想ループバックや合成 MIDI は物理デバイスの演奏・録音を証明しません。自動テストの結果と手動未確認項目を分けて記録してください。
+GUI smoke tests accept `ja-JP`, `en-US`, `de-DE`, and `ko-KR`. Virtual loopback and synthetic MIDI do not prove performance or recording with physical devices. Record automated results separately from manual checks that were not performed.
 
-今回の結果は `status-v0.13-ja.md` に記録しています。`build.ps1` も用意していますが `-SkipTests` はテスト実行を省く指定であり、テストの成功を意味しません。
+The latest results are recorded in `status-v0.13-ja.md`. A `build.ps1` script is also provided, but `-SkipTests` only skips test execution; it does not mean that tests passed.
