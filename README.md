@@ -2,7 +2,7 @@
 
 ### The Digital Audio Slopstation™
 
-**An unfinished music production application born from the finest AI-generated slop.**
+**An music production application born from the finest AI-generated slop.**
 
 **Created by Tsuikyu | Windows 11 x64 | MIT License**
 
@@ -535,7 +535,7 @@ Just don't forget your backups.
 
 ### The Digital Audio Slopstation™
 
-**AIスロップから生まれた、未完成の音楽制作ソフトウェア。**
+**AIスロップから生まれた、音楽制作ソフトウェア。**
 
 **作者：Tsuikyu | Windows 11 x64 | MIT License**
 
