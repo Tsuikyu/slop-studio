@@ -1,0 +1,2780 @@
+{
+  "schema_version": 1,
+  "product": "Slop Studio",
+  "source_version": "5.1",
+  "source": "Slop_Studio_v5_1_Complete_Spec_JA.txt",
+  "note": "メニュー構造の実装用シード。全項目implemented=false、ショートカットは暫定。説明やコメントから抽出した動的項目は適切にデータ接続すること。コマンドIDと全4言語翻訳はCodexで実装する。 v5.1では「バウンス」メニューの表示名を「マスター」に変更。旧内部コマンドの互換性を維持する。",
+  "menus": {
+    "Slop Studio": [
+      {
+        "type": "command",
+        "label_ja": "Slop Studioについて",
+        "implemented": false
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "submenu",
+        "label_ja": "設定",
+        "implemented": false,
+        "children": [
+          {
+            "type": "command",
+            "label_ja": "一般",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "オーディオ",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "録音",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "MIDI",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "表示",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "スコア",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "ムービー",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "オートメーション",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "ユーザー情報",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "プラグインマネージャー",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "コード・グリッドライブラリ",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "AI・MCP連携",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "Luaスクリプト",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "OSC・外部制御",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "キーコマンド以外のすべての設定をリセット",
+            "implemented": false
+          }
+        ]
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "submenu",
+        "label_ja": "コントロールサーフェス",
+        "implemented": false,
+        "children": [
+          {
+            "type": "command",
+            "label_ja": "コントローラーアサインメントを登録",
+            "implemented": false,
+            "proposed_shortcut": "Ctrl+L"
+          },
+          {
+            "type": "command",
+            "label_ja": "コントローラーアサインメントを編集",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "接続デバイスを管理",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "設定",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "環境設定",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "デフォルトに戻す",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "すべてのコントロールサーフェスをバイパス",
+            "implemented": false
+          }
+        ]
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "submenu",
+        "label_ja": "キーコマンド",
+        "implemented": false,
+        "children": [
+          {
+            "type": "command",
+            "label_ja": "キーコマンドエディターを開く",
+            "implemented": false,
+            "proposed_shortcut": "Alt+K"
+          },
+          {
+            "type": "submenu",
+            "label_ja": "キーボード配列",
+            "implemented": false,
+            "children": [
+              {
+                "type": "command",
+                "label_ja": "フランス語",
+                "implemented": false
+              },
+              {
+                "type": "command",
+                "label_ja": "ドイツ語",
+                "implemented": false
+              },
+              {
+                "type": "command",
+                "label_ja": "イタリア語",
+                "implemented": false
+              },
+              {
+                "type": "command",
+                "label_ja": "日本語",
+                "implemented": false
+              },
+              {
+                "type": "command",
+                "label_ja": "スペイン語",
+                "implemented": false
+              },
+              {
+                "type": "command",
+                "label_ja": "スウェーデン語",
+                "implemented": false
+              },
+              {
+                "type": "command",
+                "label_ja": "英語（US）",
+                "implemented": false
+              }
+            ]
+          },
+          {
+            "type": "submenu",
+            "label_ja": "操作スタイル",
+            "implemented": false,
+            "children": [
+              {
+                "type": "command",
+                "label_ja": "Slop Studio標準",
+                "implemented": false
+              },
+              {
+                "type": "command",
+                "label_ja": "Ableton Live風（Slop拡張）",
+                "implemented": false
+              },
+              {
+                "type": "command",
+                "label_ja": "Cubase風（Slop拡張）",
+                "implemented": false
+              },
+              {
+                "type": "command",
+                "label_ja": "FL Studio風（Slop拡張）",
+                "implemented": false
+              },
+              {
+                "type": "command",
+                "label_ja": "Pro Tools風（Slop拡張）",
+                "implemented": false
+              },
+              {
+                "type": "command",
+                "label_ja": "SONAR風（Slop拡張）",
+                "implemented": false
+              },
+              {
+                "type": "command",
+                "label_ja": "Premiere Pro風（Slop拡張）",
+                "implemented": false
+              },
+              {
+                "type": "command",
+                "label_ja": "Unity風（Slop拡張）",
+                "implemented": false
+              },
+              {
+                "type": "command",
+                "label_ja": "Unreal Engine風（Slop拡張）",
+                "implemented": false
+              },
+              {
+                "type": "command",
+                "label_ja": "REAPER風（Slop拡張）",
+                "implemented": false
+              },
+              {
+                "type": "command",
+                "label_ja": "Fender Studio Pro風（Slop拡張）",
+                "implemented": false
+              },
+              {
+                "type": "command",
+                "label_ja": "DaVinci Resolve風（Slop拡張）",
+                "implemented": false
+              },
+              {
+                "type": "command",
+                "label_ja": "カスタムプリセット",
+                "implemented": false
+              }
+            ]
+          },
+          {
+            "type": "command",
+            "label_ja": "キーコマンドを読み込む",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "キーコマンドを書き出す",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "現在のプリセットを保存",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "カスタムキーコマンドを結合",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "キーコマンドを初期化",
+            "implemented": false
+          }
+        ]
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "command",
+        "label_ja": "サウンドライブラリを管理",
+        "implemented": false
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "command",
+        "label_ja": "フィードバックを送信",
+        "implemented": false
+      },
+      {
+        "type": "submenu",
+        "label_ja": "サービス",
+        "implemented": false,
+        "children": [
+          {
+            "type": "command",
+            "label_ja": "ないよ！（無効項目。英語：Nothing!）",
+            "implemented": false
+          }
+        ]
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "command",
+        "label_ja": "ウインドウを最小化",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "すべてのウインドウを表示",
+        "implemented": false
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "command",
+        "label_ja": "Slop Studioを終了",
+        "implemented": false,
+        "proposed_shortcut": "Alt+F4"
+      }
+    ],
+    "ファイル": [
+      {
+        "type": "command",
+        "label_ja": "新規",
+        "implemented": false,
+        "proposed_shortcut": "Ctrl+Shift+N"
+      },
+      {
+        "type": "command",
+        "label_ja": "テンプレートから新規作成",
+        "implemented": false,
+        "proposed_shortcut": "Ctrl+N"
+      },
+      {
+        "type": "command",
+        "label_ja": "開く",
+        "implemented": false,
+        "proposed_shortcut": "Ctrl+O"
+      },
+      {
+        "type": "submenu",
+        "label_ja": "最近使った項目を開く",
+        "implemented": false,
+        "children": [
+          {
+            "type": "command",
+            "label_ja": "(最近使用したプロジェクト1)",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "(最近使用したプロジェクト2)",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "(最近使用したプロジェクト3)",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "(最大10件)",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "メニューを消去",
+            "implemented": false
+          }
+        ]
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "command",
+        "label_ja": "閉じる",
+        "implemented": false,
+        "proposed_shortcut": "Ctrl+W"
+      },
+      {
+        "type": "command",
+        "label_ja": "プロジェクトを閉じる",
+        "implemented": false,
+        "proposed_shortcut": "Ctrl+Alt+W"
+      },
+      {
+        "type": "command",
+        "label_ja": "保存",
+        "implemented": false,
+        "proposed_shortcut": "Ctrl+S"
+      },
+      {
+        "type": "command",
+        "label_ja": "別名で保存",
+        "implemented": false,
+        "proposed_shortcut": "Ctrl+Shift+S"
+      },
+      {
+        "type": "command",
+        "label_ja": "コピーを保存",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "テンプレートとして保存",
+        "implemented": false
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "submenu",
+        "label_ja": "戻す",
+        "implemented": false,
+        "children": [
+          {
+            "type": "command",
+            "label_ja": "最後に保存した状態",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "(自動バックアップ一覧)",
+            "implemented": false
+          }
+        ]
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "submenu",
+        "label_ja": "代替プロジェクト",
+        "implemented": false,
+        "children": [
+          {
+            "type": "command",
+            "label_ja": "新規代替バージョン",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "代替バージョンを編集",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "代替バージョンをプロジェクトとして書き出す",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "(保存されたバージョン一覧)",
+            "implemented": false
+          }
+        ]
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "submenu",
+        "label_ja": "プロジェクト管理",
+        "implemented": false,
+        "children": [
+          {
+            "type": "command",
+            "label_ja": "クリーンアップ",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "統合",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "名前を変更",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "保存場所を表示",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "不足している素材を検索",
+            "implemented": false
+          }
+        ]
+      },
+      {
+        "type": "submenu",
+        "label_ja": "プロジェクト設定",
+        "implemented": false,
+        "children": [
+          {
+            "type": "command",
+            "label_ja": "一般",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "同期",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "メトロノーム",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "テンポ解析",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "録音",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "チューニング",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "オーディオ",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "MIDI",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "スコア",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "ムービー",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "素材",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "Sloppy",
+            "implemented": false
+          }
+        ]
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "command",
+        "label_ja": "ページ設定",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "プリント",
+        "implemented": false,
+        "proposed_shortcut": "Ctrl+P"
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "submenu",
+        "label_ja": "ムービー",
+        "implemented": false,
+        "children": [
+          {
+            "type": "command",
+            "label_ja": "ムービーを開く",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "ムービーを取り除く",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "ムービーからオーディオを読み込む",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "ムービーにオーディオを書き出す",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "シーンカットを検出",
+            "implemented": false
+          }
+        ]
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "submenu",
+        "label_ja": "読み込む",
+        "implemented": false,
+        "children": [
+          {
+            "type": "command",
+            "label_ja": "オーディオファイル",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "MIDIファイル",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "MusicXMLファイル",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "AAFファイル",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "ムービーファイル",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "Slop Studioプロジェクト",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "トラックと設定",
+            "implemented": false
+          }
+        ]
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "submenu",
+        "label_ja": "書き出す",
+        "implemented": false,
+        "children": [
+          {
+            "type": "command",
+            "label_ja": "リージョンをループライブラリに追加",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "リージョンをオーディオファイルとして",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "選択したトラックをオーディオファイルとして",
+            "implemented": false,
+            "proposed_shortcut": "Ctrl+E"
+          },
+          {
+            "type": "command",
+            "label_ja": "すべてのトラックをオーディオファイルとして",
+            "implemented": false,
+            "proposed_shortcut": "Ctrl+Shift+E"
+          },
+          {
+            "type": "command",
+            "label_ja": "選択したMIDIリージョンをMIDIファイルとして",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "プロジェクトをMIDIファイルとして",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "プロジェクトをAAFファイルとして",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "スコアをMusicXMLファイルとして",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "空間オーディオを書き出す",
+            "implemented": false
+          }
+        ]
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "submenu",
+        "label_ja": "マスター",
+        "implemented": false,
+        "children": [
+          {
+            "type": "command",
+            "label_ja": "プロジェクトまたは選択範囲をマスターとして書き出す",
+            "implemented": false,
+            "proposed_shortcut": "Ctrl+B",
+            "command_id": "master.export.project_range"
+          },
+          {
+            "type": "command",
+            "label_ja": "マスタリング処理を開く",
+            "implemented": false,
+            "command_id": "master.processing.open"
+          },
+          {
+            "type": "command",
+            "label_ja": "マスタリング処理を有効化/無効化",
+            "implemented": false,
+            "command_id": "master.processing.toggle"
+          },
+          {
+            "type": "separator"
+          },
+          {
+            "type": "command",
+            "label_ja": "リージョンをオーディオ化（元の位置）",
+            "implemented": false,
+            "command_id": "master.render.region_in_place"
+          },
+          {
+            "type": "command",
+            "label_ja": "トラックをオーディオ化（元の位置）",
+            "implemented": false,
+            "command_id": "master.render.track_in_place"
+          },
+          {
+            "type": "command",
+            "label_ja": "すべてのトラックをオーディオ化して置き換え",
+            "implemented": false,
+            "command_id": "master.render.all_tracks_replace"
+          }
+        ]
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "submenu",
+        "label_ja": "共有",
+        "implemented": false,
+        "children": [
+          {
+            "type": "command",
+            "label_ja": "オーディオファイルを共有",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "プロジェクトを共有",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "外部サービスに共有",
+            "implemented": false
+          }
+        ]
+      }
+    ],
+    "編集": [
+      {
+        "type": "command",
+        "label_ja": "取り消す",
+        "implemented": false,
+        "proposed_shortcut": "Ctrl+Z"
+      },
+      {
+        "type": "command",
+        "label_ja": "やり直す",
+        "implemented": false,
+        "proposed_shortcut": "Ctrl+Shift+Z"
+      },
+      {
+        "type": "command",
+        "label_ja": "取り消し履歴",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "取り消し履歴を消去",
+        "implemented": false
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "command",
+        "label_ja": "カット",
+        "implemented": false,
+        "proposed_shortcut": "Ctrl+X"
+      },
+      {
+        "type": "command",
+        "label_ja": "コピー",
+        "implemented": false,
+        "proposed_shortcut": "Ctrl+C"
+      },
+      {
+        "type": "command",
+        "label_ja": "ペースト",
+        "implemented": false,
+        "proposed_shortcut": "Ctrl+V"
+      },
+      {
+        "type": "command",
+        "label_ja": "元の位置にペースト",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "置き換えてペースト",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "削除",
+        "implemented": false,
+        "proposed_shortcut": "Delete"
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "command",
+        "label_ja": "すべてを選択",
+        "implemented": false,
+        "proposed_shortcut": "Ctrl+A"
+      },
+      {
+        "type": "command",
+        "label_ja": "すべての選択を解除",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "選択項目を反転",
+        "implemented": false
+      },
+      {
+        "type": "submenu",
+        "label_ja": "選択",
+        "implemented": false,
+        "children": [
+          {
+            "type": "command",
+            "label_ja": "すべて",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "同じトラックのすべてのリージョン",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "同じ種類のすべてのリージョン",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "同じカラーのリージョン",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "後続のすべてのリージョン",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "ロケータ内のリージョン",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "ロケータ外のリージョン",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "ミュートされたリージョン",
+            "implemented": false
+          }
+        ]
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "submenu",
+        "label_ja": "移動",
+        "implemented": false,
+        "children": [
+          {
+            "type": "command",
+            "label_ja": "再生ヘッド位置へ",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "録音位置へ",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "選択したトラックへ",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "左にシャッフル",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "右にシャッフル",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "左にナッジ",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "右にナッジ",
+            "implemented": false
+          },
+          {
+            "type": "submenu",
+            "label_ja": "ナッジ値を設定",
+            "implemented": false,
+            "children": [
+              {
+                "type": "command",
+                "label_ja": "小節",
+                "implemented": false
+              },
+              {
+                "type": "command",
+                "label_ja": "ディビジョン",
+                "implemented": false
+              },
+              {
+                "type": "command",
+                "label_ja": "ティック",
+                "implemented": false
+              },
+              {
+                "type": "command",
+                "label_ja": "フレーム",
+                "implemented": false
+              },
+              {
+                "type": "command",
+                "label_ja": "ミリ秒",
+                "implemented": false
+              },
+              {
+                "type": "command",
+                "label_ja": "サンプル",
+                "implemented": false
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "submenu",
+        "label_ja": "トリム",
+        "implemented": false,
+        "children": [
+          {
+            "type": "command",
+            "label_ja": "オーバーラップを削除",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "ロケータの範囲内を埋める",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "ロケータの範囲外を切り取る",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "リージョンの開始位置を再生ヘッドへ",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "リージョンの終了位置を再生ヘッドへ",
+            "implemented": false
+          }
+        ]
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "submenu",
+        "label_ja": "分割",
+        "implemented": false,
+        "children": [
+          {
+            "type": "command",
+            "label_ja": "再生ヘッド位置でリージョンを分割",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "マーキー選択範囲でリージョンを分割",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "ロケータ位置でリージョンを分割",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "無音部分でリージョンを分割",
+            "implemented": false
+          }
+        ]
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "submenu",
+        "label_ja": "結合",
+        "implemented": false,
+        "children": [
+          {
+            "type": "command",
+            "label_ja": "リージョンを結合",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "MIDIリージョンを結合",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "オーディオリージョンを結合",
+            "implemented": false
+          }
+        ]
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "command",
+        "label_ja": "繰り返す",
+        "implemented": false,
+        "proposed_shortcut": "Ctrl+R"
+      },
+      {
+        "type": "command",
+        "label_ja": "セクションを繰り返す",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "リージョンをループ",
+        "implemented": false,
+        "proposed_shortcut": "L"
+      },
+      {
+        "type": "command",
+        "label_ja": "リージョンのループを解除",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "リージョンを複製",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "エイリアスを作成",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "エイリアスを実際のコピーに変換",
+        "implemented": false
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "submenu",
+        "label_ja": "テンポ",
+        "implemented": false,
+        "children": [
+          {
+            "type": "command",
+            "label_ja": "テンポを検出",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "テンポを解析",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "リージョンの長さからテンポを調整",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "テンポ情報を適用",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "テンポ情報を書き込む",
+            "implemented": false
+          }
+        ]
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "submenu",
+        "label_ja": "Sloppy",
+        "implemented": false,
+        "children": [
+          {
+            "type": "command",
+            "label_ja": "Sloppy編集を有効化",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "Sloppy編集を無効化",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "Sloppy時間編集",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "Sloppyピッチ編集",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "Sloppy解析を実行",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "Sloppy解析結果を消去",
+            "implemented": false
+          }
+        ]
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "submenu",
+        "label_ja": "クオンタイズ",
+        "implemented": false,
+        "children": [
+          {
+            "type": "command",
+            "label_ja": "選択したイベントをクオンタイズ",
+            "implemented": false,
+            "proposed_shortcut": "Q"
+          },
+          {
+            "type": "command",
+            "label_ja": "クオンタイズを解除",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "クオンタイズ値を設定",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "クオンタイズ強度を設定",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "スウィング量を設定",
+            "implemented": false
+          }
+        ]
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "command",
+        "label_ja": "名前を変更",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "カラーを変更",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "ミュート",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "ミュート解除",
+        "implemented": false
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "command",
+        "label_ja": "検索",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "検索して選択",
+        "implemented": false
+      }
+    ],
+    "トラック": [
+      {
+        "type": "command",
+        "label_ja": "新規トラック",
+        "implemented": false,
+        "proposed_shortcut": "Ctrl+Alt+N"
+      },
+      {
+        "type": "command",
+        "label_ja": "新規オーディオトラック",
+        "implemented": false,
+        "proposed_shortcut": "Ctrl+Alt+A"
+      },
+      {
+        "type": "command",
+        "label_ja": "新規ソフトウェア音源トラック",
+        "implemented": false,
+        "proposed_shortcut": "Ctrl+Alt+S"
+      },
+      {
+        "type": "command",
+        "label_ja": "新規自動演奏トラック",
+        "implemented": false,
+        "proposed_shortcut": "Ctrl+Alt+P"
+      },
+      {
+        "type": "command",
+        "label_ja": "新規外部MIDIトラック",
+        "implemented": false,
+        "proposed_shortcut": "Ctrl+Alt+X"
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "submenu",
+        "label_ja": "その他",
+        "implemented": false,
+        "children": [
+          {
+            "type": "command",
+            "label_ja": "同じチャンネルストリップを使った新規トラック",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "次のチャンネルを使った新規トラック",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "次のMIDIチャンネルを使った新規トラック",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "選択したリージョン用の新規トラック",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "オーバーラップしたリージョン用の新規トラック",
+            "implemented": false
+          }
+        ]
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "command",
+        "label_ja": "トラックを複製",
+        "implemented": false,
+        "proposed_shortcut": "Ctrl+D"
+      },
+      {
+        "type": "command",
+        "label_ja": "トラックの設定とコンテンツを複製",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "トラック名を変更",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "トラックを削除",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "未使用のトラックを削除",
+        "implemented": false
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "submenu",
+        "label_ja": "トラックグループ",
+        "implemented": false,
+        "children": [
+          {
+            "type": "command",
+            "label_ja": "トラックグループを作成",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "フォルダグループを作成",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "ミックスグループを作成",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "グループを解除",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "グループを展開",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "グループを折りたたむ",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "フォルダグループをミックスグループに変換",
+            "implemented": false
+          }
+        ]
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "submenu",
+        "label_ja": "トラックの代替バージョン",
+        "implemented": false,
+        "children": [
+          {
+            "type": "command",
+            "label_ja": "新規代替バージョン",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "代替バージョンを複製",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "代替バージョン名を変更",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "代替バージョンを削除",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "(代替バージョン一覧)",
+            "implemented": false
+          }
+        ]
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "command",
+        "label_ja": "マスタートラックを表示",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "出力トラックを表示",
+        "implemented": false
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "command",
+        "label_ja": "ドラムサウンドを置き換える/ダブリングする",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "新規サンプラートラックに変換",
+        "implemented": false
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "command",
+        "label_ja": "トラックを非表示",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "非表示トラックを表示",
+        "implemented": false,
+        "proposed_shortcut": "H"
+      },
+      {
+        "type": "command",
+        "label_ja": "トラックヘッダを設定",
+        "implemented": false
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "submenu",
+        "label_ja": "トラックを並べ替え",
+        "implemented": false,
+        "children": [
+          {
+            "type": "command",
+            "label_ja": "トラック名",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "トラック番号",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "チャンネル",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "音源",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "使用中/未使用",
+            "implemented": false
+          }
+        ]
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "command",
+        "label_ja": "トラックを検索して選択",
+        "implemented": false
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "submenu",
+        "label_ja": "グローバルトラック",
+        "implemented": false,
+        "children": [
+          {
+            "type": "command",
+            "label_ja": "グローバルトラックを表示",
+            "implemented": false,
+            "proposed_shortcut": "G"
+          },
+          {
+            "type": "command",
+            "label_ja": "グローバルトラックを非表示",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "アレンジメント",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "マーカー",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "コード",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "キー/拍子",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "テンポ",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "トランスポーズ",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "ビートマッピング",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "ムービー",
+            "implemented": false
+          }
+        ]
+      }
+    ],
+    "移動": [
+      {
+        "type": "submenu",
+        "label_ja": "移動",
+        "implemented": false,
+        "children": [
+          {
+            "type": "command",
+            "label_ja": "プロジェクトの先頭",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "プロジェクトの末尾",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "左ロケータ",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "右ロケータ",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "選択範囲の開始位置",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "選択範囲の終了位置",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "前のマーカー",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "次のマーカー",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "マーカー番号",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "位置を指定 /",
+            "implemented": false
+          }
+        ]
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "command",
+        "label_ja": "選択範囲までスクロール",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "再生ヘッド位置までスクロール",
+        "implemented": false
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "command",
+        "label_ja": "選択範囲からロケータを設定",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "選択範囲から丸めたロケータを設定",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "ロケータを設定してサイクルを有効化",
+        "implemented": false
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "submenu",
+        "label_ja": "ロケータを自動設定",
+        "implemented": false,
+        "children": [
+          {
+            "type": "command",
+            "label_ja": "リージョン選択範囲",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "マーキー選択範囲",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "マーカー選択範囲",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "コード選択範囲",
+            "implemented": false
+          }
+        ]
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "command",
+        "label_ja": "前のマーカーでロケータを設定",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "次のマーカーでロケータを設定",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "マーカーでサイクルを有効化",
+        "implemented": false
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "command",
+        "label_ja": "マーカーを作成",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "マーカーを削除",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "マーカー名を変更",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "マーカーリストを開く",
+        "implemented": false
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "submenu",
+        "label_ja": "再生",
+        "implemented": false,
+        "children": [
+          {
+            "type": "command",
+            "label_ja": "選択範囲から再生",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "プロジェクトの先頭から再生",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "左ロケータから再生",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "右ロケータから再生",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "前の小節から再生",
+            "implemented": false
+          }
+        ]
+      }
+    ],
+    "録音": [
+      {
+        "type": "command",
+        "label_ja": "録音",
+        "implemented": false,
+        "proposed_shortcut": "R"
+      },
+      {
+        "type": "command",
+        "label_ja": "直前の演奏を取り込む",
+        "implemented": false,
+        "proposed_shortcut": "Shift+R"
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "submenu",
+        "label_ja": "録音ボタンオプション",
+        "implemented": false,
+        "children": [
+          {
+            "type": "command",
+            "label_ja": "通常録音",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "録音/再生を切り替える",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "繰り返し録音",
+            "implemented": false
+          }
+        ]
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "submenu",
+        "label_ja": "カウントイン",
+        "implemented": false,
+        "children": [
+          {
+            "type": "command",
+            "label_ja": "なし",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "1小節",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "2小節",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "3小節",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "4小節",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "1拍",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "2拍",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "3拍",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "4拍",
+            "implemented": false
+          }
+        ]
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "command",
+        "label_ja": "カウントインを有効化",
+        "implemented": false,
+        "proposed_shortcut": "Shift+K"
+      },
+      {
+        "type": "command",
+        "label_ja": "メトロノームを有効化",
+        "implemented": false,
+        "proposed_shortcut": "K"
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "command",
+        "label_ja": "クイックパンチインを許可",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "自動入力モニタリング",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "低レイテンシーモード",
+        "implemented": false
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "submenu",
+        "label_ja": "MIDI録音オプション",
+        "implemented": false,
+        "children": [
+          {
+            "type": "command",
+            "label_ja": "テイクフォルダを作成",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "結合",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "オーバーラップ",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "選択したリージョンと結合",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "サイクル時に新規トラックを作成",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "サイクル時に新規トラックを作成してミュート",
+            "implemented": false
+          }
+        ]
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "submenu",
+        "label_ja": "オーディオ録音オプション",
+        "implemented": false,
+        "children": [
+          {
+            "type": "command",
+            "label_ja": "テイクフォルダを作成",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "新規トラックを作成",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "新規代替バージョンを作成",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "サイクル時に新規トラックを作成してミュート",
+            "implemented": false
+          }
+        ]
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "command",
+        "label_ja": "録音設定を開く",
+        "implemented": false
+      }
+    ],
+    "ミックス": [
+      {
+        "type": "command",
+        "label_ja": "オートメーションを表示/非表示",
+        "implemented": false,
+        "proposed_shortcut": "A"
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "command",
+        "label_ja": "オートメーションを選択",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "オートメーションをコピー",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "オートメーションを移動",
+        "implemented": false
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "submenu",
+        "label_ja": "オートメーションを削除",
+        "implemented": false,
+        "children": [
+          {
+            "type": "command",
+            "label_ja": "表示中のオートメーション",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "選択したトラックのすべて",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "孤立したオートメーション",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "重複したオートメーションポイント",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "すべてのオートメーション",
+            "implemented": false
+          }
+        ]
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "submenu",
+        "label_ja": "オートメーションを変換",
+        "implemented": false,
+        "children": [
+          {
+            "type": "command",
+            "label_ja": "トラックオートメーションをリージョンオートメーションに変換",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "リージョンオートメーションをトラックオートメーションに変換",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "すべてのトラックオートメーションを変換",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "すべてのリージョンオートメーションを変換",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "MIDI制御データをオートメーションに変換",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "オートメーションをMIDI制御データに変換",
+            "implemented": false
+          }
+        ]
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "submenu",
+        "label_ja": "オートメーションモード",
+        "implemented": false,
+        "children": [
+          {
+            "type": "command",
+            "label_ja": "オフ",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "Read（読み取り）",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "Touch（タッチ）",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "Latch（ラッチ）",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "Write（書き込み）",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "Trim（補正）",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "Relative（相対）",
+            "implemented": false
+          }
+        ]
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "command",
+        "label_ja": "I/Oラベル",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "グループ設定",
+        "implemented": false
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "command",
+        "label_ja": "すべてのソロを解除",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "すべてのミュートを解除",
+        "implemented": false
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "command",
+        "label_ja": "オートメーション設定",
+        "implemented": false
+      }
+    ],
+    "表示": [
+      {
+        "type": "command",
+        "label_ja": "ライブラリを表示/非表示",
+        "implemented": false,
+        "proposed_shortcut": "Y"
+      },
+      {
+        "type": "command",
+        "label_ja": "インスペクタを表示/非表示",
+        "implemented": false,
+        "proposed_shortcut": "I"
+      },
+      {
+        "type": "command",
+        "label_ja": "ミキサーを表示/非表示",
+        "implemented": false,
+        "proposed_shortcut": "X"
+      },
+      {
+        "type": "command",
+        "label_ja": "マクロコントロールを表示/非表示",
+        "implemented": false,
+        "proposed_shortcut": "B"
+      },
+      {
+        "type": "command",
+        "label_ja": "エディターを表示/非表示",
+        "implemented": false,
+        "proposed_shortcut": "E"
+      },
+      {
+        "type": "command",
+        "label_ja": "リストエディターを表示/非表示",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "メモ帳を表示/非表示",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "ループブラウザを表示/非表示",
+        "implemented": false,
+        "proposed_shortcut": "O"
+      },
+      {
+        "type": "command",
+        "label_ja": "ファイルブラウザを表示/非表示",
+        "implemented": false,
+        "proposed_shortcut": "F"
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "command",
+        "label_ja": "トラック領域を表示",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "クリップグリッドを表示",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "トラック領域とクリップグリッドを両方表示",
+        "implemented": false
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "command",
+        "label_ja": "コントロールバーを表示/非表示",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "コントロールバーをカスタマイズ",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "ツールバーを表示/非表示",
+        "implemented": false
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "command",
+        "label_ja": "カラーを表示/非表示",
+        "implemented": false
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "submenu",
+        "label_ja": "ズーム",
+        "implemented": false,
+        "children": [
+          {
+            "type": "command",
+            "label_ja": "横方向に拡大",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "横方向に縮小",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "縦方向に拡大",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "縦方向に縮小",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "選択したリージョンを拡大",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "すべてのトラックを表示",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "プロジェクト全体を表示",
+            "implemented": false
+          },
+          {
+            "type": "command",
+            "label_ja": "元のズームに戻す",
+            "implemented": false
+          }
+        ]
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "command",
+        "label_ja": "トラックオートメーションを表示",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "Sloppy編集を表示",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "トラックヘッダの追加コントロールを表示",
+        "implemented": false
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "command",
+        "label_ja": "フルスクリーン",
+        "implemented": false,
+        "proposed_shortcut": "F11"
+      }
+    ],
+    "ウインドウ": [
+      {
+        "type": "command",
+        "label_ja": "最小化",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "最大化",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "すべてを手前に移動",
+        "implemented": false
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "command",
+        "label_ja": "メインウインドウを開く",
+        "implemented": false,
+        "proposed_shortcut": "Ctrl+1"
+      },
+      {
+        "type": "command",
+        "label_ja": "ミキサーを開く",
+        "implemented": false,
+        "proposed_shortcut": "Ctrl+2"
+      },
+      {
+        "type": "command",
+        "label_ja": "ステップシーケンサーを開く",
+        "implemented": false,
+        "proposed_shortcut": "Ctrl+3"
+      },
+      {
+        "type": "command",
+        "label_ja": "ピアノロールを開く",
+        "implemented": false,
+        "proposed_shortcut": "Ctrl+4"
+      },
+      {
+        "type": "command",
+        "label_ja": "スコアエディターを開く",
+        "implemented": false,
+        "proposed_shortcut": "Ctrl+5"
+      },
+      {
+        "type": "command",
+        "label_ja": "オーディオファイルエディターを開く",
+        "implemented": false,
+        "proposed_shortcut": "Ctrl+6"
+      },
+      {
+        "type": "command",
+        "label_ja": "イベントリストを開く",
+        "implemented": false,
+        "proposed_shortcut": "Ctrl+7"
+      },
+      {
+        "type": "command",
+        "label_ja": "プロジェクトオーディオを開く",
+        "implemented": false,
+        "proposed_shortcut": "Ctrl+8"
+      },
+      {
+        "type": "command",
+        "label_ja": "MIDIトランスフォームを開く",
+        "implemented": false,
+        "proposed_shortcut": "Ctrl+9"
+      },
+      {
+        "type": "command",
+        "label_ja": "MIDIルーティングを開く",
+        "implemented": false,
+        "proposed_shortcut": "Ctrl+0"
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "command",
+        "label_ja": "マクロコントロールを開く",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "自動演奏エディターを開く",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "キー/拍子リストを開く",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "トランスポートウインドウを開く",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "イベント情報を表示",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "リージョンインスペクタを表示",
+        "implemented": false
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "command",
+        "label_ja": "PCキーボード演奏",
+        "implemented": false,
+        "proposed_shortcut": "Ctrl+K"
+      },
+      {
+        "type": "command",
+        "label_ja": "ステップ入力キーボード",
+        "implemented": false,
+        "proposed_shortcut": "Ctrl+Alt+K"
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "command",
+        "label_ja": "Luaスクリプト",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "OSC/VRChat連携",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "MCP AI連携マネージャー",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "ゲームコントローラーマネージャー",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "パニック! (すべての音を強制停止)",
+        "implemented": false
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "command",
+        "label_ja": "すべてのプラグインウインドウを表示",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "すべてのプラグインウインドウを隠す",
+        "implemented": false
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "submenu",
+        "label_ja": "開いているウインドウ",
+        "implemented": false,
+        "children": [
+          {
+            "type": "command",
+            "label_ja": "(現在開いているウインドウ一覧)",
+            "implemented": false
+          }
+        ]
+      }
+    ],
+    "1": [
+      {
+        "type": "command",
+        "label_ja": "スクリーンセット",
+        "implemented": false,
+        "proposed_shortcut": "1"
+      },
+      {
+        "type": "command",
+        "label_ja": "スクリーンセット",
+        "implemented": false,
+        "proposed_shortcut": "2"
+      },
+      {
+        "type": "command",
+        "label_ja": "スクリーンセット",
+        "implemented": false,
+        "proposed_shortcut": "3"
+      },
+      {
+        "type": "command",
+        "label_ja": "スクリーンセット",
+        "implemented": false,
+        "proposed_shortcut": "4"
+      },
+      {
+        "type": "command",
+        "label_ja": "スクリーンセット",
+        "implemented": false,
+        "proposed_shortcut": "5"
+      },
+      {
+        "type": "command",
+        "label_ja": "スクリーンセット",
+        "implemented": false,
+        "proposed_shortcut": "6"
+      },
+      {
+        "type": "command",
+        "label_ja": "スクリーンセット",
+        "implemented": false,
+        "proposed_shortcut": "7"
+      },
+      {
+        "type": "command",
+        "label_ja": "スクリーンセット",
+        "implemented": false,
+        "proposed_shortcut": "8"
+      },
+      {
+        "type": "command",
+        "label_ja": "スクリーンセット",
+        "implemented": false,
+        "proposed_shortcut": "9"
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "command",
+        "label_ja": "複製",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "名前を変更",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "削除",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "ロック",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "保存済みの状態に戻す",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "スクリーンセットを読み込む",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "スクリーンセットを書き出す",
+        "implemented": false
+      }
+    ],
+    "ヘルプ": [
+      {
+        "type": "command",
+        "label_ja": "ヘルプを検索",
+        "implemented": false
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "command",
+        "label_ja": "説明書",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "クイックヘルプ",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "キーコマンドのヘルプ",
+        "implemented": false
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "command",
+        "label_ja": "音源のヘルプ",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "エフェクトのヘルプ",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "コントロールサーフェスのヘルプ",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "Sloppyのヘルプ",
+        "implemented": false
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "command",
+        "label_ja": "チュートリアル",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "トラブルシューティング",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "サポートページ",
+        "implemented": false
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "command",
+        "label_ja": "アップデートを確認",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "フィードバックを送信",
+        "implemented": false
+      },
+      {
+        "type": "separator"
+      },
+      {
+        "type": "command",
+        "label_ja": "ライセンス情報",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "MITライセンス（Slop Studio本体）",
+        "implemented": false
+      },
+      {
+        "type": "command",
+        "label_ja": "第三者製品との関係について",
+        "implemented": false
+      }
+    ]
+  },
+  "top_level_order": [
+    "Slop Studio",
+    "ファイル",
+    "編集",
+    "トラック",
+    "移動",
+    "録音",
+    "ミックス",
+    "表示",
+    "ウインドウ",
+    "1",
+    "ヘルプ"
+  ],
+  "locale_targets": [
+    "ja-JP",
+    "en-US",
+    "de-DE",
+    "ko-KR"
+  ]
+}

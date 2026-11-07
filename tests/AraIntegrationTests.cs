@@ -1,0 +1,21 @@
+using System;
+using System.IO;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading;
+using System.Windows.Forms;
+using SlopStudio;
+class AraIntegrationTests {
+ [STAThread]static int Main(string[] a){Application.EnableVisualStyles();Console.OutputEncoding=System.Text.Encoding.UTF8;var lines=new List<string>();string pluginPath=a[0],report=a[1];int failed=0;try{
+  string folder=Path.GetDirectoryName(Path.GetFullPath(report));Directory.CreateDirectory(folder);Environment.SetEnvironmentVariable("SLOPSTUDIO_PROFILE",Path.Combine(folder,"profile"));string file=Path.Combine(folder,"ara-source.wav");if(File.Exists(file))File.Delete(file);float[] audio=new float[48000*2];for(int i=0;i<48000;i++)audio[i*2]=audio[i*2+1]=(float)(.12*Math.Sin(2*Math.PI*440*i/48000));using(var writer=new ExportWaveWriter(file,48000,2,24,false))writer.Write(audio,0,audio.Length);
+  var descriptor=NativePlugin.Scan(pluginPath).First(d=>d.AraSupported);lines.Add("PASS real installed ARA VST3 discovery: "+descriptor.Name);var project=new ProjectDocument{Name="ARA verification"};var track=ProjectFactory.CreateTrack("ARA input",TrackType.Audio);var region=ProjectFactory.CreateRegion("Synthetic A4",0,2);region.MediaPath=file;track.Regions.Add(region);project.Tracks.Add(track);
+  var slot=descriptor.CreateSlot();slot.AraDocument=AraDocumentInfo.FromTrack(project,track);track.Plugins.Add(slot);string archive;
+  using(var plugin=new NativePlugin(slot,48000,512)){
+   lines.Add("PASS actual ARA factory / document / source / modification / playback-role binding");
+   plugin.UpdateAraDocument(slot.AraDocument);float peak=0;float[] block=new float[1024];for(int i=0;i<100;i++){Array.Clear(block,0,block.Length);plugin.Process(block,512,new MidiEventPacket[0],0,120,i*512/24000.0,true,4,4);peak=Math.Max(peak,block.Max(x=>Math.Abs(x)));if(i%10==0){Application.DoEvents();Thread.Sleep(15);}}lines.Add((peak>.005?"PASS":"NOT VERIFIED")+" ARA random-access source rendering, peak="+peak);
+   using(var parent=new Form{Text="Slop ARA editor verification",ClientSize=new System.Drawing.Size(900,700)}){parent.Show();Application.DoEvents();int width,height;bool opened=plugin.OpenEditor(parent.Handle,out width,out height);if(!opened||width<100||height<100)throw new Exception("ARA native editor did not attach.");for(int i=0;i<10;i++){Application.DoEvents();Thread.Sleep(40);}plugin.CloseEditor();parent.Close();lines.Add("PASS actual ARA native editor attachment and clean close");}
+   slot.State=plugin.SaveState();slot.AraState=plugin.Slot.AraState;archive=slot.AraState;if(String.IsNullOrEmpty(archive))throw new Exception("ARA document archive is empty.");lines.Add("PASS ARA archive captured "+Convert.FromBase64String(archive).Length+" bytes");
+  }
+  string saved=Path.Combine(folder,"ARA.slopdaw");ProjectFile.SaveAtomic(project,saved);var loaded=ProjectFile.Load(saved);var restored=loaded.Tracks[0].Plugins[0];if(!restored.UseAra||restored.AraState!=archive)throw new Exception(".slopdaw lost ARA state.");restored.AraDocument=AraDocumentInfo.FromTrack(loaded,loaded.Tracks[0]);using(var plugin=new NativePlugin(restored,48000,512)){var block=new float[1024];plugin.Process(block,512,new MidiEventPacket[0],0,120,0,true,4,4);}lines.Add("PASS .slopdaw ARA archive round-trip and new-instance restore/render/unload");using(var engine=new ArrangementEngine(new AppSettings{SampleRate=48000,BufferFrames=512})){var output=engine.RenderOffline(loaded,48000,0);float peak=output.Max(x=>Math.Abs(x));if(engine.Warnings.Count>0||peak<.05||peak>.2)throw new Exception("Application ARA arrangement routing failed: peak="+peak+" warnings="+String.Join(";",engine.Warnings.ToArray()));engine.CapturePluginStates();if(String.IsNullOrEmpty(loaded.Tracks[0].Plugins[0].AraState))throw new Exception("Application graph lost ARA archive.");lines.Add("PASS actual application arrangement graph ARA audio routing and project state capture, peak="+peak);}
+ }catch(Exception ex){failed++;lines.Add("FAIL "+ex);}File.WriteAllLines(report,lines);foreach(string l in lines)Console.WriteLine(l);return failed==0?0:1;}
+}

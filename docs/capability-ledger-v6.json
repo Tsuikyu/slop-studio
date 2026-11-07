@@ -1,0 +1,264 @@
+{
+  "version": "0.6.0",
+  "date": "2026-10-28",
+  "features": [
+    {
+      "feature": "Windows x64 / standalone",
+      "status": "PASS",
+      "evidence": "CMake Release; AMD64 PE32+ application, both DLLs and separate companion; actual Windows startup",
+      "limits": "Clean extracted-source rebuild and packaged launch recorded separately."
+    },
+    {
+      "feature": "Startup / Quick Start / splash",
+      "status": "PASS",
+      "evidence": "Visible Windows main window, original splash and project chooser; original 4-track/32-cell starter produces PCM",
+      "limits": "Recent-project list beyond recovery candidates is not implemented."
+    },
+    {
+      "feature": "Dark reference-based UI",
+      "status": "PARTIAL",
+      "evidence": "Full-height library/inspector, central transport/LCD, tracks, lower mixer/editors, right browser, session grid",
+      "limits": "Original assets and code. Not pixel-identical reference application UI; native dialogs, icons and some proportions differ."
+    },
+    {
+      "feature": "Resize / workspace scaling",
+      "status": "PASS",
+      "evidence": "1920×1020 and 1280×800 rendered windows; Ctrl-wheel filter changes 1% and reverses; 100/125/150% workspace tests",
+      "limits": "60–200% is supported in settings; all extremes and every dialog were not exhaustively tested."
+    },
+    {
+      "feature": "Per-monitor DPI",
+      "status": "PARTIAL",
+      "evidence": "PerMonitorV2 manifest/config and scaled drawing/input; actual 120 DPI (Windows 125%)",
+      "limits": "Only DISPLAY1 at 1920×1080 is available. Cross-monitor transition NOT RUN."
+    },
+    {
+      "feature": "Transport / navigation",
+      "status": "PASS",
+      "evidence": "Actual Play/Stop/Pause/Return/ruler seek; shared GUI/menu/keyboard commands",
+      "limits": "Device clock/latency alignment is not a calibrated professional transport."
+    },
+    {
+      "feature": "WASAPI shared audio",
+      "status": "PASS",
+      "evidence": "Real MiniFuse Virtual7/8→Loopback7/8, nonzero PCM; 44.1/48/96 kHz callbacks",
+      "limits": "Physical speaker audition NOT RUN."
+    },
+    {
+      "feature": "WASAPI exclusive audio",
+      "status": "NOT VERIFIED",
+      "evidence": "Actual exclusive initialization path exists and returns native errors",
+      "limits": "No successful exclusive-mode runtime test."
+    },
+    {
+      "feature": "ASIO",
+      "status": "PASS",
+      "evidence": "Official SDK companion with FL Studio ASIO, 44.1/48 kHz, two input channels and render callbacks",
+      "limits": "MiniFuse ASIO returns no-device in this environment; no physical ASIO microphone verification."
+    },
+    {
+      "feature": "MiniFuse ASIO driver on this host",
+      "status": "FAIL",
+      "evidence": "Driver init explicitly returns No device is connected to the PC",
+      "limits": "Its Windows virtual/WASAPI endpoints work; the ASIO-specific failure is not resolved."
+    },
+    {
+      "feature": "Multiple inputs / routing",
+      "status": "PASS",
+      "evidence": "Two distinct synthetic channels recorded to separate PCM take files; per-track mono/stereo routing",
+      "limits": "ASIO supports up to 32 inputs in code; more than two actual hardware channels NOT RUN."
+    },
+    {
+      "feature": "Input monitoring",
+      "status": "PASS",
+      "evidence": "Injected stereo input reaches real track gain/pan/master render with verified amplitudes",
+      "limits": "Physical acoustic monitoring/latency measurement NOT RUN."
+    },
+    {
+      "feature": "Audio recording",
+      "status": "PASS",
+      "evidence": "GUI Record/Stop preserves actual WASAPI MiniFuse loopback WAV; multitrack disk writer separates input channels",
+      "limits": "Per take and imported WAV limit 256 MiB; no cycle recording."
+    },
+    {
+      "feature": "MIDI input / capture",
+      "status": "PARTIAL",
+      "evidence": "Real MIDI input opened; injected timestamped short messages recorded by GUI workflow; stored notes survive reload",
+      "limits": "Physical keyboard performance NOT RUN; SysEx and persistent CC/aftertouch recording absent."
+    },
+    {
+      "feature": "MIDI editing / playback",
+      "status": "PASS",
+      "evidence": "Piano roll, score and sequencer mutate actual notes; undo/redo; built-in and Vital sound generation",
+      "limits": "MIDI expression/editor depth is limited."
+    },
+    {
+      "feature": "Tracks / regions / projects",
+      "status": "PASS",
+      "evidence": "Create/select/name/reorder/mute/solo/arm; move/trim/split; v1–v6 project load and v6 persistence tests",
+      "limits": "External WAVs remain referenced. No complete media-consolidation save."
+    },
+    {
+      "feature": "Preferences",
+      "status": "PASS",
+      "evidence": "Device/backend/rate/buffer/MIDI/paths/scale/defaults/integration validation and persistent JSON",
+      "limits": "Unsupported device configurations return errors; hardware settings are not universally valid."
+    },
+    {
+      "feature": "VST3 real hosting",
+      "status": "PASS",
+      "evidence": "Official SDK; fixture and installed Vital discovery, instantiate, MIDI/audio, parameters, state, native HWND editor, unload",
+      "limits": "Only mono/stereo main bus and tested plugins; broader features below remain partial."
+    },
+    {
+      "feature": "CLAP real hosting",
+      "status": "PASS",
+      "evidence": "Official headers; fixture and installed Vital processing, events/parameters/state/editor/lifecycle",
+      "limits": "One main audio bus and first note port; advanced CLAP extensions incomplete."
+    },
+    {
+      "feature": "All-vendor compatibility",
+      "status": "NOT VERIFIED",
+      "evidence": "Vital VST3/CLAP and original ABI fixtures succeed",
+      "limits": "Saturation Knob GetPluginFactory returns null; x86/ARM and advanced bus configurations unsupported."
+    },
+    {
+      "feature": "Softube Saturation Knob on this host",
+      "status": "FAIL",
+      "evidence": "PE exports include GetPluginFactory, but it returns null during actual scan",
+      "limits": "Cause unconfirmed; diagnostics mention possible vendor initialization/activation without asserting that cause."
+    },
+    {
+      "feature": "Plugin delay compensation",
+      "status": "PARTIAL",
+      "evidence": "256-sample declared-latency fixture aligns wet/dry impulses exactly",
+      "limits": "Static chain latency only; dynamic changes, live recording/input latency and every routing topology not complete."
+    },
+    {
+      "feature": "Plugin DSP crash containment",
+      "status": "PASS",
+      "evidence": "Separate worker per instance; ExitProcess, 10-second hang, native access violation; another plugin survives",
+      "limits": "Subsequent-block wait bound 250 ms; first block up to 5 s; dropouts can occur."
+    },
+    {
+      "feature": "Complete DSP isolation / Bitwig parity",
+      "status": "PARTIAL",
+      "evidence": "Plugin, ASIO and Link processes separated; parent watchdogs and per-plugin restart",
+      "limits": "Built-in synthesis, mixing, WASAPI and UI remain in main process. Not a security sandbox or hard real-time design."
+    },
+    {
+      "feature": "Automation",
+      "status": "PARTIAL",
+      "evidence": "Sample-wise gain/pan/mute curves; real VST3/CLAP sample-offset events; persistence and offset fixture tests",
+      "limits": "Four plugin parameters/instance, about 32 points/block; Touch/Latch/Write recording modes absent."
+    },
+    {
+      "feature": "Score",
+      "status": "PARTIAL",
+      "evidence": "Real MIDI staff display, note entry/deletion, pitch/time/duration edits and persistence",
+      "limits": "Single basic staff; no complete engraving, rests, score sets or printing system."
+    },
+    {
+      "feature": "Step sequencer",
+      "status": "PASS",
+      "evidence": "Actual selected MIDI region; 16–64 visible steps, toggles and velocity; GUI/model test",
+      "limits": "Fixed note rows and 1/16 grid; polymeters/advanced pattern engine absent."
+    },
+    {
+      "feature": "Slop Launcher",
+      "status": "PARTIAL",
+      "evidence": "Audio/MIDI cells, scenes, bar-quantized launch, looping, M/S/R, assignment, arrangement return, save/load",
+      "limits": "No performance-to-arrangement recording or recording directly into cells; 8 visible scenes."
+    },
+    {
+      "feature": "Slop Pitch",
+      "status": "PARTIAL",
+      "evidence": "YIN A4 detection; C5 rendered by TD-PSOLA with same duration; editable note segments and WAV take",
+      "limits": "Monophonic-oriented, max 120 seconds; no commercial-quality polyphonic/formant workflow."
+    },
+    {
+      "feature": "Comping",
+      "status": "PARTIAL",
+      "evidence": "Take range selections route real chosen audio and persist",
+      "limits": "No automatic take folders, cycle takes or crossfade engine."
+    },
+    {
+      "feature": "Audio export",
+      "status": "PASS",
+      "evidence": "Actual 16/24-bit PCM and 32-bit float WAV, 44.1 kHz duration validation, correct range/tail exclusion",
+      "limits": "Individual stem GUI path implemented but NOT VERIFIED. No compressed/spatial export."
+    },
+    {
+      "feature": "Recovery",
+      "status": "PASS",
+      "evidence": "Actual forced Windows app termination; automatic snapshot survives and next process restores MIDI",
+      "limits": "Rolling 3 snapshots/10–600s; recording headers periodic. Real recording-time forced crash NOT RUN."
+    },
+    {
+      "feature": "Sample/file browser",
+      "status": "PARTIAL",
+      "evidence": "Actual folder navigation/search, WAV list, preview, import and drag/drop",
+      "limits": "No the vendor content, AIFF/MP3 decoding, the vendor Loop tags or tempo-aware preview."
+    },
+    {
+      "feature": "Ableton Link",
+      "status": "PARTIAL",
+      "evidence": "Official Link in separate GPL process; two real peers synchronize tempo/start-stop data",
+      "limits": "DAW sample-clock/phase following and external LAN peers not fully verified/implemented."
+    },
+    {
+      "feature": "ALS import only",
+      "status": "PARTIAL",
+      "evidence": "Gzip XML arrangement MIDI/audio subset; generated MIDI fixture validates note and timing",
+      "limits": "Live devices, mixer routing/levels, warps, envelopes, grooves and full session data not translated. No export."
+    },
+    {
+      "feature": "FLP import only",
+      "status": "PARTIAL",
+      "evidence": "Bounded binary events, note patterns and playlist timing; generated fixture verifies results",
+      "limits": "FL devices/presets, audio playlist items, mixer, slide notes and automation unsupported. No export."
+    },
+    {
+      "feature": "DAWproject import/export",
+      "status": "PARTIAL",
+      "evidence": "Standard ZIP/XML, official XSD pass, embedded audio/notes/mix/plugin state and native extension round-trip",
+      "limits": "Other vendor applications NOT RUN; warps/complex routing/comp transfer semantics incomplete; comp warning provided."
+    },
+    {
+      "feature": "MCP AI integration",
+      "status": "PASS",
+      "evidence": "Actual stdio client drives 11 tools in visible DAW, saves/reopens notes/automation, renders WAV",
+      "limits": "Creates its own DAW process; does not attach to an already-running separate instance. No built-in AI model."
+    },
+    {
+      "feature": "OSC / VRChat protocol",
+      "status": "PARTIAL",
+      "evidence": "OSC int/float/string/bool and bundles; actual bidirectional localhost UDP; mapped DAW commands/parameters",
+      "limits": "VRChat application NOT RUN; local receive binding, scheduled bundle timetags not implemented."
+    },
+    {
+      "feature": "reference application keyboard compatibility",
+      "status": "PARTIAL",
+      "evidence": "66 traceable rows, 63 active assignments / 59 command handlers; unique modifier registry, focus tests, shared menu handlers",
+      "limits": "Not all reference application shortcuts/catalogs; unavailable commands and editor/window behavior differ."
+    },
+    {
+      "feature": "Dependency / source licensing",
+      "status": "PASS",
+      "evidence": "MIT main application; separately GPLv3 ASIO/Link executable; official sources/pins and complete companion source/notices",
+      "limits": "This is the chosen distribution arrangement, not a universal licensing/legal compatibility certification."
+    },
+    {
+      "feature": "Debian 13 / Linux standalone",
+      "status": "FAIL",
+      "evidence": "No Debian backend/packaging; CMake explicitly rejects non-Windows",
+      "limits": "Cross-platform GUI/audio backend and Linux VST3 paths remain engineering work."
+    },
+    {
+      "feature": "Professional final clone / exhaustive reliability",
+      "status": "FAIL",
+      "evidence": "Material working Windows improvements and reproducible evidence exist",
+      "limits": "Strict visual equality, complete feature/shortcut/vendor parity, long-session/stress/production qualification not achieved."
+    }
+  ]
+}

@@ -1,0 +1,2553 @@
+{
+  "schema": "slop-studio-menu-mapping-1",
+  "source": "requirements/Slop_Studio_v5_Menu_Catalog.json",
+  "note": "Mappings identify the nearest existing handler; they do not assert full semantic parity, menu visibility, translation completeness, or successful verification.",
+  "command_count": 424,
+  "mapped_count": 54,
+  "entries": [
+    {
+      "catalog_id": "v5.0.0",
+      "path_ja": "Slop Studio > Slop Studioについて",
+      "command_id_or_handler": "MainForm.ShowAbout",
+      "status": "mapped; behavior and exposure require verification"
+    },
+    {
+      "catalog_id": "v5.0.2.0",
+      "path_ja": "Slop Studio > 設定 > 一般",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.0.2.1",
+      "path_ja": "Slop Studio > 設定 > オーディオ",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.0.2.2",
+      "path_ja": "Slop Studio > 設定 > 録音",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.0.2.3",
+      "path_ja": "Slop Studio > 設定 > MIDI",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.0.2.4",
+      "path_ja": "Slop Studio > 設定 > 表示",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.0.2.5",
+      "path_ja": "Slop Studio > 設定 > スコア",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.0.2.6",
+      "path_ja": "Slop Studio > 設定 > ムービー",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.0.2.7",
+      "path_ja": "Slop Studio > 設定 > オートメーション",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.0.2.8",
+      "path_ja": "Slop Studio > 設定 > ユーザー情報",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.0.2.9",
+      "path_ja": "Slop Studio > 設定 > プラグインマネージャー",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.0.2.10",
+      "path_ja": "Slop Studio > 設定 > コード・グリッドライブラリ",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.0.2.11",
+      "path_ja": "Slop Studio > 設定 > AI・MCP連携",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.0.2.12",
+      "path_ja": "Slop Studio > 設定 > Luaスクリプト",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.0.2.13",
+      "path_ja": "Slop Studio > 設定 > OSC・外部制御",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.0.2.14",
+      "path_ja": "Slop Studio > 設定 > キーコマンド以外のすべての設定をリセット",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.0.4.0",
+      "path_ja": "Slop Studio > コントロールサーフェス > コントローラーアサインメントを登録",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.0.4.1",
+      "path_ja": "Slop Studio > コントロールサーフェス > コントローラーアサインメントを編集",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.0.4.2",
+      "path_ja": "Slop Studio > コントロールサーフェス > 接続デバイスを管理",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.0.4.3",
+      "path_ja": "Slop Studio > コントロールサーフェス > 設定",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.0.4.4",
+      "path_ja": "Slop Studio > コントロールサーフェス > 環境設定",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.0.4.5",
+      "path_ja": "Slop Studio > コントロールサーフェス > デフォルトに戻す",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.0.4.6",
+      "path_ja": "Slop Studio > コントロールサーフェス > すべてのコントロールサーフェスをバイパス",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.0.6.0",
+      "path_ja": "Slop Studio > キーコマンド > キーコマンドエディターを開く",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.0.6.1.0",
+      "path_ja": "Slop Studio > キーコマンド > キーボード配列 > フランス語",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.0.6.1.1",
+      "path_ja": "Slop Studio > キーコマンド > キーボード配列 > ドイツ語",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.0.6.1.2",
+      "path_ja": "Slop Studio > キーコマンド > キーボード配列 > イタリア語",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.0.6.1.3",
+      "path_ja": "Slop Studio > キーコマンド > キーボード配列 > 日本語",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.0.6.1.4",
+      "path_ja": "Slop Studio > キーコマンド > キーボード配列 > スペイン語",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.0.6.1.5",
+      "path_ja": "Slop Studio > キーコマンド > キーボード配列 > スウェーデン語",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.0.6.1.6",
+      "path_ja": "Slop Studio > キーコマンド > キーボード配列 > 英語（US）",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.0.6.2.0",
+      "path_ja": "Slop Studio > キーコマンド > 操作スタイル > Slop Studio標準（Logic操作参考）",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.0.6.2.1",
+      "path_ja": "Slop Studio > キーコマンド > 操作スタイル > Ableton Live風（Slop拡張）",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.0.6.2.2",
+      "path_ja": "Slop Studio > キーコマンド > 操作スタイル > Cubase風（Slop拡張）",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.0.6.2.3",
+      "path_ja": "Slop Studio > キーコマンド > 操作スタイル > FL Studio風（Slop拡張）",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.0.6.2.4",
+      "path_ja": "Slop Studio > キーコマンド > 操作スタイル > Pro Tools風（Slop拡張）",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.0.6.2.5",
+      "path_ja": "Slop Studio > キーコマンド > 操作スタイル > SONAR風（Slop拡張）",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.0.6.2.6",
+      "path_ja": "Slop Studio > キーコマンド > 操作スタイル > Premiere Pro風（Slop拡張）",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.0.6.2.7",
+      "path_ja": "Slop Studio > キーコマンド > 操作スタイル > Unity風（Slop拡張）",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.0.6.2.8",
+      "path_ja": "Slop Studio > キーコマンド > 操作スタイル > Unreal Engine風（Slop拡張）",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.0.6.2.9",
+      "path_ja": "Slop Studio > キーコマンド > 操作スタイル > REAPER風（Slop拡張）",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.0.6.2.10",
+      "path_ja": "Slop Studio > キーコマンド > 操作スタイル > Fender Studio Pro風（Slop拡張）",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.0.6.2.11",
+      "path_ja": "Slop Studio > キーコマンド > 操作スタイル > DaVinci Resolve風（Slop拡張）",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.0.6.2.12",
+      "path_ja": "Slop Studio > キーコマンド > 操作スタイル > カスタムプリセット",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.0.6.3",
+      "path_ja": "Slop Studio > キーコマンド > キーコマンドを読み込む",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.0.6.4",
+      "path_ja": "Slop Studio > キーコマンド > キーコマンドを書き出す",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.0.6.5",
+      "path_ja": "Slop Studio > キーコマンド > 現在のプリセットを保存",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.0.6.6",
+      "path_ja": "Slop Studio > キーコマンド > カスタムキーコマンドを結合",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.0.6.7",
+      "path_ja": "Slop Studio > キーコマンド > キーコマンドを初期化",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.0.8",
+      "path_ja": "Slop Studio > サウンドライブラリを管理",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.0.10",
+      "path_ja": "Slop Studio > フィードバックを送信",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.0.11.0",
+      "path_ja": "Slop Studio > サービス > ないよ！（無効項目。英語：Nothing!）",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.0.13",
+      "path_ja": "Slop Studio > ウインドウを最小化",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.0.14",
+      "path_ja": "Slop Studio > すべてのウインドウを表示",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.0.16",
+      "path_ja": "Slop Studio > Slop Studioを終了",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.0",
+      "path_ja": "ファイル > 新規",
+      "command_id_or_handler": "AppCommand.NewProject",
+      "status": "mapped; behavior and exposure require verification"
+    },
+    {
+      "catalog_id": "v5.1.1",
+      "path_ja": "ファイル > テンプレートから新規作成",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.2",
+      "path_ja": "ファイル > 開く",
+      "command_id_or_handler": "AppCommand.OpenProject",
+      "status": "mapped; behavior and exposure require verification"
+    },
+    {
+      "catalog_id": "v5.1.3.0",
+      "path_ja": "ファイル > 最近使った項目を開く > (最近使用したプロジェクト1)",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.3.1",
+      "path_ja": "ファイル > 最近使った項目を開く > (最近使用したプロジェクト2)",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.3.2",
+      "path_ja": "ファイル > 最近使った項目を開く > (最近使用したプロジェクト3)",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.3.3",
+      "path_ja": "ファイル > 最近使った項目を開く > (最大10件)",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.3.4",
+      "path_ja": "ファイル > 最近使った項目を開く > メニューを消去",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.5",
+      "path_ja": "ファイル > 閉じる",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.6",
+      "path_ja": "ファイル > プロジェクトを閉じる",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.7",
+      "path_ja": "ファイル > 保存",
+      "command_id_or_handler": "AppCommand.SaveProject",
+      "status": "mapped; behavior and exposure require verification"
+    },
+    {
+      "catalog_id": "v5.1.8",
+      "path_ja": "ファイル > 別名で保存",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.9",
+      "path_ja": "ファイル > コピーを保存",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.10",
+      "path_ja": "ファイル > テンプレートとして保存",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.12.0",
+      "path_ja": "ファイル > 戻す > 最後に保存した状態",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.12.1",
+      "path_ja": "ファイル > 戻す > (自動バックアップ一覧)",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.14.0",
+      "path_ja": "ファイル > 代替プロジェクト > 新規代替バージョン",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.14.1",
+      "path_ja": "ファイル > 代替プロジェクト > 代替バージョンを編集",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.14.2",
+      "path_ja": "ファイル > 代替プロジェクト > 代替バージョンをプロジェクトとして書き出す",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.14.3",
+      "path_ja": "ファイル > 代替プロジェクト > (保存されたバージョン一覧)",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.16.0",
+      "path_ja": "ファイル > プロジェクト管理 > クリーンアップ",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.16.1",
+      "path_ja": "ファイル > プロジェクト管理 > 統合",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.16.2",
+      "path_ja": "ファイル > プロジェクト管理 > 名前を変更",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.16.3",
+      "path_ja": "ファイル > プロジェクト管理 > 保存場所を表示",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.16.4",
+      "path_ja": "ファイル > プロジェクト管理 > 不足している素材を検索",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.17.0",
+      "path_ja": "ファイル > プロジェクト設定 > 一般",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.17.1",
+      "path_ja": "ファイル > プロジェクト設定 > 同期",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.17.2",
+      "path_ja": "ファイル > プロジェクト設定 > メトロノーム",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.17.3",
+      "path_ja": "ファイル > プロジェクト設定 > テンポ解析",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.17.4",
+      "path_ja": "ファイル > プロジェクト設定 > 録音",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.17.5",
+      "path_ja": "ファイル > プロジェクト設定 > チューニング",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.17.6",
+      "path_ja": "ファイル > プロジェクト設定 > オーディオ",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.17.7",
+      "path_ja": "ファイル > プロジェクト設定 > MIDI",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.17.8",
+      "path_ja": "ファイル > プロジェクト設定 > スコア",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.17.9",
+      "path_ja": "ファイル > プロジェクト設定 > ムービー",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.17.10",
+      "path_ja": "ファイル > プロジェクト設定 > 素材",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.17.11",
+      "path_ja": "ファイル > プロジェクト設定 > Sloppy",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.19",
+      "path_ja": "ファイル > ページ設定",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.20",
+      "path_ja": "ファイル > プリント",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.22.0",
+      "path_ja": "ファイル > ムービー > ムービーを開く",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.22.1",
+      "path_ja": "ファイル > ムービー > ムービーを取り除く",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.22.2",
+      "path_ja": "ファイル > ムービー > ムービーからオーディオを読み込む",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.22.3",
+      "path_ja": "ファイル > ムービー > ムービーにオーディオを書き出す",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.22.4",
+      "path_ja": "ファイル > ムービー > シーンカットを検出",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.24.0",
+      "path_ja": "ファイル > 読み込む > オーディオファイル",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.24.1",
+      "path_ja": "ファイル > 読み込む > MIDIファイル",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.24.2",
+      "path_ja": "ファイル > 読み込む > MusicXMLファイル",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.24.3",
+      "path_ja": "ファイル > 読み込む > AAFファイル",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.24.4",
+      "path_ja": "ファイル > 読み込む > ムービーファイル",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.24.5",
+      "path_ja": "ファイル > 読み込む > Slop Studioプロジェクト",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.24.6",
+      "path_ja": "ファイル > 読み込む > トラックと設定",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.26.0",
+      "path_ja": "ファイル > 書き出す > リージョンをループライブラリに追加",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.26.1",
+      "path_ja": "ファイル > 書き出す > リージョンをオーディオファイルとして",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.26.2",
+      "path_ja": "ファイル > 書き出す > 選択したトラックをオーディオファイルとして",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.26.3",
+      "path_ja": "ファイル > 書き出す > すべてのトラックをオーディオファイルとして",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.26.4",
+      "path_ja": "ファイル > 書き出す > 選択したMIDIリージョンをMIDIファイルとして",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.26.5",
+      "path_ja": "ファイル > 書き出す > プロジェクトをMIDIファイルとして",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.26.6",
+      "path_ja": "ファイル > 書き出す > プロジェクトをAAFファイルとして",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.26.7",
+      "path_ja": "ファイル > 書き出す > スコアをMusicXMLファイルとして",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.26.8",
+      "path_ja": "ファイル > 書き出す > 空間オーディオを書き出す",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.28.0",
+      "path_ja": "ファイル > バウンス > リージョンをインプレイス",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.28.1",
+      "path_ja": "ファイル > バウンス > トラックをインプレイス",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.28.2",
+      "path_ja": "ファイル > バウンス > すべてのトラックをバウンスして置き換え",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.28.3",
+      "path_ja": "ファイル > バウンス > プロジェクトまたは選択範囲",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.30.0",
+      "path_ja": "ファイル > 共有 > オーディオファイルを共有",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.30.1",
+      "path_ja": "ファイル > 共有 > プロジェクトを共有",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.1.30.2",
+      "path_ja": "ファイル > 共有 > 外部サービスに共有",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.0",
+      "path_ja": "編集 > 取り消す",
+      "command_id_or_handler": "AppCommand.Undo",
+      "status": "mapped; behavior and exposure require verification"
+    },
+    {
+      "catalog_id": "v5.2.1",
+      "path_ja": "編集 > やり直す",
+      "command_id_or_handler": "AppCommand.Redo",
+      "status": "mapped; behavior and exposure require verification"
+    },
+    {
+      "catalog_id": "v5.2.2",
+      "path_ja": "編集 > 取り消し履歴",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.3",
+      "path_ja": "編集 > 取り消し履歴を消去",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.5",
+      "path_ja": "編集 > カット",
+      "command_id_or_handler": "AppCommand.Cut",
+      "status": "mapped; behavior and exposure require verification"
+    },
+    {
+      "catalog_id": "v5.2.6",
+      "path_ja": "編集 > コピー",
+      "command_id_or_handler": "AppCommand.Copy",
+      "status": "mapped; behavior and exposure require verification"
+    },
+    {
+      "catalog_id": "v5.2.7",
+      "path_ja": "編集 > ペースト",
+      "command_id_or_handler": "AppCommand.Paste",
+      "status": "mapped; behavior and exposure require verification"
+    },
+    {
+      "catalog_id": "v5.2.8",
+      "path_ja": "編集 > 元の位置にペースト",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.9",
+      "path_ja": "編集 > 置き換えてペースト",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.10",
+      "path_ja": "編集 > 削除",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.12",
+      "path_ja": "編集 > すべてを選択",
+      "command_id_or_handler": "AppCommand.SelectAll",
+      "status": "mapped; behavior and exposure require verification"
+    },
+    {
+      "catalog_id": "v5.2.13",
+      "path_ja": "編集 > すべての選択を解除",
+      "command_id_or_handler": "AppCommand.DeselectAll",
+      "status": "mapped; behavior and exposure require verification"
+    },
+    {
+      "catalog_id": "v5.2.14",
+      "path_ja": "編集 > 選択項目を反転",
+      "command_id_or_handler": "AppCommand.InvertSelection",
+      "status": "mapped; behavior and exposure require verification"
+    },
+    {
+      "catalog_id": "v5.2.15.0",
+      "path_ja": "編集 > 選択 > すべて",
+      "command_id_or_handler": "AppCommand.SelectAll",
+      "status": "mapped; behavior and exposure require verification"
+    },
+    {
+      "catalog_id": "v5.2.15.1",
+      "path_ja": "編集 > 選択 > 同じトラックのすべてのリージョン",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.15.2",
+      "path_ja": "編集 > 選択 > 同じ種類のすべてのリージョン",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.15.3",
+      "path_ja": "編集 > 選択 > 同じカラーのリージョン",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.15.4",
+      "path_ja": "編集 > 選択 > 後続のすべてのリージョン",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.15.5",
+      "path_ja": "編集 > 選択 > ロケータ内のリージョン",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.15.6",
+      "path_ja": "編集 > 選択 > ロケータ外のリージョン",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.15.7",
+      "path_ja": "編集 > 選択 > ミュートされたリージョン",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.17.0",
+      "path_ja": "編集 > 移動 > 再生ヘッド位置へ",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.17.1",
+      "path_ja": "編集 > 移動 > 録音位置へ",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.17.2",
+      "path_ja": "編集 > 移動 > 選択したトラックへ",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.17.3",
+      "path_ja": "編集 > 移動 > 左にシャッフル",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.17.4",
+      "path_ja": "編集 > 移動 > 右にシャッフル",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.17.5",
+      "path_ja": "編集 > 移動 > 左にナッジ",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.17.6",
+      "path_ja": "編集 > 移動 > 右にナッジ",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.17.7.0",
+      "path_ja": "編集 > 移動 > ナッジ値を設定 > 小節",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.17.7.1",
+      "path_ja": "編集 > 移動 > ナッジ値を設定 > ディビジョン",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.17.7.2",
+      "path_ja": "編集 > 移動 > ナッジ値を設定 > ティック",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.17.7.3",
+      "path_ja": "編集 > 移動 > ナッジ値を設定 > フレーム",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.17.7.4",
+      "path_ja": "編集 > 移動 > ナッジ値を設定 > ミリ秒",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.17.7.5",
+      "path_ja": "編集 > 移動 > ナッジ値を設定 > サンプル",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.19.0",
+      "path_ja": "編集 > トリム > オーバーラップを削除",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.19.1",
+      "path_ja": "編集 > トリム > ロケータの範囲内を埋める",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.19.2",
+      "path_ja": "編集 > トリム > ロケータの範囲外を切り取る",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.19.3",
+      "path_ja": "編集 > トリム > リージョンの開始位置を再生ヘッドへ",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.19.4",
+      "path_ja": "編集 > トリム > リージョンの終了位置を再生ヘッドへ",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.21.0",
+      "path_ja": "編集 > 分割 > 再生ヘッド位置でリージョンを分割",
+      "command_id_or_handler": "AppCommand.SplitRegion",
+      "status": "mapped; behavior and exposure require verification"
+    },
+    {
+      "catalog_id": "v5.2.21.1",
+      "path_ja": "編集 > 分割 > マーキー選択範囲でリージョンを分割",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.21.2",
+      "path_ja": "編集 > 分割 > ロケータ位置でリージョンを分割",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.21.3",
+      "path_ja": "編集 > 分割 > 無音部分でリージョンを分割",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.23.0",
+      "path_ja": "編集 > 結合 > リージョンを結合",
+      "command_id_or_handler": "AppCommand.JoinRegions",
+      "status": "mapped; behavior and exposure require verification"
+    },
+    {
+      "catalog_id": "v5.2.23.1",
+      "path_ja": "編集 > 結合 > MIDIリージョンを結合",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.23.2",
+      "path_ja": "編集 > 結合 > オーディオリージョンを結合",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.25",
+      "path_ja": "編集 > 繰り返す",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.26",
+      "path_ja": "編集 > セクションを繰り返す",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.27",
+      "path_ja": "編集 > リージョンをループ",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.28",
+      "path_ja": "編集 > リージョンのループを解除",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.29",
+      "path_ja": "編集 > リージョンを複製",
+      "command_id_or_handler": "AppCommand.DuplicateRegion",
+      "status": "mapped; behavior and exposure require verification"
+    },
+    {
+      "catalog_id": "v5.2.30",
+      "path_ja": "編集 > エイリアスを作成",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.31",
+      "path_ja": "編集 > エイリアスを実際のコピーに変換",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.33.0",
+      "path_ja": "編集 > テンポ > テンポを検出",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.33.1",
+      "path_ja": "編集 > テンポ > テンポを解析",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.33.2",
+      "path_ja": "編集 > テンポ > リージョンの長さからテンポを調整",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.33.3",
+      "path_ja": "編集 > テンポ > テンポ情報を適用",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.33.4",
+      "path_ja": "編集 > テンポ > テンポ情報を書き込む",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.35.0",
+      "path_ja": "編集 > Sloppy > Sloppy編集を有効化",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.35.1",
+      "path_ja": "編集 > Sloppy > Sloppy編集を無効化",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.35.2",
+      "path_ja": "編集 > Sloppy > Sloppy時間編集",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.35.3",
+      "path_ja": "編集 > Sloppy > Sloppyピッチ編集",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.35.4",
+      "path_ja": "編集 > Sloppy > Sloppy解析を実行",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.35.5",
+      "path_ja": "編集 > Sloppy > Sloppy解析結果を消去",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.37.0",
+      "path_ja": "編集 > クオンタイズ > 選択したイベントをクオンタイズ",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.37.1",
+      "path_ja": "編集 > クオンタイズ > クオンタイズを解除",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.37.2",
+      "path_ja": "編集 > クオンタイズ > クオンタイズ値を設定",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.37.3",
+      "path_ja": "編集 > クオンタイズ > クオンタイズ強度を設定",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.37.4",
+      "path_ja": "編集 > クオンタイズ > スウィング量を設定",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.39",
+      "path_ja": "編集 > 名前を変更",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.40",
+      "path_ja": "編集 > カラーを変更",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.41",
+      "path_ja": "編集 > ミュート",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.42",
+      "path_ja": "編集 > ミュート解除",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.44",
+      "path_ja": "編集 > 検索",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.2.45",
+      "path_ja": "編集 > 検索して選択",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.3.0",
+      "path_ja": "トラック > 新規トラック",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.3.1",
+      "path_ja": "トラック > 新規オーディオトラック",
+      "command_id_or_handler": "AppCommand.AddAudioTrack",
+      "status": "mapped; behavior and exposure require verification"
+    },
+    {
+      "catalog_id": "v5.3.2",
+      "path_ja": "トラック > 新規ソフトウェア音源トラック",
+      "command_id_or_handler": "AppCommand.AddMidiTrack",
+      "status": "mapped; behavior and exposure require verification"
+    },
+    {
+      "catalog_id": "v5.3.3",
+      "path_ja": "トラック > 新規自動演奏トラック",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.3.4",
+      "path_ja": "トラック > 新規外部MIDIトラック",
+      "command_id_or_handler": "AppCommand.AddExternalMidiTrack",
+      "status": "mapped; behavior and exposure require verification"
+    },
+    {
+      "catalog_id": "v5.3.6.0",
+      "path_ja": "トラック > その他 > 同じチャンネルストリップを使った新規トラック",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.3.6.1",
+      "path_ja": "トラック > その他 > 次のチャンネルを使った新規トラック",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.3.6.2",
+      "path_ja": "トラック > その他 > 次のMIDIチャンネルを使った新規トラック",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.3.6.3",
+      "path_ja": "トラック > その他 > 選択したリージョン用の新規トラック",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.3.6.4",
+      "path_ja": "トラック > その他 > オーバーラップしたリージョン用の新規トラック",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.3.8",
+      "path_ja": "トラック > トラックを複製",
+      "command_id_or_handler": "AppCommand.DuplicateTrack",
+      "status": "mapped; behavior and exposure require verification"
+    },
+    {
+      "catalog_id": "v5.3.9",
+      "path_ja": "トラック > トラックの設定とコンテンツを複製",
+      "command_id_or_handler": "AppCommand.DuplicateTrackWithContent",
+      "status": "mapped; behavior and exposure require verification"
+    },
+    {
+      "catalog_id": "v5.3.10",
+      "path_ja": "トラック > トラック名を変更",
+      "command_id_or_handler": "AppCommand.RenameTrack",
+      "status": "mapped; behavior and exposure require verification"
+    },
+    {
+      "catalog_id": "v5.3.11",
+      "path_ja": "トラック > トラックを削除",
+      "command_id_or_handler": "AppCommand.DeleteTrack",
+      "status": "mapped; behavior and exposure require verification"
+    },
+    {
+      "catalog_id": "v5.3.12",
+      "path_ja": "トラック > 未使用のトラックを削除",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.3.14.0",
+      "path_ja": "トラック > トラックグループ > トラックグループを作成",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.3.14.1",
+      "path_ja": "トラック > トラックグループ > フォルダグループを作成",
+      "command_id_or_handler": "AppCommand.CreateFolderStack",
+      "status": "mapped; behavior and exposure require verification"
+    },
+    {
+      "catalog_id": "v5.3.14.2",
+      "path_ja": "トラック > トラックグループ > ミックスグループを作成",
+      "command_id_or_handler": "AppCommand.CreateSummingStack",
+      "status": "mapped; behavior and exposure require verification"
+    },
+    {
+      "catalog_id": "v5.3.14.3",
+      "path_ja": "トラック > トラックグループ > グループを解除",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.3.14.4",
+      "path_ja": "トラック > トラックグループ > グループを展開",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.3.14.5",
+      "path_ja": "トラック > トラックグループ > グループを折りたたむ",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.3.14.6",
+      "path_ja": "トラック > トラックグループ > フォルダグループをミックスグループに変換",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.3.16.0",
+      "path_ja": "トラック > トラックの代替バージョン > 新規代替バージョン",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.3.16.1",
+      "path_ja": "トラック > トラックの代替バージョン > 代替バージョンを複製",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.3.16.2",
+      "path_ja": "トラック > トラックの代替バージョン > 代替バージョン名を変更",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.3.16.3",
+      "path_ja": "トラック > トラックの代替バージョン > 代替バージョンを削除",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.3.16.4",
+      "path_ja": "トラック > トラックの代替バージョン > (代替バージョン一覧)",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.3.18",
+      "path_ja": "トラック > マスタートラックを表示",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.3.19",
+      "path_ja": "トラック > 出力トラックを表示",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.3.21",
+      "path_ja": "トラック > ドラムサウンドを置き換える/ダブリングする",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.3.22",
+      "path_ja": "トラック > 新規サンプラートラックに変換",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.3.24",
+      "path_ja": "トラック > トラックを非表示",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.3.25",
+      "path_ja": "トラック > 非表示トラックを表示",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.3.26",
+      "path_ja": "トラック > トラックヘッダを設定",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.3.28.0",
+      "path_ja": "トラック > トラックを並べ替え > トラック名",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.3.28.1",
+      "path_ja": "トラック > トラックを並べ替え > トラック番号",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.3.28.2",
+      "path_ja": "トラック > トラックを並べ替え > チャンネル",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.3.28.3",
+      "path_ja": "トラック > トラックを並べ替え > 音源",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.3.28.4",
+      "path_ja": "トラック > トラックを並べ替え > 使用中/未使用",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.3.30",
+      "path_ja": "トラック > トラックを検索して選択",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.3.32.0",
+      "path_ja": "トラック > グローバルトラック > グローバルトラックを表示",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.3.32.1",
+      "path_ja": "トラック > グローバルトラック > グローバルトラックを非表示",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.3.32.2",
+      "path_ja": "トラック > グローバルトラック > アレンジメント",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.3.32.3",
+      "path_ja": "トラック > グローバルトラック > マーカー",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.3.32.4",
+      "path_ja": "トラック > グローバルトラック > コード",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.3.32.5",
+      "path_ja": "トラック > グローバルトラック > キー/拍子",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.3.32.6",
+      "path_ja": "トラック > グローバルトラック > テンポ",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.3.32.7",
+      "path_ja": "トラック > グローバルトラック > トランスポーズ",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.3.32.8",
+      "path_ja": "トラック > グローバルトラック > ビートマッピング",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.3.32.9",
+      "path_ja": "トラック > グローバルトラック > ムービー",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.4.0.0",
+      "path_ja": "移動 > 移動 > プロジェクトの先頭",
+      "command_id_or_handler": "AppCommand.GoToBeginning",
+      "status": "mapped; behavior and exposure require verification"
+    },
+    {
+      "catalog_id": "v5.4.0.1",
+      "path_ja": "移動 > 移動 > プロジェクトの末尾",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.4.0.2",
+      "path_ja": "移動 > 移動 > 左ロケータ",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.4.0.3",
+      "path_ja": "移動 > 移動 > 右ロケータ",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.4.0.4",
+      "path_ja": "移動 > 移動 > 選択範囲の開始位置",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.4.0.5",
+      "path_ja": "移動 > 移動 > 選択範囲の終了位置",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.4.0.6",
+      "path_ja": "移動 > 移動 > 前のマーカー",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.4.0.7",
+      "path_ja": "移動 > 移動 > 次のマーカー",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.4.0.8",
+      "path_ja": "移動 > 移動 > マーカー番号",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.4.0.9",
+      "path_ja": "移動 > 移動 > 位置を指定 /",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.4.2",
+      "path_ja": "移動 > 選択範囲までスクロール",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.4.3",
+      "path_ja": "移動 > 再生ヘッド位置までスクロール",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.4.5",
+      "path_ja": "移動 > 選択範囲からロケータを設定",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.4.6",
+      "path_ja": "移動 > 選択範囲から丸めたロケータを設定",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.4.7",
+      "path_ja": "移動 > ロケータを設定してサイクルを有効化",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.4.9.0",
+      "path_ja": "移動 > ロケータを自動設定 > リージョン選択範囲",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.4.9.1",
+      "path_ja": "移動 > ロケータを自動設定 > マーキー選択範囲",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.4.9.2",
+      "path_ja": "移動 > ロケータを自動設定 > マーカー選択範囲",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.4.9.3",
+      "path_ja": "移動 > ロケータを自動設定 > コード選択範囲",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.4.11",
+      "path_ja": "移動 > 前のマーカーでロケータを設定",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.4.12",
+      "path_ja": "移動 > 次のマーカーでロケータを設定",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.4.13",
+      "path_ja": "移動 > マーカーでサイクルを有効化",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.4.15",
+      "path_ja": "移動 > マーカーを作成",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.4.16",
+      "path_ja": "移動 > マーカーを削除",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.4.17",
+      "path_ja": "移動 > マーカー名を変更",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.4.18",
+      "path_ja": "移動 > マーカーリストを開く",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.4.20.0",
+      "path_ja": "移動 > 再生 > 選択範囲から再生",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.4.20.1",
+      "path_ja": "移動 > 再生 > プロジェクトの先頭から再生",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.4.20.2",
+      "path_ja": "移動 > 再生 > 左ロケータから再生",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.4.20.3",
+      "path_ja": "移動 > 再生 > 右ロケータから再生",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.4.20.4",
+      "path_ja": "移動 > 再生 > 前の小節から再生",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.5.0",
+      "path_ja": "録音 > 録音",
+      "command_id_or_handler": "AppCommand.Record",
+      "status": "mapped; behavior and exposure require verification"
+    },
+    {
+      "catalog_id": "v5.5.1",
+      "path_ja": "録音 > 直前の演奏を取り込む",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.5.3.0",
+      "path_ja": "録音 > 録音ボタンオプション > 通常録音",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.5.3.1",
+      "path_ja": "録音 > 録音ボタンオプション > 録音/再生を切り替える",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.5.3.2",
+      "path_ja": "録音 > 録音ボタンオプション > 繰り返し録音",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.5.5.0",
+      "path_ja": "録音 > カウントイン > なし",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.5.5.1",
+      "path_ja": "録音 > カウントイン > 1小節",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.5.5.2",
+      "path_ja": "録音 > カウントイン > 2小節",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.5.5.3",
+      "path_ja": "録音 > カウントイン > 3小節",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.5.5.4",
+      "path_ja": "録音 > カウントイン > 4小節",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.5.5.5",
+      "path_ja": "録音 > カウントイン > 1拍",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.5.5.6",
+      "path_ja": "録音 > カウントイン > 2拍",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.5.5.7",
+      "path_ja": "録音 > カウントイン > 3拍",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.5.5.8",
+      "path_ja": "録音 > カウントイン > 4拍",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.5.7",
+      "path_ja": "録音 > カウントインを有効化",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.5.8",
+      "path_ja": "録音 > メトロノームを有効化",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.5.10",
+      "path_ja": "録音 > クイックパンチインを許可",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.5.11",
+      "path_ja": "録音 > 自動入力モニタリング",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.5.12",
+      "path_ja": "録音 > 低レイテンシーモード",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.5.14.0",
+      "path_ja": "録音 > MIDI録音オプション > テイクフォルダを作成",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.5.14.1",
+      "path_ja": "録音 > MIDI録音オプション > 結合",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.5.14.2",
+      "path_ja": "録音 > MIDI録音オプション > オーバーラップ",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.5.14.3",
+      "path_ja": "録音 > MIDI録音オプション > 選択したリージョンと結合",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.5.14.4",
+      "path_ja": "録音 > MIDI録音オプション > サイクル時に新規トラックを作成",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.5.14.5",
+      "path_ja": "録音 > MIDI録音オプション > サイクル時に新規トラックを作成してミュート",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.5.16.0",
+      "path_ja": "録音 > オーディオ録音オプション > テイクフォルダを作成",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.5.16.1",
+      "path_ja": "録音 > オーディオ録音オプション > 新規トラックを作成",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.5.16.2",
+      "path_ja": "録音 > オーディオ録音オプション > 新規代替バージョンを作成",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.5.16.3",
+      "path_ja": "録音 > オーディオ録音オプション > サイクル時に新規トラックを作成してミュート",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.5.18",
+      "path_ja": "録音 > 録音設定を開く",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.6.0",
+      "path_ja": "ミックス > オートメーションを表示/非表示",
+      "command_id_or_handler": "AppCommand.ShowAutomation",
+      "status": "mapped; behavior and exposure require verification"
+    },
+    {
+      "catalog_id": "v5.6.2",
+      "path_ja": "ミックス > オートメーションを選択",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.6.3",
+      "path_ja": "ミックス > オートメーションをコピー",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.6.4",
+      "path_ja": "ミックス > オートメーションを移動",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.6.6.0",
+      "path_ja": "ミックス > オートメーションを削除 > 表示中のオートメーション",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.6.6.1",
+      "path_ja": "ミックス > オートメーションを削除 > 選択したトラックのすべて",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.6.6.2",
+      "path_ja": "ミックス > オートメーションを削除 > 孤立したオートメーション",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.6.6.3",
+      "path_ja": "ミックス > オートメーションを削除 > 重複したオートメーションポイント",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.6.6.4",
+      "path_ja": "ミックス > オートメーションを削除 > すべてのオートメーション",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.6.8.0",
+      "path_ja": "ミックス > オートメーションを変換 > トラックオートメーションをリージョンオートメーションに変換",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.6.8.1",
+      "path_ja": "ミックス > オートメーションを変換 > リージョンオートメーションをトラックオートメーションに変換",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.6.8.2",
+      "path_ja": "ミックス > オートメーションを変換 > すべてのトラックオートメーションを変換",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.6.8.3",
+      "path_ja": "ミックス > オートメーションを変換 > すべてのリージョンオートメーションを変換",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.6.8.4",
+      "path_ja": "ミックス > オートメーションを変換 > MIDI制御データをオートメーションに変換",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.6.8.5",
+      "path_ja": "ミックス > オートメーションを変換 > オートメーションをMIDI制御データに変換",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.6.10.0",
+      "path_ja": "ミックス > オートメーションモード > オフ",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.6.10.1",
+      "path_ja": "ミックス > オートメーションモード > Read（読み取り）",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.6.10.2",
+      "path_ja": "ミックス > オートメーションモード > Touch（タッチ）",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.6.10.3",
+      "path_ja": "ミックス > オートメーションモード > Latch（ラッチ）",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.6.10.4",
+      "path_ja": "ミックス > オートメーションモード > Write（書き込み）",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.6.10.5",
+      "path_ja": "ミックス > オートメーションモード > Trim（補正）",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.6.10.6",
+      "path_ja": "ミックス > オートメーションモード > Relative（相対）",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.6.12",
+      "path_ja": "ミックス > I/Oラベル",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.6.13",
+      "path_ja": "ミックス > グループ設定",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.6.15",
+      "path_ja": "ミックス > すべてのソロを解除",
+      "command_id_or_handler": "AppCommand.ClearSolo",
+      "status": "mapped; behavior and exposure require verification"
+    },
+    {
+      "catalog_id": "v5.6.16",
+      "path_ja": "ミックス > すべてのミュートを解除",
+      "command_id_or_handler": "AppCommand.UnmuteAll",
+      "status": "mapped; behavior and exposure require verification"
+    },
+    {
+      "catalog_id": "v5.6.18",
+      "path_ja": "ミックス > オートメーション設定",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.7.0",
+      "path_ja": "表示 > ライブラリを表示/非表示",
+      "command_id_or_handler": "AppCommand.ToggleLibrary",
+      "status": "mapped; behavior and exposure require verification"
+    },
+    {
+      "catalog_id": "v5.7.1",
+      "path_ja": "表示 > インスペクタを表示/非表示",
+      "command_id_or_handler": "AppCommand.ToggleInspector",
+      "status": "mapped; behavior and exposure require verification"
+    },
+    {
+      "catalog_id": "v5.7.2",
+      "path_ja": "表示 > ミキサーを表示/非表示",
+      "command_id_or_handler": "AppCommand.ToggleMixer",
+      "status": "mapped; behavior and exposure require verification"
+    },
+    {
+      "catalog_id": "v5.7.3",
+      "path_ja": "表示 > マクロコントロールを表示/非表示",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.7.4",
+      "path_ja": "表示 > エディターを表示/非表示",
+      "command_id_or_handler": "AppCommand.ShowEditor",
+      "status": "mapped; behavior and exposure require verification"
+    },
+    {
+      "catalog_id": "v5.7.5",
+      "path_ja": "表示 > リストエディターを表示/非表示",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.7.6",
+      "path_ja": "表示 > メモ帳を表示/非表示",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.7.7",
+      "path_ja": "表示 > ループブラウザを表示/非表示",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.7.8",
+      "path_ja": "表示 > ファイルブラウザを表示/非表示",
+      "command_id_or_handler": "AppCommand.ToggleBrowser",
+      "status": "mapped; behavior and exposure require verification"
+    },
+    {
+      "catalog_id": "v5.7.10",
+      "path_ja": "表示 > トラック領域を表示",
+      "command_id_or_handler": "AppCommand.TracksOnly",
+      "status": "mapped; behavior and exposure require verification"
+    },
+    {
+      "catalog_id": "v5.7.11",
+      "path_ja": "表示 > クリップグリッドを表示",
+      "command_id_or_handler": "AppCommand.LauncherOnly",
+      "status": "mapped; behavior and exposure require verification"
+    },
+    {
+      "catalog_id": "v5.7.12",
+      "path_ja": "表示 > トラック領域とクリップグリッドを両方表示",
+      "command_id_or_handler": "AppCommand.LauncherBoth",
+      "status": "mapped; behavior and exposure require verification"
+    },
+    {
+      "catalog_id": "v5.7.14",
+      "path_ja": "表示 > コントロールバーを表示/非表示",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.7.15",
+      "path_ja": "表示 > コントロールバーをカスタマイズ",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.7.16",
+      "path_ja": "表示 > ツールバーを表示/非表示",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.7.18",
+      "path_ja": "表示 > カラーを表示/非表示",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.7.20.0",
+      "path_ja": "表示 > ズーム > 横方向に拡大",
+      "command_id_or_handler": "AppCommand.ZoomIn",
+      "status": "mapped; behavior and exposure require verification"
+    },
+    {
+      "catalog_id": "v5.7.20.1",
+      "path_ja": "表示 > ズーム > 横方向に縮小",
+      "command_id_or_handler": "AppCommand.ZoomOut",
+      "status": "mapped; behavior and exposure require verification"
+    },
+    {
+      "catalog_id": "v5.7.20.2",
+      "path_ja": "表示 > ズーム > 縦方向に拡大",
+      "command_id_or_handler": "AppCommand.ZoomVerticalIn",
+      "status": "mapped; behavior and exposure require verification"
+    },
+    {
+      "catalog_id": "v5.7.20.3",
+      "path_ja": "表示 > ズーム > 縦方向に縮小",
+      "command_id_or_handler": "AppCommand.ZoomVerticalOut",
+      "status": "mapped; behavior and exposure require verification"
+    },
+    {
+      "catalog_id": "v5.7.20.4",
+      "path_ja": "表示 > ズーム > 選択したリージョンを拡大",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.7.20.5",
+      "path_ja": "表示 > ズーム > すべてのトラックを表示",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.7.20.6",
+      "path_ja": "表示 > ズーム > プロジェクト全体を表示",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.7.20.7",
+      "path_ja": "表示 > ズーム > 元のズームに戻す",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.7.22",
+      "path_ja": "表示 > トラックオートメーションを表示",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.7.23",
+      "path_ja": "表示 > Sloppy編集を表示",
+      "command_id_or_handler": "AppCommand.ShowPitch",
+      "status": "mapped; behavior and exposure require verification"
+    },
+    {
+      "catalog_id": "v5.7.24",
+      "path_ja": "表示 > トラックヘッダの追加コントロールを表示",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.7.26",
+      "path_ja": "表示 > フルスクリーン",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.8.0",
+      "path_ja": "ウインドウ > 最小化",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.8.1",
+      "path_ja": "ウインドウ > 最大化",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.8.2",
+      "path_ja": "ウインドウ > すべてを手前に移動",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.8.4",
+      "path_ja": "ウインドウ > メインウインドウを開く",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.8.5",
+      "path_ja": "ウインドウ > ミキサーを開く",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.8.6",
+      "path_ja": "ウインドウ > ステップシーケンサーを開く",
+      "command_id_or_handler": "AppCommand.ShowSteps",
+      "status": "mapped; behavior and exposure require verification"
+    },
+    {
+      "catalog_id": "v5.8.7",
+      "path_ja": "ウインドウ > ピアノロールを開く",
+      "command_id_or_handler": "AppCommand.ShowPianoRoll",
+      "status": "mapped; behavior and exposure require verification"
+    },
+    {
+      "catalog_id": "v5.8.8",
+      "path_ja": "ウインドウ > スコアエディターを開く",
+      "command_id_or_handler": "AppCommand.ShowScore",
+      "status": "mapped; behavior and exposure require verification"
+    },
+    {
+      "catalog_id": "v5.8.9",
+      "path_ja": "ウインドウ > オーディオファイルエディターを開く",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.8.10",
+      "path_ja": "ウインドウ > イベントリストを開く",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.8.11",
+      "path_ja": "ウインドウ > プロジェクトオーディオを開く",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.8.12",
+      "path_ja": "ウインドウ > MIDIトランスフォームを開く",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.8.13",
+      "path_ja": "ウインドウ > MIDIルーティングを開く",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.8.15",
+      "path_ja": "ウインドウ > マクロコントロールを開く",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.8.16",
+      "path_ja": "ウインドウ > 自動演奏エディターを開く",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.8.17",
+      "path_ja": "ウインドウ > キー/拍子リストを開く",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.8.18",
+      "path_ja": "ウインドウ > トランスポートウインドウを開く",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.8.19",
+      "path_ja": "ウインドウ > イベント情報を表示",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.8.20",
+      "path_ja": "ウインドウ > リージョンインスペクタを表示",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.8.22",
+      "path_ja": "ウインドウ > PCキーボード演奏",
+      "command_id_or_handler": "AppCommand.ToggleSoftwareKeyboard",
+      "status": "mapped; behavior and exposure require verification"
+    },
+    {
+      "catalog_id": "v5.8.23",
+      "path_ja": "ウインドウ > ステップ入力キーボード",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.8.25",
+      "path_ja": "ウインドウ > Luaスクリプト",
+      "command_id_or_handler": "AppCommand.LoadLua",
+      "status": "mapped; behavior and exposure require verification"
+    },
+    {
+      "catalog_id": "v5.8.26",
+      "path_ja": "ウインドウ > OSC/VRChat連携",
+      "command_id_or_handler": "AppCommand.OpenOscSettings",
+      "status": "mapped; behavior and exposure require verification"
+    },
+    {
+      "catalog_id": "v5.8.27",
+      "path_ja": "ウインドウ > MCP AI連携マネージャー",
+      "command_id_or_handler": "AppCommand.OpenMcpManager",
+      "status": "mapped; behavior and exposure require verification"
+    },
+    {
+      "catalog_id": "v5.8.28",
+      "path_ja": "ウインドウ > ゲームコントローラーマネージャー",
+      "command_id_or_handler": "AppCommand.OpenControllerSettings",
+      "status": "mapped; behavior and exposure require verification"
+    },
+    {
+      "catalog_id": "v5.8.29",
+      "path_ja": "ウインドウ > パニック! (すべての音を強制停止)",
+      "command_id_or_handler": "AppCommand.Panic",
+      "status": "mapped; behavior and exposure require verification"
+    },
+    {
+      "catalog_id": "v5.8.31",
+      "path_ja": "ウインドウ > すべてのプラグインウインドウを表示",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.8.32",
+      "path_ja": "ウインドウ > すべてのプラグインウインドウを隠す",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.8.34.0",
+      "path_ja": "ウインドウ > 開いているウインドウ > (現在開いているウインドウ一覧)",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.9.0",
+      "path_ja": "1 > スクリーンセット",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.9.1",
+      "path_ja": "1 > スクリーンセット",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.9.2",
+      "path_ja": "1 > スクリーンセット",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.9.3",
+      "path_ja": "1 > スクリーンセット",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.9.4",
+      "path_ja": "1 > スクリーンセット",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.9.5",
+      "path_ja": "1 > スクリーンセット",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.9.6",
+      "path_ja": "1 > スクリーンセット",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.9.7",
+      "path_ja": "1 > スクリーンセット",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.9.8",
+      "path_ja": "1 > スクリーンセット",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.9.10",
+      "path_ja": "1 > 複製",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.9.11",
+      "path_ja": "1 > 名前を変更",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.9.12",
+      "path_ja": "1 > 削除",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.9.13",
+      "path_ja": "1 > ロック",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.9.14",
+      "path_ja": "1 > 保存済みの状態に戻す",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.9.15",
+      "path_ja": "1 > スクリーンセットを読み込む",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.9.16",
+      "path_ja": "1 > スクリーンセットを書き出す",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.10.0",
+      "path_ja": "ヘルプ > ヘルプを検索",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.10.2",
+      "path_ja": "ヘルプ > 説明書",
+      "command_id_or_handler": "AppCommand.UserManual",
+      "status": "mapped; behavior and exposure require verification"
+    },
+    {
+      "catalog_id": "v5.10.3",
+      "path_ja": "ヘルプ > クイックヘルプ",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.10.4",
+      "path_ja": "ヘルプ > キーコマンドのヘルプ",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.10.6",
+      "path_ja": "ヘルプ > 音源のヘルプ",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.10.7",
+      "path_ja": "ヘルプ > エフェクトのヘルプ",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.10.8",
+      "path_ja": "ヘルプ > コントロールサーフェスのヘルプ",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.10.9",
+      "path_ja": "ヘルプ > Sloppyのヘルプ",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.10.11",
+      "path_ja": "ヘルプ > チュートリアル",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.10.12",
+      "path_ja": "ヘルプ > トラブルシューティング",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.10.13",
+      "path_ja": "ヘルプ > サポートページ",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.10.15",
+      "path_ja": "ヘルプ > アップデートを確認",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.10.16",
+      "path_ja": "ヘルプ > フィードバックを送信",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.10.18",
+      "path_ja": "ヘルプ > ライセンス情報",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    },
+    {
+      "catalog_id": "v5.10.19",
+      "path_ja": "ヘルプ > MITライセンス（Slop Studio本体）",
+      "command_id_or_handler": "AppCommand.MitLicences",
+      "status": "mapped; behavior and exposure require verification"
+    },
+    {
+      "catalog_id": "v5.10.20",
+      "path_ja": "ヘルプ > 第三者製品との関係について",
+      "command_id_or_handler": null,
+      "status": "unmapped; not claimed implemented"
+    }
+  ]
+}

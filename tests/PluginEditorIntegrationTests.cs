@@ -1,0 +1,16 @@
+using System;
+using System.Drawing;
+using System.IO;
+using System.Runtime.InteropServices;
+using System.Threading;
+using System.Windows.Forms;
+using SlopStudio;
+internal static class PluginEditorIntegrationTests
+{
+ [DllImport("user32.dll")]private static extern IntPtr GetWindow(IntPtr h,int command);
+ [STAThread]private static int Main(string[] args)
+ {
+  try{File.WriteAllText(args[1]+".stage","start");Application.EnableVisualStyles();Application.SetCompatibleTextRenderingDefault(false);Application.OleRequired();PluginDescriptor descriptor=NativePlugin.Scan(args[0])[0];PluginSlot slot=descriptor.CreateSlot();using(NativePlugin plugin=new NativePlugin(slot,48000,256))using(Form host=new Form{Text="Slop Studio — native plugin editor integration",StartPosition=FormStartPosition.Manual,Location=new Point(30,30),ClientSize=new Size(1100,700),BackColor=Color.FromArgb(48,48,48)}){host.Show();int width,height;if(!plugin.OpenEditor(host.Handle,out width,out height))throw new InvalidOperationException("Native editor attachment was rejected.");host.ClientSize=new Size(Math.Min(1500,Math.Max(200,width)),Math.Min(950,Math.Max(150,height)));DateTime end=DateTime.UtcNow.AddMilliseconds(650);while(DateTime.UtcNow<end){plugin.Idle();Application.DoEvents();Thread.Sleep(8);}if(GetWindow(host.Handle,5)==IntPtr.Zero)throw new InvalidOperationException("Plugin did not create a child HWND.");using(Bitmap bitmap=new Bitmap(host.Width,host.Height)){host.DrawToBitmap(bitmap,new Rectangle(Point.Empty,host.Size));bitmap.Save(Path.ChangeExtension(args[1],"png"),System.Drawing.Imaging.ImageFormat.Png);}File.WriteAllText(args[1]+".stage","editor attached; before close");plugin.CloseEditor();DateTime settle=DateTime.UtcNow.AddMilliseconds(180);while(DateTime.UtcNow<settle){Application.DoEvents();Thread.Sleep(8);}File.WriteAllText(args[1]+".stage","closed and event queue drained; before save");slot.State=plugin.SaveState();File.WriteAllText(args[1]+".stage","saved; before second instance");if(String.IsNullOrEmpty(slot.State))throw new InvalidOperationException("Vendor plugin did not save state.");string saved=slot.State;slot.State=String.Empty;using(NativePlugin restored=new NativePlugin(slot,48000,256)){File.WriteAllText(args[1]+".stage","second instance created; before restore");restored.RestoreState(saved);File.WriteAllText(args[1]+".stage","restored; before process");float[] samples=new float[512];restored.Process(samples,256,new[]{new MidiEventPacket(0,0x90,60,96)},1,120,0,true,4,4);for(int i=0;i<samples.Length;i++)if(Single.IsNaN(samples[i])||Single.IsInfinity(samples[i]))throw new InvalidOperationException("Restored plugin emitted invalid samples.");}File.WriteAllText(args[1]+".stage","second instance disposed");File.WriteAllText(args[1]+".stage","before final plugin disposal");plugin.Dispose();File.WriteAllText(args[1]+".stage","final plugin disposed");host.Close();File.WriteAllText(args[1],"PASS "+descriptor.Name+" "+descriptor.Format+": actual native HWND editor attached; child window exists; idle callbacks; close; save state; new instance restored state and processed MIDI. UI screenshot uses DrawToBitmap, which may omit GPU surfaces.\r\n");}return 0;}
+  catch(Exception e){File.WriteAllText(args[1],"FAIL "+e);return 1;}
+ }
+}
