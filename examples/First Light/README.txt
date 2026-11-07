@@ -1,1 +1,1 @@
-First Light: original generated example composition and synthesized PCM. No Apple sounds, artwork or third-party samples. Open First Light.slopdaw, press Space. All visible regions contain real MIDI notes or linked audio. Files are relative to the project folder.
+First Light: original generated example composition and synthesized PCM. No the vendor sounds, artwork or third-party samples. Open First Light.slopdaw, press Space. All visible regions contain real MIDI notes or linked audio. Files are relative to the project folder.

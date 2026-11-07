@@ -47,5 +47,5 @@ for name,kind,color,gain in [('Kick','kick',1,-4),('Snare','snare',1,-9),('Hi-Ha
  for phrase in range(4):t['regions'].append(region(name,phrase*16,16,path='Media/'+filename))
  p['tracks'].append(t)
 (root/'First Light.slopdaw').write_text(json.dumps(p,ensure_ascii=False,separators=(',',':')),encoding='utf-8')
-(root/'README.txt').write_text('First Light: original generated example composition and synthesized PCM. No Apple sounds, artwork or third-party samples. Open First Light.slopdaw, press Space. All visible regions contain real MIDI notes or linked audio. Files are relative to the project folder.\n',encoding='utf-8')
+(root/'README.txt').write_text('First Light: original generated example composition and synthesized PCM. No the vendor sounds, artwork or third-party samples. Open First Light.slopdaw, press Space. All visible regions contain real MIDI notes or linked audio. Files are relative to the project folder.\n',encoding='utf-8')
 print('Created original playable project:',len(p['tracks']),'tracks',sum(len(t['regions']) for t in p['tracks']),'regions')

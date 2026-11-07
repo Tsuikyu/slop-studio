@@ -13,7 +13,7 @@
 | Track inspector does not collapse | Header lacked toggle action. | Windows GUI toggle test. |
 | Stack and Aux missing | No audio route graph. Added folder/summing stack, Aux, post-fader send, Ducker track key and cycle rejection. | Shift-selection/context menu/disclosure GUI and PCM routing/round-trip tests; nested stack, ungroup and external plug-in sidechain not supported. |
 | Mixer latency after new routing | Previous flat maximum applied independently to every track. | Real 256-sample CLAP fixture impulse aligned across direct, summing and Aux paths including inserts and local bus audio. Sidechain key compensation and arbitrary graphs/plugins remain unverified. |
-| Shortcut preference uses macOS notation | Preferences displayed source-reference column. | Windows GUI verifies default Windows key column; source records remain for audit only. |
+| Shortcut preference uses legacy platform notation | Preferences displayed source-reference column. | Windows GUI verifies default Windows key column; source records remain for audit only. |
 | Example lacks developed arrangement | Replaced with original 14-track/80-bar example and built-in Ducker/key routing. | Save/reopen and finite PCM tests; musical quality has not been evaluated by listening. |
 
 The user-supplied references show dense tracks, a persistent side inspector, compact transport and channel strips with blue insert slots. The redesigned mixer follows the relevant structure using original drawing code. The application remains visually and functionally different; this is not verified full parity.

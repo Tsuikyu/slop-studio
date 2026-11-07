@@ -25,7 +25,7 @@
 - 一部 VST3 の合法な `setProcessing` の未実装応答を失敗と判定していた。明示的な拒否は引き続きエラーにする。MIDI 対応の問い合わせ順もコントローラー接続後へ移した。公式仕様: <https://steinbergmedia.github.io/vst3_dev_portal/pages/Technical%2BDocumentation/API%2BDocumentation/Index.html>。
 - 音声処理とプラグイン画面の作成が同じロックを占有し、互いを待つ場合があった。処理中の編集画面表示を許し、状態復元・破棄とは排他する。障害隔離や全ベンダー互換の保証ではない。
 - 内蔵 FX の編集時に処理グラフを作り直していた。パラメーターだけを現行プロセッサーに反映し、状態を保つよう変更した。
-- 参考画像の構造を分析して操作を設計した。Apple の画像やアイコンは組み込んでいない。プラグイン設定の操作参考: <https://support.apple.com/en-am/guide/logicpro/lgcp4dcb0092/12.3/mac/15.6>。
+- 参考画像の構造を分析して操作を設計した。the vendor の画像やアイコンは組み込んでいない。プラグイン設定の操作参考: <>。
 
 ## ローカル Release ビルド
 

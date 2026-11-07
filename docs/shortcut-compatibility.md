@@ -1,76 +1,76 @@
 # Slop Studio 0.7 shortcut compatibility
 
-Exported from the actual command registry. An active handler is not proof that every key was individually exercised. The registry duplicate/conflict check passed. Space, numeric 0/decimal, Return, M and text-entry guards were exercised by GUI/transport tests; Ctrl+K opens Musical Typing. Many remaining Logic commands have no implementation. This is a documented subset, not a complete Logic preset.
+Exported from the actual command registry. An active handler is not proof that every key was individually exercised. The registry duplicate/conflict check passed. Space, numeric 0/decimal, Return, M and text-entry guards were exercised by GUI/transport tests; Ctrl+K opens Musical Typing. Many remaining reference application commands have no implementation. This is a documented subset, not a complete reference application preset.
 
-Modifier policy: Command → Ctrl; Option → Alt; Control → Ctrl+Alt; Shift → Shift. Modifier sets are normalized, so repeated Alt is not duplicated. Context restrictions and deliberate adaptations are recorded per row. AppleUSFactoryPreset refers to the documented US factory preset; other origins are explicitly separate.
+Modifier policy: Command → Ctrl; Option → Alt; Control → Ctrl+Alt; Shift → Shift. Modifier sets are normalized, so repeated Alt is not duplicated. Context restrictions and deliberate adaptations are recorded per row. the vendorUSFactoryPreset refers to the documented US factory preset; other origins are explicitly separate.
 
-| Logic command | macOS source | Windows | Handler | Origin | Active | Verification / note | Primary source |
+| reference application command | legacy platform source | Windows | Handler | Origin | Active | Verification / note | Primary source |
 |---|---|---|---|---|---|---|---|
-| Show/Hide Musical Typing | Command-K | Ctrl+K | ToggleSoftwareKeyboard | AppleUSFactoryPreset | Yes | Registry validated; Command maps to Ctrl. | https://support.apple.com/en-asia/guide/logicpro/lgcp32e85cd9/10.7/mac/11.0 |
+| Show/Hide Musical Typing | Command-K | Ctrl+K | ToggleSoftwareKeyboard | the vendorUSFactoryPreset | Yes | Registry validated; Command maps to Ctrl. |  |
 | User Manual |  | F1 | UserManual | SlopProXConvenience | Yes | Registry validated; Windows Help convention. |  |
-| Play or Stop | Space | Space | PlayOrStop | AppleUSFactoryPreset | Yes | Registry validated; Apple documents Space as Play or Stop. | https://support.apple.com/guide/logicpro/use-transport-key-commands-lgcp2814a670/10.7/mac/11.0 |
-| Stop | numeric keypad 0 | Num 0 | Stop | AppleUSFactoryPreset | Yes | Registry validated; Requires the numeric keypad 0 key. | https://support.apple.com/en-asia/guide/logicpro/lgcp32e85cd9/10.7/mac/11.0 |
-| Go to Beginning | Return | Enter | GoToBeginning | AppleUSFactoryPreset | Yes | Registry validated; Stops playback and returns the arrangement cursor to beat 0. | https://support.apple.com/en-asia/guide/logicpro/lgcp32e85cd9/10.7/mac/11.0 |
-| Rewind one bar | , | , | RewindBar | AppleUSFactoryPreset | Yes | Registry validated; Moves the timeline playhead one bar left. | https://support.apple.com/en-asia/guide/logicpro/lgcp32e85cd9/10.7/mac/11.0 |
-| Forward one bar | . | . | ForwardBar | AppleUSFactoryPreset | Yes | Registry validated; Moves the timeline playhead one bar right. | https://support.apple.com/en-asia/guide/logicpro/lgcp32e85cd9/10.7/mac/11.0 |
-| New Empty Project | Shift-Command-N | Ctrl+Shift+N | NewProject | AppleUSFactoryPreset | Yes | Registry validated; Logic's New Empty Project mapping translated to Ctrl+Shift+N. | https://support.apple.com/en-asia/guide/logicpro/lgcp32e85cd9/10.7/mac/11.0 |
-| Open Project | Command-O | Ctrl+O | OpenProject | AppleUSFactoryPreset | Yes | Registry validated; Logic's Open mapping translated to Ctrl+O. | https://support.apple.com/en-asia/guide/logicpro/lgcp32e85cd9/10.7/mac/11.0 |
-| Save Project | Command-S | Ctrl+S | SaveProject | AppleUSFactoryPreset | Yes | Registry validated; Logic's Save mapping translated to Ctrl+S. | https://support.apple.com/en-asia/guide/logicpro/lgcp32e85cd9/10.7/mac/11.0 |
-| Undo | Command-Z | Ctrl+Z | Undo | AppleUSFactoryPreset | Yes | Registry validated; Command maps to Ctrl. | https://support.apple.com/en-hk/guide/logicpro/lgcp665bbccc/mac |
-| Redo | Shift-Command-Z | Ctrl+Shift+Z | Redo | AppleUSFactoryPreset | Yes | Registry validated; Preserves Logic's Shift-Command redo chord. | https://support.apple.com/en-hk/guide/logicpro/lgcp665bbccc/mac |
-| New Audio Track | Option-Command-A | Ctrl+Alt+A | AddAudioTrack | AppleUSFactoryPreset | Yes | Registry validated; Option maps to Alt; Command maps to Ctrl. | https://support.apple.com/en-sg/guide/logicpro/lgcpb99be9c5/10.7/mac/11.0 |
-| New Software Instrument Track | Option-Command-S | Ctrl+Alt+S | AddMidiTrack | AppleUSFactoryPreset | Yes | Registry validated; Creates an internal instrument track. | https://support.apple.com/en-sg/guide/logicpro/lgcpb99be9c5/10.7/mac/11.0 |
-| Delete Track | Command-Delete | Ctrl+Delete | DeleteTrack | AppleUSFactoryPreset | Yes | Registry validated; Deletes the selected track when no region is selected. | https://support.apple.com/en-sg/guide/logicpro/lgcpb99be9c5/10.7/mac/11.0 |
-| Import Audio File | Shift-Command-I | Ctrl+Shift+I | ImportAudio | AppleUSFactoryPreset | Yes | Registry validated; Imports a PCM WAV file. | https://support.apple.com/en-sg/guide/logicpro/lgcpb99be9c5/10.7/mac/11.0 |
-| Rename Track | Shift-Return | Shift+Enter | RenameTrack | AppleUSFactoryPreset | Yes | Registry validated; Available with a track selected and no region selected. | https://support.apple.com/en-sg/guide/logicpro/lgcpb99be9c5/10.7/mac/11.0 |
-| Rename Regions | Shift-N | Shift+N | RenameRegion | AppleUSFactoryPreset | Yes | Registry validated; Available with a region selected. | https://support.apple.com/en-sg/guide/logicpro/lgcpb99be9c5/10.7/mac/11.0 |
-| Select Previous Region on Selected Track | Left Arrow | ← | SelectPreviousRegion | AppleUSFactoryPreset | Yes | Registry validated; Arrangement focus only. | https://support.apple.com/en-sg/guide/logicpro/lgcpb99be9c5/10.7/mac/11.0 |
-| Select Next Region on Selected Track | Right Arrow | → | SelectNextRegion | AppleUSFactoryPreset | Yes | Registry validated; Arrangement focus only. | https://support.apple.com/en-sg/guide/logicpro/lgcpb99be9c5/10.7/mac/11.0 |
-| Select Previous Track | Up Arrow | ↑ | SelectPreviousTrack | AppleUSFactoryPreset | Yes | Registry validated; Arrangement focus only. | https://support.apple.com/en-asia/guide/logicpro/lgcp32e85cd9/10.7/mac/11.0 |
-| Select Next Track | Down Arrow | ↓ | SelectNextTrack | AppleUSFactoryPreset | Yes | Registry validated; Arrangement focus only. | https://support.apple.com/en-asia/guide/logicpro/lgcp32e85cd9/10.7/mac/11.0 |
-| Zoom Horizontal Out | Command-Left Arrow | Ctrl+← | ZoomOut | AppleUSFactoryPreset | Yes | Registry validated; Command maps to Ctrl. | https://support.apple.com/en-hk/guide/logicpro/lgcp665bbccc/mac |
-| Zoom Horizontal In | Command-Right Arrow | Ctrl+→ | ZoomIn | AppleUSFactoryPreset | Yes | Registry validated; Command maps to Ctrl. | https://support.apple.com/en-hk/guide/logicpro/lgcp665bbccc/mac |
-| Show/Hide Mixer | X | X | ToggleMixer | AppleUSFactoryPreset | Yes | Registry validated; Toggles the lower track-control panel. | https://support.apple.com/en-asia/guide/logicpro/lgcp32e85cd9/10.7/mac/11.0 |
-| Show/Hide Library | Y | Y | ToggleLibrary | AppleUSFactoryPreset | Yes | Registry validated; Toggles the sound library. | https://support.apple.com/en-asia/guide/logicpro/lgcp32e85cd9/10.7/mac/11.0 |
-| Show/Hide Browsers | F | F | ToggleBrowser | AppleUSFactoryPreset | Yes | Registry validated; Toggles the right-hand project media browser. | https://support.apple.com/en-sg/guide/logicpro/lgcpb99be9c5/10.7/mac/11.0 |
-| Show/Hide Local Inspector | Option-Shift-I | Alt+Shift+I | ToggleInspector | AppleUSFactoryPreset | Yes | Registry validated; Option maps to Alt. | https://support.apple.com/en-hk/guide/logicpro/lgcp665bbccc/mac |
-| Toggle Channel Strip Mute | M | M | ToggleMute | AppleUSFactoryPreset | Yes | Registry validated; Toggles mute for the selected track while the arrangement has focus. | https://support.apple.com/en-asia/guide/logicpro/lgcp32e85cd9/10.7/mac/11.0 |
-| Toggle Channel Strip Solo | S | S | ToggleSolo | AppleUSFactoryPreset | Yes | Registry validated; Toggles solo for the selected track while the arrangement has focus. | https://support.apple.com/en-asia/guide/logicpro/lgcp32e85cd9/10.7/mac/11.0 |
-| Toggle Track On | Option-M | Alt+M | ToggleMute | AppleUSFactoryPreset | No | Registry validated; Track power-off is distinct from mute and is not implemented. | https://support.apple.com/en-sg/guide/logicpro/lgcpb99be9c5/10.7/mac/11.0 |
-| Engage Solo Tracks of Selected Regions | Control-S | Ctrl+Alt+S | ToggleSolo | AppleUSFactoryPreset | No | Registry validated; Windows translation conflicts with New Software Instrument Track (Ctrl+Alt+S); use the active S shortcut for solo. | https://support.apple.com/en-asia/guide/logicpro/lgcp32e85cd9/10.7/mac/11.0 |
-| Clear/Recall Solo | Option-S | Alt+S | ClearSolo | AppleUSFactoryPreset | Yes | Registry validated; Clears solo state for all tracks. | https://support.apple.com/en-asia/guide/logicpro/lgcp32e85cd9/10.7/mac/11.0 |
-| Mute Off for All | Control-Shift-M | Ctrl+Alt+Shift+M | UnmuteAll | AppleUSFactoryPreset | Yes | Registry validated; Apple Control maps to Ctrl+Alt. | https://support.apple.com/en-asia/guide/logicpro/lgcp32e85cd9/10.7/mac/11.0 |
-| Add Region (Slop Studio) | Ctrl-Shift-R | Ctrl+Shift+R | AddRegion | SlopProXConvenience | Yes | Registry validated; Slop Studio convenience mapping; not claimed as a Logic default. |  |
+| Play or Stop | Space | Space | PlayOrStop | the vendorUSFactoryPreset | Yes | Registry validated; the vendor documents Space as Play or Stop. |  |
+| Stop | numeric keypad 0 | Num 0 | Stop | the vendorUSFactoryPreset | Yes | Registry validated; Requires the numeric keypad 0 key. |  |
+| Go to Beginning | Return | Enter | GoToBeginning | the vendorUSFactoryPreset | Yes | Registry validated; Stops playback and returns the arrangement cursor to beat 0. |  |
+| Rewind one bar | , | , | RewindBar | the vendorUSFactoryPreset | Yes | Registry validated; Moves the timeline playhead one bar left. |  |
+| Forward one bar | . | . | ForwardBar | the vendorUSFactoryPreset | Yes | Registry validated; Moves the timeline playhead one bar right. |  |
+| New Empty Project | Shift-Command-N | Ctrl+Shift+N | NewProject | the vendorUSFactoryPreset | Yes | Registry validated; The default New Empty Project mapping translated to Ctrl+Shift+N. |  |
+| Open Project | Command-O | Ctrl+O | OpenProject | the vendorUSFactoryPreset | Yes | Registry validated; The default Open mapping translated to Ctrl+O. |  |
+| Save Project | Command-S | Ctrl+S | SaveProject | the vendorUSFactoryPreset | Yes | Registry validated; The default Save mapping translated to Ctrl+S. |  |
+| Undo | Command-Z | Ctrl+Z | Undo | the vendorUSFactoryPreset | Yes | Registry validated; Command maps to Ctrl. |  |
+| Redo | Shift-Command-Z | Ctrl+Shift+Z | Redo | the vendorUSFactoryPreset | Yes | Registry validated; Preserves The default Shift-Command redo chord. |  |
+| New Audio Track | Option-Command-A | Ctrl+Alt+A | AddAudioTrack | the vendorUSFactoryPreset | Yes | Registry validated; Option maps to Alt; Command maps to Ctrl. |  |
+| New Software Instrument Track | Option-Command-S | Ctrl+Alt+S | AddMidiTrack | the vendorUSFactoryPreset | Yes | Registry validated; Creates an internal instrument track. |  |
+| Delete Track | Command-Delete | Ctrl+Delete | DeleteTrack | the vendorUSFactoryPreset | Yes | Registry validated; Deletes the selected track when no region is selected. |  |
+| Import Audio File | Shift-Command-I | Ctrl+Shift+I | ImportAudio | the vendorUSFactoryPreset | Yes | Registry validated; Imports a PCM WAV file. |  |
+| Rename Track | Shift-Return | Shift+Enter | RenameTrack | the vendorUSFactoryPreset | Yes | Registry validated; Available with a track selected and no region selected. |  |
+| Rename Regions | Shift-N | Shift+N | RenameRegion | the vendorUSFactoryPreset | Yes | Registry validated; Available with a region selected. |  |
+| Select Previous Region on Selected Track | Left Arrow | ← | SelectPreviousRegion | the vendorUSFactoryPreset | Yes | Registry validated; Arrangement focus only. |  |
+| Select Next Region on Selected Track | Right Arrow | → | SelectNextRegion | the vendorUSFactoryPreset | Yes | Registry validated; Arrangement focus only. |  |
+| Select Previous Track | Up Arrow | ↑ | SelectPreviousTrack | the vendorUSFactoryPreset | Yes | Registry validated; Arrangement focus only. |  |
+| Select Next Track | Down Arrow | ↓ | SelectNextTrack | the vendorUSFactoryPreset | Yes | Registry validated; Arrangement focus only. |  |
+| Zoom Horizontal Out | Command-Left Arrow | Ctrl+← | ZoomOut | the vendorUSFactoryPreset | Yes | Registry validated; Command maps to Ctrl. |  |
+| Zoom Horizontal In | Command-Right Arrow | Ctrl+→ | ZoomIn | the vendorUSFactoryPreset | Yes | Registry validated; Command maps to Ctrl. |  |
+| Show/Hide Mixer | X | X | ToggleMixer | the vendorUSFactoryPreset | Yes | Registry validated; Toggles the lower track-control panel. |  |
+| Show/Hide Library | Y | Y | ToggleLibrary | the vendorUSFactoryPreset | Yes | Registry validated; Toggles the sound library. |  |
+| Show/Hide Browsers | F | F | ToggleBrowser | the vendorUSFactoryPreset | Yes | Registry validated; Toggles the right-hand project media browser. |  |
+| Show/Hide Local Inspector | Option-Shift-I | Alt+Shift+I | ToggleInspector | the vendorUSFactoryPreset | Yes | Registry validated; Option maps to Alt. |  |
+| Toggle Channel Strip Mute | M | M | ToggleMute | the vendorUSFactoryPreset | Yes | Registry validated; Toggles mute for the selected track while the arrangement has focus. |  |
+| Toggle Channel Strip Solo | S | S | ToggleSolo | the vendorUSFactoryPreset | Yes | Registry validated; Toggles solo for the selected track while the arrangement has focus. |  |
+| Toggle Track On | Option-M | Alt+M | ToggleMute | the vendorUSFactoryPreset | No | Registry validated; Track power-off is distinct from mute and is not implemented. |  |
+| Engage Solo Tracks of Selected Regions | Control-S | Ctrl+Alt+S | ToggleSolo | the vendorUSFactoryPreset | No | Registry validated; Windows translation conflicts with New Software Instrument Track (Ctrl+Alt+S); use the active S shortcut for solo. |  |
+| Clear/Recall Solo | Option-S | Alt+S | ClearSolo | the vendorUSFactoryPreset | Yes | Registry validated; Clears solo state for all tracks. |  |
+| Mute Off for All | Control-Shift-M | Ctrl+Alt+Shift+M | UnmuteAll | the vendorUSFactoryPreset | Yes | Registry validated; the vendor Control maps to Ctrl+Alt. |  |
+| Add Region (Slop Studio) | Ctrl-Shift-R | Ctrl+Shift+R | AddRegion | SlopProXConvenience | Yes | Registry validated; Slop Studio convenience mapping; not claimed as a reference application default. |  |
 | Delete Region (Slop Studio) | Delete | Delete | DeleteRegion | SlopProXConvenience | Yes | Registry validated; Slop Studio convenience mapping. |  |
-| Record | R | R | Record | AppleUSFactoryPreset | Yes | Registry validated; Starts a real input recording workflow; dependencies are validated. | https://support.apple.com/en-asia/guide/logicpro/lgcp32e85cd9/10.7/mac/11.0 |
-| Pause | numeric keypad period | Num . | Pause | AppleUSFactoryPreset | Yes | Registry validated; Pauses transport at the current timeline position. | https://support.apple.com/en-asia/guide/logicpro/lgcp32e85cd9/10.7/mac/11.0 |
-| Show/Hide Piano Roll | P | P | ShowPianoRoll | AppleUSFactoryPreset | Yes | Registry validated; Shows or hides the piano-roll editor. | https://support.apple.com/en-asia/guide/logicpro/lgcp32e85cd9/10.7/mac/11.0 |
-| Show/Hide Editor | E | E | ShowEditor | AppleUSFactoryPreset | Yes | Registry validated; Shows or hides the selected region editor. | https://support.apple.com/en-sg/guide/logicpro/lgcpb99be9c5/10.7/mac/11.0 |
-| Open Settings | Command-Comma | Ctrl+, | OpenPreferences | AppleUSFactoryPreset | Yes | Registry validated; Opens persistent audio, MIDI, plugin and display settings. | https://support.apple.com/en-asia/guide/logicpro/lgcp32e85cd9/10.7/mac/11.0 |
-| Copy | Command-C | Ctrl+C | Copy | AppleUSFactoryPreset | Yes | Registry validated; Copies the selected arrangement region. | https://support.apple.com/en-hk/guide/logicpro/lgcp665bbccc/mac |
-| Cut | Command-X | Ctrl+X | Cut | AppleUSFactoryPreset | Yes | Registry validated; Cuts the selected arrangement region. | https://support.apple.com/en-hk/guide/logicpro/lgcp665bbccc/mac |
-| Paste | Command-V | Ctrl+V | Paste | AppleUSFactoryPreset | Yes | Registry validated; Pastes the region at the playhead. | https://support.apple.com/en-hk/guide/logicpro/lgcp665bbccc/mac |
-| Select All | Command-A | Ctrl+A | SelectAll | AppleUSFactoryPreset | No | Registry validated; Not active: multiregion selection is not implemented. | https://support.apple.com/en-hk/guide/logicpro/lgcp665bbccc/mac |
-| Deselect All | Shift-D | Shift+D | DeselectAll | AppleUSFactoryPreset | Yes | Registry validated; Clears the region selection. | https://support.apple.com/en-hk/guide/logicpro/lgcp665bbccc/mac |
-| New External MIDI Track | Option-Command-X | Ctrl+Alt+X | AddExternalMidiTrack | AppleUSFactoryPreset | Yes | Registry validated; Routes notes to the external MIDI output configured in Settings. | https://support.apple.com/guide/logicpro/main-window-tracks-and-various-editors-lgcpe8314fe2/12.3/mac/15.6 |
-| Cycle Mode | C | C | ToggleCycle | AppleUSFactoryPreset | Yes | Registry validated; Toggles the actual arrangement loop. | https://support.apple.com/en-mo/guide/logicpro/lgcp59e41e86/10.7/mac/11.0 |
-| Toggle Track Record Enable | Control-R | Ctrl+Alt+R | ToggleArm | AppleUSFactoryPreset | Yes | Registry validated; Apple Control translates to Ctrl+Alt. | https://support.apple.com/en-mo/guide/logicpro/lgcp0c445ccf/mac |
-| Show/Hide Inspector | I | I | ToggleInspector | AppleUSFactoryPreset | Yes | Registry validated; Toggles the main inspector. | https://support.apple.com/en-asia/guide/logicpro/lgcp32e85cd9/10.7/mac/11.0 |
-| New Track with Duplicate Settings | Command-D | Ctrl+D | DuplicateTrack | AppleUSFactoryPreset | Yes | Registry validated; Copies track settings without regions. | https://support.apple.com/guide/logicpro/main-window-tracks-and-various-editors-lgcpe8314fe2/12.3/mac/15.6 |
-| New Track with Duplicate Settings and Content | Option-Shift-Command-D | Ctrl+Alt+Shift+D | DuplicateTrackWithContent | AppleUSFactoryPreset | Yes | Registry validated; Copies track settings and region content. | https://support.apple.com/guide/logicpro/main-window-tracks-and-various-editors-lgcpe8314fe2/12.3/mac/15.6 |
-| Repeat Regions/Events | Command-R | Ctrl+R | DuplicateRegion | AppleUSFactoryPreset | Yes | Registry validated; Repeats the selected region once at its end. | https://support.apple.com/guide/logicpro/main-window-tracks-and-various-editors-lgcpe8314fe2/12.3/mac/15.6 |
-| Split Regions/Events at Playhead Position | Command-T | Ctrl+T | SplitRegion | AppleUSFactoryPreset | Yes | Registry validated; Splits the selected region at the playhead. | https://support.apple.com/guide/logicpro/main-window-tracks-and-various-editors-lgcpe8314fe2/12.3/mac/15.6 |
-| Quantize Selected Regions/Events | Q | Q | Quantize | AppleUSFactoryPreset | Yes | Registry validated; Quantizes notes in the selected MIDI region to 1/16. | https://support.apple.com/guide/logicpro/main-window-tracks-and-various-editors-lgcpe8314fe2/12.3/mac/15.6 |
-| Switch between Live Loops Grid and Tracks View | Option-V | Alt+V | ToggleLauncher | AppleUSFactoryPreset | Yes | Registry validated; Uses the corresponding Slop workspace; advanced Logic behavior remains partial. | https://support.apple.com/en-sg/guide/logicpro/lgcpb99be9c5/10.7/mac/11.0 |
-| Show Live Loops Grid only | Option-L | Alt+L | LauncherOnly | AppleUSFactoryPreset | Yes | Registry validated; Uses the corresponding Slop workspace; advanced Logic behavior remains partial. | https://support.apple.com/en-sg/guide/logicpro/lgcpb99be9c5/10.7/mac/11.0 |
-| Show Tracks View only | Option-N | Alt+N | TracksOnly | AppleUSFactoryPreset | Yes | Registry validated; Uses the corresponding Slop workspace; advanced Logic behavior remains partial. | https://support.apple.com/en-sg/guide/logicpro/lgcpb99be9c5/10.7/mac/11.0 |
-| Show Both, Live Loops Grid and Tracks View | Option-B | Alt+B | LauncherBoth | AppleUSFactoryPreset | Yes | Registry validated; Uses the corresponding Slop workspace; advanced Logic behavior remains partial. | https://support.apple.com/en-sg/guide/logicpro/lgcpb99be9c5/10.7/mac/11.0 |
-| Show/Hide Score Editor | N | N | ShowScore | AppleUSFactoryPreset | Yes | Registry validated; Uses the corresponding Slop workspace; advanced Logic behavior remains partial. | https://support.apple.com/en-ph/guide/logicpro/lgcp02bf31b6/mac |
-| Open Score Editor | Command-5 | Ctrl+D5 | ShowScore | AppleUSFactoryPreset | Yes | Registry validated; Uses the corresponding Slop workspace; advanced Logic behavior remains partial. | https://support.apple.com/en-ph/guide/logicpro/lgcp02bf31b6/mac |
-| Open Step Sequencer | Command-3 | Ctrl+D3 | ShowSteps | AppleUSFactoryPreset | Yes | Registry validated; Uses the corresponding Slop workspace; advanced Logic behavior remains partial. | https://support.apple.com/en-ph/guide/logicpro/lgcp02bf31b6/mac |
-| Show/Hide Loop Browser | O | O | ShowSamples | AppleUSFactoryPreset | Yes | Registry validated; Uses the corresponding Slop workspace; advanced Logic behavior remains partial. | https://support.apple.com/en-ph/guide/logicpro/lgcp02bf31b6/mac |
-| Hide/Show Track Automation | A | A | ShowAutomation | AppleUSFactoryPreset | Yes | Registry validated; Uses the corresponding Slop workspace; advanced Logic behavior remains partial. | https://support.apple.com/en-sg/guide/logicpro/lgcpb99be9c5/10.7/mac/11.0 |
-| Hide/Show Flex Pitch/Time | Command-F | Ctrl+F | ShowPitch | AppleUSFactoryPreset | Yes | Registry validated; Uses the corresponding Slop workspace; advanced Logic behavior remains partial. | https://support.apple.com/en-sg/guide/logicpro/lgcpb99be9c5/10.7/mac/11.0 |
-| Bounce | Command-B | Ctrl+B | ExportAudio | AppleUSFactoryPreset | Yes | Registry validated; Uses the corresponding Slop workspace; advanced Logic behavior remains partial. | https://support.apple.com/en-za/guide/logicpro/lgcpe8314fe2/10.7/mac/11.0 |
-| Open Piano Roll | Command-4 | Ctrl+D4 | ShowPianoRoll | AppleUSFactoryPreset | Yes | Registry validated; Uses the corresponding Slop workspace; advanced Logic behavior remains partial. | https://support.apple.com/en-ph/guide/logicpro/lgcp02bf31b6/mac |
-| Open Mixer | Command-2 | Ctrl+D2 | ToggleMixer | AppleUSFactoryPreset | Yes | Registry validated; Uses the corresponding Slop workspace; advanced Logic behavior remains partial. | https://support.apple.com/en-ph/guide/logicpro/lgcp02bf31b6/mac |
+| Record | R | R | Record | the vendorUSFactoryPreset | Yes | Registry validated; Starts a real input recording workflow; dependencies are validated. |  |
+| Pause | numeric keypad period | Num . | Pause | the vendorUSFactoryPreset | Yes | Registry validated; Pauses transport at the current timeline position. |  |
+| Show/Hide Piano Roll | P | P | ShowPianoRoll | the vendorUSFactoryPreset | Yes | Registry validated; Shows or hides the piano-roll editor. |  |
+| Show/Hide Editor | E | E | ShowEditor | the vendorUSFactoryPreset | Yes | Registry validated; Shows or hides the selected region editor. |  |
+| Open Settings | Command-Comma | Ctrl+, | OpenPreferences | the vendorUSFactoryPreset | Yes | Registry validated; Opens persistent audio, MIDI, plugin and display settings. |  |
+| Copy | Command-C | Ctrl+C | Copy | the vendorUSFactoryPreset | Yes | Registry validated; Copies the selected arrangement region. |  |
+| Cut | Command-X | Ctrl+X | Cut | the vendorUSFactoryPreset | Yes | Registry validated; Cuts the selected arrangement region. |  |
+| Paste | Command-V | Ctrl+V | Paste | the vendorUSFactoryPreset | Yes | Registry validated; Pastes the region at the playhead. |  |
+| Select All | Command-A | Ctrl+A | SelectAll | the vendorUSFactoryPreset | No | Registry validated; Not active: multiregion selection is not implemented. |  |
+| Deselect All | Shift-D | Shift+D | DeselectAll | the vendorUSFactoryPreset | Yes | Registry validated; Clears the region selection. |  |
+| New External MIDI Track | Option-Command-X | Ctrl+Alt+X | AddExternalMidiTrack | the vendorUSFactoryPreset | Yes | Registry validated; Routes notes to the external MIDI output configured in Settings. |  |
+| Cycle Mode | C | C | ToggleCycle | the vendorUSFactoryPreset | Yes | Registry validated; Toggles the actual arrangement loop. |  |
+| Toggle Track Record Enable | Control-R | Ctrl+Alt+R | ToggleArm | the vendorUSFactoryPreset | Yes | Registry validated; the vendor Control translates to Ctrl+Alt. |  |
+| Show/Hide Inspector | I | I | ToggleInspector | the vendorUSFactoryPreset | Yes | Registry validated; Toggles the main inspector. |  |
+| New Track with Duplicate Settings | Command-D | Ctrl+D | DuplicateTrack | the vendorUSFactoryPreset | Yes | Registry validated; Copies track settings without regions. |  |
+| New Track with Duplicate Settings and Content | Option-Shift-Command-D | Ctrl+Alt+Shift+D | DuplicateTrackWithContent | the vendorUSFactoryPreset | Yes | Registry validated; Copies track settings and region content. |  |
+| Repeat Regions/Events | Command-R | Ctrl+R | DuplicateRegion | the vendorUSFactoryPreset | Yes | Registry validated; Repeats the selected region once at its end. |  |
+| Split Regions/Events at Playhead Position | Command-T | Ctrl+T | SplitRegion | the vendorUSFactoryPreset | Yes | Registry validated; Splits the selected region at the playhead. |  |
+| Quantize Selected Regions/Events | Q | Q | Quantize | the vendorUSFactoryPreset | Yes | Registry validated; Quantizes notes in the selected MIDI region to 1/16. |  |
+| Switch between Launcher Grid and Tracks View | Option-V | Alt+V | ToggleLauncher | the vendorUSFactoryPreset | Yes | Registry validated; Uses the corresponding Slop workspace; advanced reference application behavior remains partial. |  |
+| Show Launcher Grid only | Option-L | Alt+L | LauncherOnly | the vendorUSFactoryPreset | Yes | Registry validated; Uses the corresponding Slop workspace; advanced reference application behavior remains partial. |  |
+| Show Tracks View only | Option-N | Alt+N | TracksOnly | the vendorUSFactoryPreset | Yes | Registry validated; Uses the corresponding Slop workspace; advanced reference application behavior remains partial. |  |
+| Show Both, Launcher Grid and Tracks View | Option-B | Alt+B | LauncherBoth | the vendorUSFactoryPreset | Yes | Registry validated; Uses the corresponding Slop workspace; advanced reference application behavior remains partial. |  |
+| Show/Hide Score Editor | N | N | ShowScore | the vendorUSFactoryPreset | Yes | Registry validated; Uses the corresponding Slop workspace; advanced reference application behavior remains partial. |  |
+| Open Score Editor | Command-5 | Ctrl+D5 | ShowScore | the vendorUSFactoryPreset | Yes | Registry validated; Uses the corresponding Slop workspace; advanced reference application behavior remains partial. |  |
+| Open Step Sequencer | Command-3 | Ctrl+D3 | ShowSteps | the vendorUSFactoryPreset | Yes | Registry validated; Uses the corresponding Slop workspace; advanced reference application behavior remains partial. |  |
+| Show/Hide Loop Browser | O | O | ShowSamples | the vendorUSFactoryPreset | Yes | Registry validated; Uses the corresponding Slop workspace; advanced reference application behavior remains partial. |  |
+| Hide/Show Track Automation | A | A | ShowAutomation | the vendorUSFactoryPreset | Yes | Registry validated; Uses the corresponding Slop workspace; advanced reference application behavior remains partial. |  |
+| Hide/Show Flex Pitch/Time | Command-F | Ctrl+F | ShowPitch | the vendorUSFactoryPreset | Yes | Registry validated; Uses the corresponding Slop workspace; advanced reference application behavior remains partial. |  |
+| Bounce | Command-B | Ctrl+B | ExportAudio | the vendorUSFactoryPreset | Yes | Registry validated; Uses the corresponding Slop workspace; advanced reference application behavior remains partial. |  |
+| Open Piano Roll | Command-4 | Ctrl+D4 | ShowPianoRoll | the vendorUSFactoryPreset | Yes | Registry validated; Uses the corresponding Slop workspace; advanced reference application behavior remains partial. |  |
+| Open Mixer | Command-2 | Ctrl+D2 | ToggleMixer | the vendorUSFactoryPreset | Yes | Registry validated; Uses the corresponding Slop workspace; advanced reference application behavior remains partial. |  |

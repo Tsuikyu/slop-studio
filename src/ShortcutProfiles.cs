@@ -19,7 +19,7 @@ namespace SlopProX
             if(root==null||!root.ContainsKey("schema")||Convert.ToString(root["schema"])!="slopstudio-shortcuts"||!root.ContainsKey("version")||Convert.ToInt32(root["version"])!=1||!root.ContainsKey("overrides"))throw new InvalidDataException("Unsupported shortcut profile.");
             var input=root["overrides"] as IDictionary<string,object>;if(input==null)throw new InvalidDataException("Invalid shortcut assignments.");
             var result=new Dictionary<string,int>();foreach(var entry in input){if(entry.Value is bool||!(entry.Value is IConvertible))throw new InvalidDataException("Shortcut values must be integers.");double n=Convert.ToDouble(entry.Value,System.Globalization.CultureInfo.InvariantCulture);if(n!=Math.Floor(n)||n<Int32.MinValue||n>Int32.MaxValue)throw new InvalidDataException("Shortcut values must be integers.");result.Add(entry.Key,(int)n);}
-            ShortcutRegistry.ValidateOverrides(result);return result;
+            result=ShortcutRegistry.NormalizeOverrides(result);ShortcutRegistry.ValidateOverrides(result);return result;
         }
         public static void Save(string path,IDictionary<string,int> overrides)
         {

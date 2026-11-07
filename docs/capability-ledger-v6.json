@@ -18,7 +18,7 @@
       "feature": "Dark reference-based UI",
       "status": "PARTIAL",
       "evidence": "Full-height library/inspector, central transport/LCD, tracks, lower mixer/editors, right browser, session grid",
-      "limits": "Original assets and code. Not pixel-identical Logic UI; native dialogs, icons and some proportions differ."
+      "limits": "Original assets and code. Not pixel-identical reference application UI; native dialogs, icons and some proportions differ."
     },
     {
       "feature": "Resize / workspace scaling",
@@ -198,7 +198,7 @@
       "feature": "Sample/file browser",
       "status": "PARTIAL",
       "evidence": "Actual folder navigation/search, WAV list, preview, import and drag/drop",
-      "limits": "No Apple content, AIFF/MP3 decoding, Apple Loop tags or tempo-aware preview."
+      "limits": "No the vendor content, AIFF/MP3 decoding, the vendor Loop tags or tempo-aware preview."
     },
     {
       "feature": "Ableton Link",
@@ -237,10 +237,10 @@
       "limits": "VRChat application NOT RUN; local receive binding, scheduled bundle timetags not implemented."
     },
     {
-      "feature": "Logic keyboard compatibility",
+      "feature": "reference application keyboard compatibility",
       "status": "PARTIAL",
       "evidence": "66 traceable rows, 63 active assignments / 59 command handlers; unique modifier registry, focus tests, shared menu handlers",
-      "limits": "Not all Logic shortcuts/catalogs; unavailable commands and editor/window behavior differ."
+      "limits": "Not all reference application shortcuts/catalogs; unavailable commands and editor/window behavior differ."
     },
     {
       "feature": "Dependency / source licensing",

@@ -23,7 +23,7 @@ internal static class ProjectModelTests
         Run("default model and serialization round-trip", delegate { TestRoundTrip(); });
         Run("PCM WAV metadata and invalid-format handling", delegate { TestPcmWave(testDirectory); });
         Run("preview copy crops, applies gain and pans mono PCM", delegate { TestPlaybackTransform(testDirectory); });
-        Run("Logic shortcut translation registry and conflict check", delegate { TestShortcuts(); });
+        Run("reference application shortcut translation registry and conflict check", delegate { TestShortcuts(); });
         Run("unknown fields and malformed input", delegate { TestMalformedInput(); });
         Run("project validation bounds and identifiers", delegate { TestValidation(); });
         Run("atomic save, replace, and failed-save preservation", delegate { TestAtomicSave(testDirectory); });
@@ -121,11 +121,11 @@ internal static class ProjectModelTests
     {
         ShortcutRegistry.ValidateUniqueActiveAssignments();ShortcutBinding binding;
         Assert(ShortcutRegistry.TryFind(Keys.Space,false,out binding)&&binding.Command==AppCommand.PlayOrStop,"Space does not map to transport Play/Stop.");
-        Assert(ShortcutRegistry.TryFind(Keys.Control|Keys.Shift|Keys.N,false,out binding)&&binding.Command==AppCommand.NewProject,"Logic New Empty Project did not translate to Ctrl+Shift+N.");
-        Assert(ShortcutRegistry.TryFind(Keys.Control|Keys.Shift|Keys.Z,false,out binding)&&binding.Command==AppCommand.Redo,"Logic Shift-Command-Z did not translate to Ctrl+Shift+Z.");
+        Assert(ShortcutRegistry.TryFind(Keys.Control|Keys.Shift|Keys.N,false,out binding)&&binding.Command==AppCommand.NewProject,"reference application New Empty Project did not translate to Ctrl+Shift+N.");
+        Assert(ShortcutRegistry.TryFind(Keys.Control|Keys.Shift|Keys.Z,false,out binding)&&binding.Command==AppCommand.Redo,"reference application Shift-Command-Z did not translate to Ctrl+Shift+Z.");
         Assert(ShortcutRegistry.TryFind(Keys.Control|Keys.Alt|Keys.S,true,out binding)&&binding.Command==AppCommand.AddMidiTrack,"New Software Instrument Track must win the Ctrl+Alt+S collision.");
-        Assert(ShortcutRegistry.TryFind(Keys.M,true,out binding)&&binding.Command==AppCommand.ToggleMute,"Logic M did not toggle track mute.");
-        Assert(ShortcutRegistry.TryFind(Keys.S,true,out binding)&&binding.Command==AppCommand.ToggleSolo,"Logic S did not toggle track solo.");
+        Assert(ShortcutRegistry.TryFind(Keys.M,true,out binding)&&binding.Command==AppCommand.ToggleMute,"reference application M did not toggle track mute.");
+        Assert(ShortcutRegistry.TryFind(Keys.S,true,out binding)&&binding.Command==AppCommand.ToggleSolo,"reference application S did not toggle track solo.");
         Assert(ShortcutRegistry.TryFind(Keys.Control|Keys.Alt|Keys.A,false,out binding)&&binding.Command==AppCommand.AddAudioTrack,"Option-Command-A translation failed.");
         Assert(ShortcutRegistry.TryFind(Keys.Control|Keys.Alt|Keys.X,false,out binding)&&binding.Command==AppCommand.AddExternalMidiTrack,"Option-Command-X translation failed.");
         Assert(ShortcutRegistry.TryFind(Keys.Control|Keys.Shift|Keys.I,false,out binding)&&binding.Command==AppCommand.ImportAudio,"Shift-Command-I translation failed.");

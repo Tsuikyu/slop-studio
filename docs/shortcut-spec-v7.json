@@ -2,10 +2,10 @@
   {
     "command": "ToggleSoftwareKeyboard",
     "logicCommand": "Show/Hide Musical Typing",
-    "mac": "Command-K",
+    "legacy": "Command-K",
     "windows": "Ctrl+K",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/en-asia/guide/logicpro/lgcp32e85cd9/10.7/mac/11.0",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": false,
     "note": "Command maps to Ctrl."
@@ -13,7 +13,7 @@
   {
     "command": "UserManual",
     "logicCommand": "User Manual",
-    "mac": "",
+    "legacy": "",
     "windows": "F1",
     "origin": "SlopProXConvenience",
     "source": "",
@@ -24,21 +24,21 @@
   {
     "command": "PlayOrStop",
     "logicCommand": "Play or Stop",
-    "mac": "Space",
+    "legacy": "Space",
     "windows": "Space",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/guide/logicpro/use-transport-key-commands-lgcp2814a670/10.7/mac/11.0",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": false,
-    "note": "Apple documents Space as Play or Stop."
+    "note": "the vendor documents Space as Play or Stop."
   },
   {
     "command": "Stop",
     "logicCommand": "Stop",
-    "mac": "numeric keypad 0",
+    "legacy": "numeric keypad 0",
     "windows": "Num 0",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/en-asia/guide/logicpro/lgcp32e85cd9/10.7/mac/11.0",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": false,
     "note": "Requires the numeric keypad 0 key."
@@ -46,10 +46,10 @@
   {
     "command": "GoToBeginning",
     "logicCommand": "Go to Beginning",
-    "mac": "Return",
+    "legacy": "Return",
     "windows": "Enter",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/en-asia/guide/logicpro/lgcp32e85cd9/10.7/mac/11.0",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": false,
     "note": "Stops playback and returns the arrangement cursor to beat 0."
@@ -57,10 +57,10 @@
   {
     "command": "RewindBar",
     "logicCommand": "Rewind one bar",
-    "mac": ",",
+    "legacy": ",",
     "windows": ",",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/en-asia/guide/logicpro/lgcp32e85cd9/10.7/mac/11.0",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": false,
     "note": "Moves the timeline playhead one bar left."
@@ -68,10 +68,10 @@
   {
     "command": "ForwardBar",
     "logicCommand": "Forward one bar",
-    "mac": ".",
+    "legacy": ".",
     "windows": ".",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/en-asia/guide/logicpro/lgcp32e85cd9/10.7/mac/11.0",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": false,
     "note": "Moves the timeline playhead one bar right."
@@ -79,43 +79,43 @@
   {
     "command": "NewProject",
     "logicCommand": "New Empty Project",
-    "mac": "Shift-Command-N",
+    "legacy": "Shift-Command-N",
     "windows": "Ctrl+Shift+N",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/en-asia/guide/logicpro/lgcp32e85cd9/10.7/mac/11.0",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": false,
-    "note": "Logic's New Empty Project mapping translated to Ctrl+Shift+N."
+    "note": "The default New Empty Project mapping translated to Ctrl+Shift+N."
   },
   {
     "command": "OpenProject",
     "logicCommand": "Open Project",
-    "mac": "Command-O",
+    "legacy": "Command-O",
     "windows": "Ctrl+O",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/en-asia/guide/logicpro/lgcp32e85cd9/10.7/mac/11.0",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": false,
-    "note": "Logic's Open mapping translated to Ctrl+O."
+    "note": "The default Open mapping translated to Ctrl+O."
   },
   {
     "command": "SaveProject",
     "logicCommand": "Save Project",
-    "mac": "Command-S",
+    "legacy": "Command-S",
     "windows": "Ctrl+S",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/en-asia/guide/logicpro/lgcp32e85cd9/10.7/mac/11.0",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": false,
-    "note": "Logic's Save mapping translated to Ctrl+S."
+    "note": "The default Save mapping translated to Ctrl+S."
   },
   {
     "command": "Undo",
     "logicCommand": "Undo",
-    "mac": "Command-Z",
+    "legacy": "Command-Z",
     "windows": "Ctrl+Z",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/en-hk/guide/logicpro/lgcp665bbccc/mac",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": false,
     "note": "Command maps to Ctrl."
@@ -123,21 +123,21 @@
   {
     "command": "Redo",
     "logicCommand": "Redo",
-    "mac": "Shift-Command-Z",
+    "legacy": "Shift-Command-Z",
     "windows": "Ctrl+Shift+Z",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/en-hk/guide/logicpro/lgcp665bbccc/mac",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": false,
-    "note": "Preserves Logic's Shift-Command redo chord."
+    "note": "Preserves The default Shift-Command redo chord."
   },
   {
     "command": "AddAudioTrack",
     "logicCommand": "New Audio Track",
-    "mac": "Option-Command-A",
+    "legacy": "Option-Command-A",
     "windows": "Ctrl+Alt+A",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/en-sg/guide/logicpro/lgcpb99be9c5/10.7/mac/11.0",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": false,
     "note": "Option maps to Alt; Command maps to Ctrl."
@@ -145,10 +145,10 @@
   {
     "command": "AddMidiTrack",
     "logicCommand": "New Software Instrument Track",
-    "mac": "Option-Command-S",
+    "legacy": "Option-Command-S",
     "windows": "Ctrl+Alt+S",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/en-sg/guide/logicpro/lgcpb99be9c5/10.7/mac/11.0",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": false,
     "note": "Creates an internal instrument track."
@@ -156,10 +156,10 @@
   {
     "command": "DeleteTrack",
     "logicCommand": "Delete Track",
-    "mac": "Command-Delete",
+    "legacy": "Command-Delete",
     "windows": "Ctrl+Delete",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/en-sg/guide/logicpro/lgcpb99be9c5/10.7/mac/11.0",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": false,
     "note": "Deletes the selected track when no region is selected."
@@ -167,10 +167,10 @@
   {
     "command": "ImportAudio",
     "logicCommand": "Import Audio File",
-    "mac": "Shift-Command-I",
+    "legacy": "Shift-Command-I",
     "windows": "Ctrl+Shift+I",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/en-sg/guide/logicpro/lgcpb99be9c5/10.7/mac/11.0",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": false,
     "note": "Imports a PCM WAV file."
@@ -178,10 +178,10 @@
   {
     "command": "RenameTrack",
     "logicCommand": "Rename Track",
-    "mac": "Shift-Return",
+    "legacy": "Shift-Return",
     "windows": "Shift+Enter",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/en-sg/guide/logicpro/lgcpb99be9c5/10.7/mac/11.0",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": true,
     "note": "Available with a track selected and no region selected."
@@ -189,10 +189,10 @@
   {
     "command": "RenameRegion",
     "logicCommand": "Rename Regions",
-    "mac": "Shift-N",
+    "legacy": "Shift-N",
     "windows": "Shift+N",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/en-sg/guide/logicpro/lgcpb99be9c5/10.7/mac/11.0",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": true,
     "note": "Available with a region selected."
@@ -200,10 +200,10 @@
   {
     "command": "SelectPreviousRegion",
     "logicCommand": "Select Previous Region on Selected Track",
-    "mac": "Left Arrow",
+    "legacy": "Left Arrow",
     "windows": "←",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/en-sg/guide/logicpro/lgcpb99be9c5/10.7/mac/11.0",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": true,
     "note": "Arrangement focus only."
@@ -211,10 +211,10 @@
   {
     "command": "SelectNextRegion",
     "logicCommand": "Select Next Region on Selected Track",
-    "mac": "Right Arrow",
+    "legacy": "Right Arrow",
     "windows": "→",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/en-sg/guide/logicpro/lgcpb99be9c5/10.7/mac/11.0",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": true,
     "note": "Arrangement focus only."
@@ -222,10 +222,10 @@
   {
     "command": "SelectPreviousTrack",
     "logicCommand": "Select Previous Track",
-    "mac": "Up Arrow",
+    "legacy": "Up Arrow",
     "windows": "↑",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/en-asia/guide/logicpro/lgcp32e85cd9/10.7/mac/11.0",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": true,
     "note": "Arrangement focus only."
@@ -233,10 +233,10 @@
   {
     "command": "SelectNextTrack",
     "logicCommand": "Select Next Track",
-    "mac": "Down Arrow",
+    "legacy": "Down Arrow",
     "windows": "↓",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/en-asia/guide/logicpro/lgcp32e85cd9/10.7/mac/11.0",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": true,
     "note": "Arrangement focus only."
@@ -244,10 +244,10 @@
   {
     "command": "ZoomOut",
     "logicCommand": "Zoom Horizontal Out",
-    "mac": "Command-Left Arrow",
+    "legacy": "Command-Left Arrow",
     "windows": "Ctrl+←",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/en-hk/guide/logicpro/lgcp665bbccc/mac",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": false,
     "note": "Command maps to Ctrl."
@@ -255,10 +255,10 @@
   {
     "command": "ZoomIn",
     "logicCommand": "Zoom Horizontal In",
-    "mac": "Command-Right Arrow",
+    "legacy": "Command-Right Arrow",
     "windows": "Ctrl+→",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/en-hk/guide/logicpro/lgcp665bbccc/mac",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": false,
     "note": "Command maps to Ctrl."
@@ -266,10 +266,10 @@
   {
     "command": "ToggleMixer",
     "logicCommand": "Show/Hide Mixer",
-    "mac": "X",
+    "legacy": "X",
     "windows": "X",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/en-asia/guide/logicpro/lgcp32e85cd9/10.7/mac/11.0",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": false,
     "note": "Toggles the lower track-control panel."
@@ -277,10 +277,10 @@
   {
     "command": "ToggleLibrary",
     "logicCommand": "Show/Hide Library",
-    "mac": "Y",
+    "legacy": "Y",
     "windows": "Y",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/en-asia/guide/logicpro/lgcp32e85cd9/10.7/mac/11.0",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": false,
     "note": "Toggles the sound library."
@@ -288,10 +288,10 @@
   {
     "command": "ToggleBrowser",
     "logicCommand": "Show/Hide Browsers",
-    "mac": "F",
+    "legacy": "F",
     "windows": "F",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/en-sg/guide/logicpro/lgcpb99be9c5/10.7/mac/11.0",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": false,
     "note": "Toggles the right-hand project media browser."
@@ -299,10 +299,10 @@
   {
     "command": "ToggleInspector",
     "logicCommand": "Show/Hide Local Inspector",
-    "mac": "Option-Shift-I",
+    "legacy": "Option-Shift-I",
     "windows": "Alt+Shift+I",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/en-hk/guide/logicpro/lgcp665bbccc/mac",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": false,
     "note": "Option maps to Alt."
@@ -310,10 +310,10 @@
   {
     "command": "ToggleMute",
     "logicCommand": "Toggle Channel Strip Mute",
-    "mac": "M",
+    "legacy": "M",
     "windows": "M",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/en-asia/guide/logicpro/lgcp32e85cd9/10.7/mac/11.0",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": true,
     "note": "Toggles mute for the selected track while the arrangement has focus."
@@ -321,10 +321,10 @@
   {
     "command": "ToggleSolo",
     "logicCommand": "Toggle Channel Strip Solo",
-    "mac": "S",
+    "legacy": "S",
     "windows": "S",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/en-asia/guide/logicpro/lgcp32e85cd9/10.7/mac/11.0",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": true,
     "note": "Toggles solo for the selected track while the arrangement has focus."
@@ -332,10 +332,10 @@
   {
     "command": "ToggleMute",
     "logicCommand": "Toggle Track On",
-    "mac": "Option-M",
+    "legacy": "Option-M",
     "windows": "Alt+M",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/en-sg/guide/logicpro/lgcpb99be9c5/10.7/mac/11.0",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": false,
     "arrangementOnly": true,
     "note": "Track power-off is distinct from mute and is not implemented."
@@ -343,10 +343,10 @@
   {
     "command": "ToggleSolo",
     "logicCommand": "Engage Solo Tracks of Selected Regions",
-    "mac": "Control-S",
+    "legacy": "Control-S",
     "windows": "Ctrl+Alt+S",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/en-asia/guide/logicpro/lgcp32e85cd9/10.7/mac/11.0",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": false,
     "arrangementOnly": true,
     "note": "Windows translation conflicts with New Software Instrument Track (Ctrl+Alt+S); use the active S shortcut for solo."
@@ -354,10 +354,10 @@
   {
     "command": "ClearSolo",
     "logicCommand": "Clear/Recall Solo",
-    "mac": "Option-S",
+    "legacy": "Option-S",
     "windows": "Alt+S",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/en-asia/guide/logicpro/lgcp32e85cd9/10.7/mac/11.0",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": false,
     "note": "Clears solo state for all tracks."
@@ -365,29 +365,29 @@
   {
     "command": "UnmuteAll",
     "logicCommand": "Mute Off for All",
-    "mac": "Control-Shift-M",
+    "legacy": "Control-Shift-M",
     "windows": "Ctrl+Alt+Shift+M",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/en-asia/guide/logicpro/lgcp32e85cd9/10.7/mac/11.0",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": false,
-    "note": "Apple Control maps to Ctrl+Alt."
+    "note": "the vendor Control maps to Ctrl+Alt."
   },
   {
     "command": "AddRegion",
     "logicCommand": "Add Region (Slop Studio)",
-    "mac": "Ctrl-Shift-R",
+    "legacy": "Ctrl-Shift-R",
     "windows": "Ctrl+Shift+R",
     "origin": "SlopProXConvenience",
     "source": "",
     "active": true,
     "arrangementOnly": false,
-    "note": "Slop Studio convenience mapping; not claimed as a Logic default."
+    "note": "Slop Studio convenience mapping; not claimed as a reference application default."
   },
   {
     "command": "DeleteRegion",
     "logicCommand": "Delete Region (Slop Studio)",
-    "mac": "Delete",
+    "legacy": "Delete",
     "windows": "Delete",
     "origin": "SlopProXConvenience",
     "source": "",
@@ -398,10 +398,10 @@
   {
     "command": "Record",
     "logicCommand": "Record",
-    "mac": "R",
+    "legacy": "R",
     "windows": "R",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/en-asia/guide/logicpro/lgcp32e85cd9/10.7/mac/11.0",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": false,
     "note": "Starts a real input recording workflow; dependencies are validated."
@@ -409,10 +409,10 @@
   {
     "command": "Pause",
     "logicCommand": "Pause",
-    "mac": "numeric keypad period",
+    "legacy": "numeric keypad period",
     "windows": "Num .",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/en-asia/guide/logicpro/lgcp32e85cd9/10.7/mac/11.0",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": false,
     "note": "Pauses transport at the current timeline position."
@@ -420,10 +420,10 @@
   {
     "command": "ShowPianoRoll",
     "logicCommand": "Show/Hide Piano Roll",
-    "mac": "P",
+    "legacy": "P",
     "windows": "P",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/en-asia/guide/logicpro/lgcp32e85cd9/10.7/mac/11.0",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": false,
     "note": "Shows or hides the piano-roll editor."
@@ -431,10 +431,10 @@
   {
     "command": "ShowEditor",
     "logicCommand": "Show/Hide Editor",
-    "mac": "E",
+    "legacy": "E",
     "windows": "E",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/en-sg/guide/logicpro/lgcpb99be9c5/10.7/mac/11.0",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": false,
     "note": "Shows or hides the selected region editor."
@@ -442,10 +442,10 @@
   {
     "command": "OpenPreferences",
     "logicCommand": "Open Settings",
-    "mac": "Command-Comma",
+    "legacy": "Command-Comma",
     "windows": "Ctrl+,",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/en-asia/guide/logicpro/lgcp32e85cd9/10.7/mac/11.0",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": false,
     "note": "Opens persistent audio, MIDI, plugin and display settings."
@@ -453,10 +453,10 @@
   {
     "command": "Copy",
     "logicCommand": "Copy",
-    "mac": "Command-C",
+    "legacy": "Command-C",
     "windows": "Ctrl+C",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/en-hk/guide/logicpro/lgcp665bbccc/mac",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": true,
     "note": "Copies the selected arrangement region."
@@ -464,10 +464,10 @@
   {
     "command": "Cut",
     "logicCommand": "Cut",
-    "mac": "Command-X",
+    "legacy": "Command-X",
     "windows": "Ctrl+X",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/en-hk/guide/logicpro/lgcp665bbccc/mac",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": true,
     "note": "Cuts the selected arrangement region."
@@ -475,10 +475,10 @@
   {
     "command": "Paste",
     "logicCommand": "Paste",
-    "mac": "Command-V",
+    "legacy": "Command-V",
     "windows": "Ctrl+V",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/en-hk/guide/logicpro/lgcp665bbccc/mac",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": true,
     "note": "Pastes the region at the playhead."
@@ -486,10 +486,10 @@
   {
     "command": "SelectAll",
     "logicCommand": "Select All",
-    "mac": "Command-A",
+    "legacy": "Command-A",
     "windows": "Ctrl+A",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/en-hk/guide/logicpro/lgcp665bbccc/mac",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": false,
     "arrangementOnly": true,
     "note": "Not active: multiregion selection is not implemented."
@@ -497,10 +497,10 @@
   {
     "command": "DeselectAll",
     "logicCommand": "Deselect All",
-    "mac": "Shift-D",
+    "legacy": "Shift-D",
     "windows": "Shift+D",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/en-hk/guide/logicpro/lgcp665bbccc/mac",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": true,
     "note": "Clears the region selection."
@@ -508,10 +508,10 @@
   {
     "command": "AddExternalMidiTrack",
     "logicCommand": "New External MIDI Track",
-    "mac": "Option-Command-X",
+    "legacy": "Option-Command-X",
     "windows": "Ctrl+Alt+X",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/guide/logicpro/main-window-tracks-and-various-editors-lgcpe8314fe2/12.3/mac/15.6",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": false,
     "note": "Routes notes to the external MIDI output configured in Settings."
@@ -519,10 +519,10 @@
   {
     "command": "ToggleCycle",
     "logicCommand": "Cycle Mode",
-    "mac": "C",
+    "legacy": "C",
     "windows": "C",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/en-mo/guide/logicpro/lgcp59e41e86/10.7/mac/11.0",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": false,
     "note": "Toggles the actual arrangement loop."
@@ -530,21 +530,21 @@
   {
     "command": "ToggleArm",
     "logicCommand": "Toggle Track Record Enable",
-    "mac": "Control-R",
+    "legacy": "Control-R",
     "windows": "Ctrl+Alt+R",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/en-mo/guide/logicpro/lgcp0c445ccf/mac",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": true,
-    "note": "Apple Control translates to Ctrl+Alt."
+    "note": "the vendor Control translates to Ctrl+Alt."
   },
   {
     "command": "ToggleInspector",
     "logicCommand": "Show/Hide Inspector",
-    "mac": "I",
+    "legacy": "I",
     "windows": "I",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/en-asia/guide/logicpro/lgcp32e85cd9/10.7/mac/11.0",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": false,
     "note": "Toggles the main inspector."
@@ -552,10 +552,10 @@
   {
     "command": "DuplicateTrack",
     "logicCommand": "New Track with Duplicate Settings",
-    "mac": "Command-D",
+    "legacy": "Command-D",
     "windows": "Ctrl+D",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/guide/logicpro/main-window-tracks-and-various-editors-lgcpe8314fe2/12.3/mac/15.6",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": true,
     "note": "Copies track settings without regions."
@@ -563,10 +563,10 @@
   {
     "command": "DuplicateTrackWithContent",
     "logicCommand": "New Track with Duplicate Settings and Content",
-    "mac": "Option-Shift-Command-D",
+    "legacy": "Option-Shift-Command-D",
     "windows": "Ctrl+Alt+Shift+D",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/guide/logicpro/main-window-tracks-and-various-editors-lgcpe8314fe2/12.3/mac/15.6",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": true,
     "note": "Copies track settings and region content."
@@ -574,10 +574,10 @@
   {
     "command": "DuplicateRegion",
     "logicCommand": "Repeat Regions/Events",
-    "mac": "Command-R",
+    "legacy": "Command-R",
     "windows": "Ctrl+R",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/guide/logicpro/main-window-tracks-and-various-editors-lgcpe8314fe2/12.3/mac/15.6",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": true,
     "note": "Repeats the selected region once at its end."
@@ -585,10 +585,10 @@
   {
     "command": "SplitRegion",
     "logicCommand": "Split Regions/Events at Playhead Position",
-    "mac": "Command-T",
+    "legacy": "Command-T",
     "windows": "Ctrl+T",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/guide/logicpro/main-window-tracks-and-various-editors-lgcpe8314fe2/12.3/mac/15.6",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": true,
     "note": "Splits the selected region at the playhead."
@@ -596,155 +596,155 @@
   {
     "command": "Quantize",
     "logicCommand": "Quantize Selected Regions/Events",
-    "mac": "Q",
+    "legacy": "Q",
     "windows": "Q",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/guide/logicpro/main-window-tracks-and-various-editors-lgcpe8314fe2/12.3/mac/15.6",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": true,
     "note": "Quantizes notes in the selected MIDI region to 1/16."
   },
   {
     "command": "ToggleLauncher",
-    "logicCommand": "Switch between Live Loops Grid and Tracks View",
-    "mac": "Option-V",
+    "logicCommand": "Switch between Launcher Grid and Tracks View",
+    "legacy": "Option-V",
     "windows": "Alt+V",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/en-sg/guide/logicpro/lgcpb99be9c5/10.7/mac/11.0",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": false,
-    "note": "Uses the corresponding Slop workspace; advanced Logic behavior remains partial."
+    "note": "Uses the corresponding Slop workspace; advanced reference application behavior remains partial."
   },
   {
     "command": "LauncherOnly",
-    "logicCommand": "Show Live Loops Grid only",
-    "mac": "Option-L",
+    "logicCommand": "Show Launcher Grid only",
+    "legacy": "Option-L",
     "windows": "Alt+L",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/en-sg/guide/logicpro/lgcpb99be9c5/10.7/mac/11.0",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": false,
-    "note": "Uses the corresponding Slop workspace; advanced Logic behavior remains partial."
+    "note": "Uses the corresponding Slop workspace; advanced reference application behavior remains partial."
   },
   {
     "command": "TracksOnly",
     "logicCommand": "Show Tracks View only",
-    "mac": "Option-N",
+    "legacy": "Option-N",
     "windows": "Alt+N",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/en-sg/guide/logicpro/lgcpb99be9c5/10.7/mac/11.0",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": false,
-    "note": "Uses the corresponding Slop workspace; advanced Logic behavior remains partial."
+    "note": "Uses the corresponding Slop workspace; advanced reference application behavior remains partial."
   },
   {
     "command": "LauncherBoth",
-    "logicCommand": "Show Both, Live Loops Grid and Tracks View",
-    "mac": "Option-B",
+    "logicCommand": "Show Both, Launcher Grid and Tracks View",
+    "legacy": "Option-B",
     "windows": "Alt+B",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/en-sg/guide/logicpro/lgcpb99be9c5/10.7/mac/11.0",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": false,
-    "note": "Uses the corresponding Slop workspace; advanced Logic behavior remains partial."
+    "note": "Uses the corresponding Slop workspace; advanced reference application behavior remains partial."
   },
   {
     "command": "ShowScore",
     "logicCommand": "Show/Hide Score Editor",
-    "mac": "N",
+    "legacy": "N",
     "windows": "N",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/en-ph/guide/logicpro/lgcp02bf31b6/mac",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": false,
-    "note": "Uses the corresponding Slop workspace; advanced Logic behavior remains partial."
+    "note": "Uses the corresponding Slop workspace; advanced reference application behavior remains partial."
   },
   {
     "command": "ShowScore",
     "logicCommand": "Open Score Editor",
-    "mac": "Command-5",
+    "legacy": "Command-5",
     "windows": "Ctrl+D5",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/en-ph/guide/logicpro/lgcp02bf31b6/mac",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": false,
-    "note": "Uses the corresponding Slop workspace; advanced Logic behavior remains partial."
+    "note": "Uses the corresponding Slop workspace; advanced reference application behavior remains partial."
   },
   {
     "command": "ShowSteps",
     "logicCommand": "Open Step Sequencer",
-    "mac": "Command-3",
+    "legacy": "Command-3",
     "windows": "Ctrl+D3",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/en-ph/guide/logicpro/lgcp02bf31b6/mac",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": false,
-    "note": "Uses the corresponding Slop workspace; advanced Logic behavior remains partial."
+    "note": "Uses the corresponding Slop workspace; advanced reference application behavior remains partial."
   },
   {
     "command": "ShowSamples",
     "logicCommand": "Show/Hide Loop Browser",
-    "mac": "O",
+    "legacy": "O",
     "windows": "O",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/en-ph/guide/logicpro/lgcp02bf31b6/mac",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": false,
-    "note": "Uses the corresponding Slop workspace; advanced Logic behavior remains partial."
+    "note": "Uses the corresponding Slop workspace; advanced reference application behavior remains partial."
   },
   {
     "command": "ShowAutomation",
     "logicCommand": "Hide/Show Track Automation",
-    "mac": "A",
+    "legacy": "A",
     "windows": "A",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/en-sg/guide/logicpro/lgcpb99be9c5/10.7/mac/11.0",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": false,
-    "note": "Uses the corresponding Slop workspace; advanced Logic behavior remains partial."
+    "note": "Uses the corresponding Slop workspace; advanced reference application behavior remains partial."
   },
   {
     "command": "ShowPitch",
     "logicCommand": "Hide/Show Flex Pitch/Time",
-    "mac": "Command-F",
+    "legacy": "Command-F",
     "windows": "Ctrl+F",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/en-sg/guide/logicpro/lgcpb99be9c5/10.7/mac/11.0",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": false,
-    "note": "Uses the corresponding Slop workspace; advanced Logic behavior remains partial."
+    "note": "Uses the corresponding Slop workspace; advanced reference application behavior remains partial."
   },
   {
     "command": "ExportAudio",
     "logicCommand": "Bounce",
-    "mac": "Command-B",
+    "legacy": "Command-B",
     "windows": "Ctrl+B",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/en-za/guide/logicpro/lgcpe8314fe2/10.7/mac/11.0",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": false,
-    "note": "Uses the corresponding Slop workspace; advanced Logic behavior remains partial."
+    "note": "Uses the corresponding Slop workspace; advanced reference application behavior remains partial."
   },
   {
     "command": "ShowPianoRoll",
     "logicCommand": "Open Piano Roll",
-    "mac": "Command-4",
+    "legacy": "Command-4",
     "windows": "Ctrl+D4",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/en-ph/guide/logicpro/lgcp02bf31b6/mac",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": false,
-    "note": "Uses the corresponding Slop workspace; advanced Logic behavior remains partial."
+    "note": "Uses the corresponding Slop workspace; advanced reference application behavior remains partial."
   },
   {
     "command": "ToggleMixer",
     "logicCommand": "Open Mixer",
-    "mac": "Command-2",
+    "legacy": "Command-2",
     "windows": "Ctrl+D2",
-    "origin": "AppleUSFactoryPreset",
-    "source": "https://support.apple.com/en-ph/guide/logicpro/lgcp02bf31b6/mac",
+    "origin": "the vendorUSFactoryPreset",
+    "source": "",
     "active": true,
     "arrangementOnly": false,
-    "note": "Uses the corresponding Slop workspace; advanced Logic behavior remains partial."
+    "note": "Uses the corresponding Slop workspace; advanced reference application behavior remains partial."
   }
 ]

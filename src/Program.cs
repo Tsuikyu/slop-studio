@@ -10,7 +10,7 @@ namespace SlopProX
         [STAThread]
         private static void Main(string[] args)
         {
-            if(args!=null&&args.Length==2&&args[0]=="--export-shortcuts"){var rows=new System.Collections.Generic.List<object>();foreach(var b in ShortcutRegistry.Bindings)rows.Add(new {command=b.Command.ToString(),logicCommand=b.LogicCommand,mac=b.MacShortcut,windows=b.WindowsShortcut,origin=b.Origin.ToString(),source=b.SourceUrl,active=b.Implemented,arrangementOnly=b.ArrangementOnly,note=b.Note});File.WriteAllText(args[1],new System.Web.Script.Serialization.JavaScriptSerializer().Serialize(rows));return;}
+            if(args!=null&&args.Length==2&&args[0]=="--export-shortcuts"){var rows=new System.Collections.Generic.List<object>();foreach(var b in ShortcutRegistry.Bindings)rows.Add(new {command=b.Command.ToString(),logicCommand=b.LogicCommand,legacy=b.LegacyShortcut,windows=b.WindowsShortcut,origin=b.Origin.ToString(),source=b.SourceUrl,active=b.Implemented,arrangementOnly=b.ArrangementOnly,note=b.Note});File.WriteAllText(args[1],new System.Web.Script.Serialization.JavaScriptSerializer().Serialize(rows));return;}
             if(args!=null&&args.Length==2&&args[0]=="--plugin-worker"){SetErrorMode(0x8003);try{PluginWorker.Run(args[1]);}catch(Exception ex){File.WriteAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory,"worker-startup-error.log"),ex.ToString());Environment.ExitCode=74;}return;}
             if(args!=null&&args.Length==3&&args[0]=="--scan-plugin")
             {

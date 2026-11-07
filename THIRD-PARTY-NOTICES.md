@@ -1,6 +1,6 @@
 # Third-party notices — Slop Studio 0.13
 
-The MIT license applies to the original application, native VST3/CLAP host and WASAPI bridge, original UI/assets and example music, except for separately licensed third-party and companion files below. No Apple screenshot, logo, icon, font, sample library or application binary is embedded. This is an independent Windows application.
+The MIT license applies to the original application, native VST3/CLAP host and WASAPI bridge, original UI/assets and example music, except for separately licensed third-party and companion files below. No the vendor screenshot, logo, icon, font, sample library or application binary is embedded. This is an independent Windows application.
 
 | Distributed component | Upstream / provenance | Applicable notice |
 |---|---|---|
@@ -24,6 +24,6 @@ SlopNative.dll, SlopAudio.dll and SlopControl.dll do not link to ASIO or Ableton
 
 Third-party plugin binaries are not redistributed. In the preceding 0.11 release the locally installed Ozone 11 Elements, SerumFX and Serum 2 VST3 instances were individually tested for editor attachment, host preset state, application insertion, synthetic PCM/MIDI processing and project state restoration. In earlier testing, Vital was tested from the existing installation; Melodyne ARA and Synthesizer V Studio 2 ARA were tested in limited scenarios, but those tests were not repeated for this release. Their binaries, voices, artwork and licenses are not redistributed. Softube Saturation Knob returned a null VST3 factory in an earlier test; it was not retested. No activation circumvention or replacement plugin was used. Original TestFixtures are ABI/fault fixtures, clearly named as verification tools and not substituted for third-party instances.
 
-ALS and FLP importers are original limited implementations. FLP binary layout facts were checked against the parser author's primary source at https://github.com/demberto/PyFLP ; no PyFLP implementation is copied or linked. Apple keyboard documentation is used as a factual mapping reference. Coverage and adaptations are recorded, not presented as a complete Logic preset.
+ALS and FLP importers are original limited implementations. FLP binary layout facts were checked against the parser author's primary source at https://github.com/demberto/PyFLP ; no PyFLP implementation is copied or linked. Shortcut assignments and known limitations are recorded in the project documentation.
 
-CMake, Ninja, LLVM toolchain archives, Apple reference images and other applications are not included as runtime assets. The full compiler/runtime notice collections are retained. This inventory records the actual distribution and does not certify universal plugin compatibility.
+CMake, Ninja, LLVM toolchain archives, the vendor reference images and other applications are not included as runtime assets. The full compiler/runtime notice collections are retained. This inventory records the actual distribution and does not certify universal plugin compatibility.

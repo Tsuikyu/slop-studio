@@ -4,7 +4,7 @@
 
 ## 目的と規則
 
-Slop Studio は Windows 11 x64 を優先する開発中の独立DAW。Logicに慣れた利用者の操作感を参考にしつつ、Minimal CyberSquareの独自UIを採用する。正式なApple製品を装わず、Appleの画像・アイコン・音源を流用しない。ネイティブプロジェクト形式は `.slopdaw`、テンプレートは `.sloptemplate`。旧形式 `.slopx` を復活させないというユーザー指示がある。最新の明示指示が古い仕様より優先する。
+Slop Studio は Windows 11 x64 を優先する開発中の独立DAW。Minimal CyberSquareの独自UIを採用する。正式なthe vendor製品を装わず、the vendorの画像・アイコン・音源を流用しない。ネイティブプロジェクト形式は `.slopdaw`、テンプレートは `.sloptemplate`。旧形式 `.slopx` を復活させないというユーザー指示がある。最新の明示指示が古い仕様より優先する。
 
 まずルートの `AGENTS.md`、`docs/requirements/` の仕様とメニュー、`docs/status-v0.13-ja.md`、`docs/plan-v0.13-ja.md` を読む。4言語 ja-JP/en-US/de-DE/ko-KR、実機と合成テストの区別、無効な機能を完成と偽らないこと、原子的保存・バックアップ・Undo、既存データの保護を維持。JUCEは使わない。Windows優先、Debian対応は未完成。ネットワーク・ファイルI/O・GUI・スクリプトを音声コールバックに持ち込まない。ユーザーは Downloads の参照を禁止している。外部投稿、公開、送信、pushは無許可で行わない。
 

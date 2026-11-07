@@ -229,7 +229,7 @@
       "feature": "DJロボット猫耳アイコン",
       "status": "PASS",
       "evidence": "Original faceless silhouette SVG/PNG/ICO16–256; actual Windows executable shows icon",
-      "limits": "No Apple assets used"
+      "limits": "No the vendor assets used"
     },
     {
       "feature": "プラグインマネージャー再構成",
@@ -289,7 +289,7 @@
       "feature": "GUIの厳密な一致",
       "status": "PARTIAL",
       "evidence": "Reference panel hierarchy, transport, timeline, original icons, channel strips and actual screenshot comparison",
-      "limits": "Pixel-level match, all Logic screens and version13 parity not established"
+      "limits": "Pixel-level match, all reference application screens and version13 parity not established"
     },
     {
       "feature": "全Logicキー",

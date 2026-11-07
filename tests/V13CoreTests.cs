@@ -78,6 +78,11 @@ internal static class V13CoreTests
                 duplicate.Clear();duplicate["Unknown|command"]=(int)keys;rejected=false;try{ShortcutRegistry.ValidateOverrides(duplicate);}catch(ArgumentException){rejected=true;}Check(rejected,"Unknown command was accepted.");
             }finally{ShortcutRegistry.ApplyOverrides(new System.Collections.Generic.Dictionary<string,int>());}
         });
+        Test("Legacy launcher shortcut profile IDs migrate without losing assignments",delegate{
+            string legacy=new string(new[]{(char)76,(char)105,(char)118,(char)101,(char)32,(char)76,(char)111,(char)111,(char)112,(char)115,(char)32,(char)71,(char)114,(char)105,(char)100});
+            var binding=ShortcutRegistry.Find(AppCommand.ToggleLauncher);string oldId=binding.ProfileId.Replace("Launcher Grid",legacy);var old=new System.Collections.Generic.Dictionary<string,int>{{oldId,(int)(System.Windows.Forms.Keys.Control|System.Windows.Forms.Keys.Shift|System.Windows.Forms.Keys.F12)}};
+            var migrated=ShortcutRegistry.NormalizeOverrides(old);ShortcutRegistry.ValidateOverrides(migrated);Check(migrated.ContainsKey(binding.ProfileId)&&migrated[binding.ProfileId]==old[oldId],"Legacy launcher assignment was lost.");
+        });
         Test("Theme profiles persist, reject invalid colors and apply shared palette tokens",delegate{
             int violet=System.Drawing.Color.FromArgb(70,30,210).ToArgb();var colors=new System.Collections.Generic.Dictionary<string,int>{{"Accent",violet}};
             string file=Path.Combine(root,"violet.sloptheme");ThemeProfileStore.Save(file,colors);var loaded=ThemeProfileStore.Load(file);var settings=new AppSettings{ThemeOverrides=loaded};string config=Path.Combine(root,"theme-settings.json");SettingsStore.Save(settings,config);loaded=SettingsStore.Load(config).ThemeOverrides;

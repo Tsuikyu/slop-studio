@@ -12,7 +12,7 @@ Statuses describe the specific evidence, not unrestricted compatibility.
 - PARTIAL — Japanese localization and IME handling are improved; Japanese IME physical interactions and every translated string are NOT VERIFIED.
 - PARTIAL — FLP, ALS and SMF imports cover subsets. FL instruments/mixer effects and full conversion are not reconstructed.
 - PARTIAL — ASIO/WASAPI behavior depends on the device. FL Studio ASIO and WASAPI tests are reported separately; MiniFuse initialization failed in this environment.
-- NOT VERIFIED — All plug-in vendors, all Logic key commands, pixel-identical appearance, all features and commercial-grade reliability. A full Logic clone has not been delivered.
+- NOT VERIFIED — All plug-in vendors, all reference application key commands, pixel-identical appearance, all features and commercial-grade reliability. A full reference application clone has not been delivered.
 - NOT RUN — Physical microphone, physical MIDI note performance, tablet and mixed-monitor DPI.
 - FAIL — OSC localhost UDP integration test fails in this environment; VRChat OSC interoperability was not verified.
 

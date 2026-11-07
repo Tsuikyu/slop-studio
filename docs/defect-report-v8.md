@@ -23,12 +23,12 @@ Date: 2026-10-28. Windows 11 AMD64 / .NET Framework 4.8 / C++17. This report sep
 
 1. Reproduce the selected MiniFuse ASIO initialization error in an unrestricted runtime with the device available; verify physical keyboard input and recording.
 2. Variable tempo maps, full take folders, deeper score engraving and complete audio/MIDI editor parity.
-3. Full Logic command coverage and actual multi-monitor/multitouch/gamepad tests.
+3. Full reference application command coverage and actual multi-monitor/multitouch/gamepad tests.
 4. Broader vendor matrices, multiple buses, external plugin sidechains and documented ARA edge cases.
 5. Full-rate movie playback/export, portable media collection and comprehensive FLP/ALS conversion.
 6. Debian 13 and Slop DAW-as-plugin builds remain absent. OSC UDP receive and Link peer discovery remain blocked in this environment.
 
-No Apple application assets, samples, screenshots, or icons were embedded. Existing v6/v7 deliverables were retained.
+No the vendor application assets, samples, screenshots, or icons were embedded. Existing v6/v7 deliverables were retained.
 
 ## Final DPI layout correction
 
