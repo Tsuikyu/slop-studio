@@ -1,6 +1,6 @@
 # Slop Studio 0.13
 
-### The Digital Audio Slopstation™
+### The Digital Audio Slopstation
 
 **An music production application born from the finest AI-generated slop.**
 
