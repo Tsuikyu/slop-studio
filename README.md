@@ -2,6 +2,539 @@
 
 ### The Digital Audio Slopstation™
 
+**An unfinished music production application born from the finest AI-generated slop.**
+
+**Created by Tsuikyu | Windows 11 x64 | MIT License**
+
+> **WARNING: THIS IS AI SLOP. AND IT'S NOT EVEN FINISHED.**
+>
+> USE AT YOUR OWN RISK. No guarantees of functionality. No guarantees of quality. Not even your precious production time is guaranteed.
+>
+> There are bugs. There are missing features. Some features might look like they work while doing absolutely nothing.
+>
+> **MOD IT. FORK IT. MUTATE IT. BREAK IT.**
+>
+> Do whatever you want with your own copy. Rewrite it, tear it apart, rebuild it from scratch, or turn it into something completely unrecognizable. The developer will be thoroughly satisfied.
+>
+> Just remember to back up your important projects. If your greatest masterpiece turns into a steaming pile of slop, that's between you and your hard drive.
+
+---
+
+## What the Hell Is This?
+
+Slop Studio is a digital audio workstation (DAW) for Windows.
+
+It's being developed to handle music composition, arrangement, recording, MIDI editing, mixing, and audio exporting in a single application.
+
+The interface features a black-and-blue-purple design called **Minimal CyberSquare**.
+
+The standard project format is `.slopdaw`.
+
+Slop Studio packs audio tracks, MIDI tracks, a piano roll, mixer, plugins, automation, a sampler, and various other music production features into one glorious pile of software.
+
+Current version: **0.13**.
+
+What can it do?
+
+Quite a few things.
+
+What can't it do?
+
+Quite a few other things.
+
+It's supposed to help you make music, but occasionally, you might find yourself fixing the software instead.
+
+**That's the Slop Studio experience.**
+
+## How to Launch This Thing
+
+Run `SlopStudio.exe` from the distribution folder.
+
+System requirements:
+
+- Windows 11 x64
+- .NET Framework 4.8
+- A reasonable tolerance for unfinished software
+
+A Quick Start guide appears on the first launch.
+
+The splash screen displays a dedicated image and a progress bar that updates according to the actual startup stages. If the image fails to load, a simpler fallback screen is displayed.
+
+If the application launches successfully, make some music.
+
+If it doesn't, start debugging.
+
+## Projects: `.slopdaw`
+
+Slop Studio saves projects using its proprietary `.slopdaw` format.
+
+Project data includes MIDI, tracks, supported plugin states, insert order, automation, and other information.
+
+This is the standard format for creating, saving, loading, and recovering projects.
+
+When overwriting an existing project, the application creates a backup under a different filename.
+
+Audio files are generally referenced rather than embedded. If you move a project to another computer, keep its audio files accessible.
+
+Automatic collection of all referenced media is still unfinished.
+
+If you don't want yesterday's perfectly functioning kick drum to suddenly become `[Missing]`, keep track of your sample folders.
+
+For details, see the [`.slopdaw` Format Specification](docs/slopdaw-format.md).
+
+## Features: The Cutting Edge of Slop Technology
+
+**Basic Music Production Stuff**
+
+- Audio and MIDI tracks
+- Region editing and piano roll
+- Playback, recording, Undo / Redo
+- Sampler and built-in effects
+- VST3 / CLAP plugin hosting
+- Mixer, auxiliary channels, and track stacks
+- Automation and comping
+- Global tracks and chords
+- Pitch editing in the waveform editor
+- Video preview
+
+**Additional Slop Technology**
+
+- Slop Launcher: grid-based clip launching
+- MIDI file import and export
+- Limited FLP / ALS / DAWproject import
+- WASAPI and an ASIO companion process
+- Lua Mods
+- OSC
+- Game controller support
+- AI integration via MCP
+- UI resources and manuals in Japanese, English, German, and Korean
+
+Implementation and verification status vary by feature. Some interface text also remains untranslated.
+
+**JUST BECAUSE SOMETHING EXISTS IN A MENU DOESN'T MEAN IT ACTUALLY WORKS.**
+
+Check the [Feature and Verification Register](docs/status-v0.13-ja.md) for the current status.
+
+## Mixer and Effects
+
+Built-in effects and external plugins are processed through an ordered insert chain.
+
+Track and master inserts are supported, including drag-and-drop reordering.
+
+Master effects can be added from the mixer's "Stereo Output" strip or the inspector's output strip.
+
+Visual Equalizer displays a five-band frequency response graph. Dragging points on the graph edits the filters.
+
+The Sampler's Attack, Decay, Sustain, and Release parameters can be adjusted using knobs or numerical controls.
+
+Parameter changes in built-in effects, including Compressor, are reflected in audio processing during playback.
+
+Some audio signal paths and plugin combinations still require further testing.
+
+**If you hear sound, congratulations. Start making music.**
+
+**If you don't, congratulations. You're now a software debugger.**
+
+## Exporting: Turning Slop into Audio Files
+
+Navigate to:
+
+**File → Master → Export Project or Selection as Master**
+
+Keyboard shortcut: `Ctrl+B`
+
+This allows you to export WAV or MP3 files with master processing applied.
+
+The same menu also provides controls to enable or disable master processing globally, display reference audio waveforms, and preview reference audio.
+
+MP3 exporting requires separately installed FFmpeg and libmp3lame.
+
+Project information can also be written to WAV / MP3 metadata tags.
+
+The mastering screen supports exporting stems to a new folder.
+
+Buses and their child tracks may overlap in stem exports. Nonlinear master effects may also cause the sum of exported stems to differ from the original mix.
+
+The following features are currently unfinished:
+
+- Rendering regions or tracks to audio at their original positions
+- Replacing all tracks with rendered audio
+
+Their buttons are disabled.
+
+You can't click them.
+
+We haven't built those features yet.
+
+## Some Actually Useful Features
+
+Right-click a region, track header, or mixer strip to change its background and text colors.
+
+The sample browser displays waveforms and lets you audition samples through the default Windows audio output.
+
+Inspector values can be adjusted by dragging vertically or using the mouse wheel.
+
+When ASIO is selected, the settings button opens the driver's configuration panel.
+
+The Lua Mod Manager allows multiple `.lua` files to be registered and executed when selected.
+
+Game controller button assignments can be customized through the Key Commands section of Preferences.
+
+**Press F11 to toggle fullscreen mode.**
+
+Fullscreen makes everything look slightly more professional.
+
+It does absolutely nothing to increase the percentage of completed features.
+
+## Feeding Other DAW Projects to the Slop Machine
+
+Slop Studio provides limited import support for FLP, ALS, and DAWproject files.
+
+FLP importing can recover MIDI notes, their arrangement, and audio files that can be located.
+
+Missing audio files are represented by silent `[Missing]` regions.
+
+Right-click an affected region and select "Relink Audio File..." to specify a WAV file.
+
+Other regions referencing the same missing audio source will also be updated.
+
+The following data cannot currently be fully reconstructed:
+
+- Original instruments and effects
+- Automation
+- Routing
+- Trimming and time stretching
+- Other application-specific data
+
+Whatever the importer can recover, it recovers.
+
+Whatever it can't recover is lost somewhere in the vast wilderness of slop.
+
+Keep your original project files somewhere safe.
+
+## What's New in Slop Studio 0.13?
+
+### Master Volume and MIDI
+
+The rectangular slider in the upper-right corner and the Stereo Output fader control the same master volume.
+
+Use "File → Export MIDI" to save a Standard MIDI File.
+
+Velocity bars at the bottom of the piano roll can be adjusted by dragging, and changes can be reverted with Undo.
+
+### Sample Browser
+
+Bookmarks and favorites store references to audio files.
+
+Search operates on the currently displayed folder or the favorites collection.
+
+Your audio files still need to be managed by an actual human being.
+
+### Project Templates
+
+Navigate to:
+
+**File → Save Project as Template**
+
+This creates a `.sloptemplate` file.
+
+Templates and bundled example projects open as unsaved copies.
+
+Save them as new `.slopdaw` projects.
+
+Referenced audio files must remain accessible.
+
+### Themes and Keyboard Shortcuts
+
+Preferences allow you to configure:
+
+- Undo history length
+- Themes: `.sloptheme`
+- Keyboard shortcuts: `.slopkeys`
+
+Theme changes are applied to shared interface colors after restarting the application.
+
+Some custom interface components still use fixed colors.
+
+If you want to redesign the entire interface, go ahead.
+
+Add more slop. Make it yours.
+
+### Launchpad Support
+
+Slop Studio includes functionality intended for Launchpad X and Launchpad Mini MK3 in Programmer Mode.
+
+With explicitly selected MIDI input and output ports, it can control the first 8 tracks and 8 scenes.
+
+**ACTUAL HARDWARE TESTING HAS NOT BEEN COMPLETED.**
+
+Other Launchpad models are also untested.
+
+According to the code, the lights are supposed to work.
+
+Whether they light up in the physical world is something we'll discover through testing.
+
+### Included Example Projects
+
+Two sample projects are included:
+
+- **EDM Sample - Melodic House** — 128 BPM
+- **J-Pop - Shibuya** — 150 BPM
+
+Automatic sample BPM following and track freeze / unfreeze are not implemented.
+
+If your samples don't automatically match the project tempo, human intervention is currently required.
+
+Yes, actual human labor. In 2026.
+
+## Plugins and Presets
+
+The upper sections of plugin, built-in effect, and Sampler windows provide:
+
+- Save and load settings
+- Copy and paste
+- Comparison with the state captured when the window was opened
+
+Presets use the `.sloppreset` format.
+
+Copied settings remain available until the application closes and can be pasted into the same type of plugin.
+
+Importing or exporting native preset formats belonging to external plugins is currently unfinished.
+
+External samples used by the Sampler are not embedded into preset files.
+
+Their original file paths must remain accessible.
+
+Saving a preset will not magically resurrect missing samples.
+
+## Letting AI Control the Slop: MCP
+
+Slop Studio provides AI integration through stdio-based MCP.
+
+MCP is disabled during normal application startup.
+
+To use it with an MCP client, launch:
+
+```powershell
+SlopStudio.exe --mcp
+```
+
+The initial connection is read-only.
+
+Editing operations must be authorized for each session through:
+
+**Window → MCP AI Integration Manager**
+
+File operations and record-arm actions require additional confirmation each time.
+
+MCP interoperability and security testing remain in progress.
+
+**AI CONTROLLING A DAW.**
+
+How wonderfully modern.
+
+Unfortunately, letting AI control the slop does not magically transform the slop into a finished product.
+
+Back up important data before experimenting.
+
+## Lua Mods: For People Who Want to Make Things Worse (or Better)
+
+The Lua Mod Manager allows `.lua` files to be registered and explicitly executed.
+
+You are welcome to create Mods, experiment, and extend the application.
+
+Review scripts obtained from other people before running them.
+
+If your own Mod goes completely berserk, congratulations.
+
+That's software development.
+
+**MOD IT. BREAK IT. FIX IT. BREAK IT AGAIN.**
+
+Welcome to Slop Studio.
+
+## Known Issues: The Hall of Unfinished Business
+
+**SLOP STUDIO 0.13 IS NOT FINISHED.**
+
+Features that are not implemented:
+
+- Automatic sample BPM following
+- Track freeze / unfreeze
+- Rendering regions or tracks to audio at their original positions
+- Replacing all tracks with rendered audio
+
+Features and environments requiring additional testing:
+
+- Synchronization between playback position and audible output
+- Physical Launchpad devices
+- Various combinations of physical MIDI keyboards, microphones, and ASIO devices
+- ASIO driver compatibility
+- VST3 / CLAP plugin compatibility
+- DPI behavior across multiple monitors
+- Builds on operating systems other than Windows
+- Importing projects from other DAWs
+- MCP interoperability and security
+- Other unfinished features
+
+**OSC LOCAL UDP RECEPTION FAILED IN THE TEST ENVIRONMENT.**
+
+For the current development status, see the [Feature and Verification Register](docs/status-v0.13-ja.md).
+
+Bug reports are welcome.
+
+Reproduction steps are even more welcome.
+
+"I clicked this button and the application crashes every time" is considerably more useful than "IT DOESN'T WORK."
+
+**A reproducible disaster is the first step toward fixing it.**
+
+## Building: Create Your Own Custom Slop
+
+Slop Studio uses the following technologies:
+
+| Component | Technology |
+|---|---|
+| Main application | C# / Windows Forms |
+| .NET runtime | .NET Framework 4.8 |
+| Audio and plugin processing | C++ |
+| Build system | CMake |
+| Primary target OS | Windows 11 x64 |
+| ASIO / Ableton Link | Separate GPL companion processes |
+
+**JUCE IS NOT USED.**
+
+Build requirements:
+
+- CMake 3.24 or newer
+- Ninja or MSVC
+- x64 C/C++ toolchain
+- C# compiler compatible with .NET Framework 4.8
+- Required SDKs and license files
+
+For build commands and testing procedures, see [docs/build-and-test.md](docs/build-and-test.md).
+
+Protect existing projects, audio assets, application settings, and Git history during development.
+
+**MODIFY THE SOURCE CODE AS MUCH AS YOU WANT.**
+
+Rewrite the entire UI.
+
+Mutate the mixer beyond recognition.
+
+Add 100 unnecessary features.
+
+Delete your own working copy and start from scratch.
+
+If nothing works afterward, congratulations.
+
+It's your Slop Studio now.
+
+Freedom is wonderful.
+
+Backups are even better.
+
+## Developer Documentation
+
+Before aggressively rewriting everything, read these files:
+
+- [AGENTS.md](AGENTS.md) — Development instructions
+- [docs/HANDOFF.md](docs/HANDOFF.md) — Development handoff information
+- [docs/status-v0.13-ja.md](docs/status-v0.13-ja.md) — Current implementation and verification status
+- [docs/plan-v0.13-ja.md](docs/plan-v0.13-ja.md) — Development roadmap
+- [docs/build-and-test.md](docs/build-and-test.md) — Build and testing instructions
+- [docs/menu-command-map.json](docs/menu-command-map.json) — Menu-to-command mapping
+
+Record unverified features as unverified.
+
+Record broken features as broken.
+
+**THE SOFTWARE MAY BE SLOP. THE DEVELOPMENT RECORDS DON'T HAVE TO BE.**
+
+## License: The Freedom to Modify and Destroy
+
+Slop Studio's original application code is licensed under the [MIT License](LICENSE).
+
+Subject to the license conditions, you are free to use, modify, copy, redistribute, and sell this code.
+
+**MODIFY YOUR OWN COPY AS MUCH AS YOU WANT.**
+
+Rewrite it until it becomes completely unrecognizable.
+
+Build something entirely different.
+
+That's part of the beauty of open-source software.
+
+Separate licensing conditions apply to third-party SDKs, libraries, external plugins, and runtime components.
+
+The ASIO / Ableton Link companion programs run as separate processes and are licensed under GPL-3.0-only.
+
+When redistributing the software, preserve the necessary licensing materials and corresponding source code, including:
+
+- [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md)
+- `licenses`
+- `Companions/Source`
+
+The splash-screen image requires separate rights clearance. Verify redistribution permissions or replace it with an appropriately licensed image before public distribution.
+
+Enjoy the freedom to modify the code.
+
+## Disclaimer: One Final Warning
+
+This software is provided **"AS IS"**.
+
+No warranty is provided regarding completeness, functionality, compatibility, quality, or fitness for a particular purpose. Liability is governed by applicable law and the relevant license conditions.
+
+**BACK UP YOUR MUSIC PROJECTS AND AUDIO FILES.**
+
+The developer may improve the software.
+
+The developer may change the specifications.
+
+The developer may also make an absolute mess of everything.
+
+Bug fixes, feature suggestions, and forks are welcome.
+
+Slop Studio is unfinished software.
+
+It's here for people who can have fun with that.
+
+---
+
+## Final Words
+
+Slop Studio is a digital audio workstation born from enormous ambitions, ridiculous amounts of code, and a deeply unreasonable quantity of AI-generated slop.
+
+It is not perfect software.
+
+Some features don't exist yet.
+
+Some things that should work don't work.
+
+Some things might work for reasons nobody fully understands.
+
+Nevertheless, if you want to make music with this magnificent pile of AI-generated garbage, you're welcome here.
+
+If you want to modify it, you're welcome here.
+
+If you want to fight bugs until 3 AM, you're definitely welcome here.
+
+**BUILD IT. MOD IT. BREAK IT. BUILD IT AGAIN.**
+
+Just don't forget your backups.
+
+**Slop Studio 0.13**
+
+*Made by Tsuikyu.*
+
+*Built with code, questionable decisions, and an unreasonable amount of slop.*
+
+**NO WARRANTY. NO PERFECTION. JUST SLOP.**
+
+# Slop Studio 0.13
+
+### The Digital Audio Slopstation™
+
 **AIスロップから生まれた、未完成の音楽制作ソフトウェア。**
 
 **作者：Tsuikyu | Windows 11 x64 | MIT License**
@@ -62,7 +595,7 @@ Slop Studioは、Windows向けのデジタル・オーディオ・ワークス�
 
 起動に成功したら、音楽を作りましょう。
 
-起動に失敗したら、デバッグしましょう。
+起動に失敗したら、CodexでもClaude Codeでも開いてデバッグしましょう。
 
 ## プロジェクト：`.slopdaw`
 
